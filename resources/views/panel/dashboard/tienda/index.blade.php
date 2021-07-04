@@ -110,13 +110,13 @@
                 <div class="card-header">
                     <h4>Top 5 Products</h4>
                     <div class="card-header-action dropdown">
-                        <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
+                        <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Mensual</a>
                         <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                             <li class="dropdown-title">Select Period</li>
-                            <li><a href="#" class="dropdown-item">Today</a></li>
-                            <li><a href="#" class="dropdown-item">Week</a></li>
-                            <li><a href="#" class="dropdown-item active">Month</a></li>
-                            <li><a href="#" class="dropdown-item">This Year</a></li>
+                            <li><a href="#" class="dropdown-item">Hoy</a></li>
+                            <li><a href="#" class="dropdown-item">Semanal</a></li>
+                            <li><a href="#" class="dropdown-item active">Mensual</a></li>
+                            <li><a href="#" class="dropdown-item">Anual</a></li>
                         </ul>
                     </div>
                 </div>
@@ -227,11 +227,11 @@
                 <div class="card-footer pt-3 d-flex justify-content-center">
                     <div class="budget-price justify-content-center">
                         <div class="budget-price-square bg-primary" data-width="20"></div>
-                        <div class="budget-price-label">Selling Price</div>
+                        <div class="budget-price-label">Precio de Venta</div>
                     </div>
                     <div class="budget-price justify-content-center">
                         <div class="budget-price-square bg-danger" data-width="20"></div>
-                        <div class="budget-price-label">Budget Price</div>
+                        <div class="budget-price-label">Precio de Rebaja</div>
                     </div>
                 </div>
             </div>

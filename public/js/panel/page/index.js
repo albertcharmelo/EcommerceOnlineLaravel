@@ -37,7 +37,7 @@ var myChart = new Chart(ctx, {
     scales: {
       yAxes: [{
         gridLines: {
-          // display: false,
+          display: false,
           drawBorder: false,
           color: '#f2f2f2',
         },

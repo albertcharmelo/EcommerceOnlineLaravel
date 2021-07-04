@@ -23,7 +23,7 @@ const mix = require('laravel-mix');
     "node_modules/chocolat/dist/js/jquery.chocolat.min.js",
 ],  'public/js/app.js')
 
-.styles([
+mix.styles([
     
    
  
