@@ -12,8 +12,8 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="index-0.html">Tienda</a></li>
-                    <li class="active"><a class="nav-link" href="index.html">Blog</a></li>
-                    <li class="active"><a class="nav-link" href="index.html">Usuarios</a></li>
+                    <li><a class="nav-link" href="index.html">Blog</a></li>
+                    <li><a class="nav-link" href="index.html">Usuarios</a></li>
 
                 </ul>
             </li>
