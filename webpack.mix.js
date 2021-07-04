@@ -19,8 +19,8 @@ const mix = require('laravel-mix');
     
     // "node_modules/jquery-sparkline/jquery.sparkline.min.js",
     "node_modules/chart.js/dist/Chart.min.js",
-    "node_modules/owl.carousel/dist/owl.carousel.min.js",
-    "node_modules/chocolat/dist/js/jquery.chocolat.min.js",
+    // "node_modules/owl.carousel/dist/owl.carousel.min.js",
+    // "node_modules/chocolat/dist/js/jquery.chocolat.min.js",
 ],  'public/js/app.js')
 
 mix.styles([

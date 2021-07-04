@@ -1,5 +1,7 @@
 @extends('panel.layout')
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}">
 
 @endsection
 @section('content')
@@ -98,7 +100,7 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    <h4>Budget vs Sales</h4>
+                    <h4>Precio de Rebaja vs Precio de Venta</h4>
                 </div>
                 <div class="card-body">
                     <canvas id="myChart" height="158"></canvas>
@@ -127,7 +129,7 @@
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
-                                    <div class="font-weight-600 text-muted text-small">86 Sales</div>
+                                    <div class="font-weight-600 text-muted text-small">86 Ventas</div>
                                 </div>
                                 <div class="media-title">iPhone S9 Limited</div>
                                 <div class="mt-1">
@@ -147,7 +149,7 @@
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
-                                    <div class="font-weight-600 text-muted text-small">67 Sales</div>
+                                    <div class="font-weight-600 text-muted text-small">67 Ventas</div>
                                 </div>
                                 <div class="media-title">iBook Pro 2018</div>
                                 <div class="mt-1">
@@ -167,7 +169,7 @@
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
-                                    <div class="font-weight-600 text-muted text-small">63 Sales</div>
+                                    <div class="font-weight-600 text-muted text-small">63 Ventas</div>
                                 </div>
                                 <div class="media-title">Headphone Blitz</div>
                                 <div class="mt-1">
@@ -187,7 +189,7 @@
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
-                                    <div class="font-weight-600 text-muted text-small">28 Sales</div>
+                                    <div class="font-weight-600 text-muted text-small">28 Ventas</div>
                                 </div>
                                 <div class="media-title">oPhone X Lite</div>
                                 <div class="mt-1">
@@ -207,7 +209,7 @@
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
-                                    <div class="font-weight-600 text-muted text-small">19 Sales</div>
+                                    <div class="font-weight-600 text-muted text-small">19 Ventas</div>
                                 </div>
                                 <div class="media-title">Old Camera</div>
                                 <div class="mt-1">
@@ -259,7 +261,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <div class="text-muted text-small">67 Sales</div>
+                                    <div class="text-muted text-small">67 Ventas</div>
                                     <div class="product-cta">
                                         <a href="#" class="btn btn-primary">Detail</a>
                                     </div>
@@ -280,7 +282,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star-half"></i>
                                     </div>
-                                    <div class="text-muted text-small">86 Sales</div>
+                                    <div class="text-muted text-small">86 Ventas</div>
                                     <div class="product-cta">
                                         <a href="#" class="btn btn-primary">Detail</a>
                                     </div>
@@ -301,7 +303,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="far fa-star"></i>
                                     </div>
-                                    <div class="text-muted text-small">63 Sales</div>
+                                    <div class="text-muted text-small">63 Ventas</div>
                                     <div class="product-cta">
                                         <a href="#" class="btn btn-primary">Detail</a>
                                     </div>
@@ -449,5 +451,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src='{{ asset('js/owl.carousel.min.js') }}'></script>
+<script src='{{ asset('js/jquery.chocolat.min.js') }}'></script>
+
+
 <script src="/js/panel/page/index.js"></script>
 @endsection
