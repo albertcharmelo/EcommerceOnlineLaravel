@@ -125,7 +125,8 @@
                 <div class="card-body" id="top-5-scroll">
                     <ul class="list-unstyled list-unstyled-border">
                         <li class="media">
-                            <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png"
+                            <img class="mr-3 rounded" width="55"
+                                src="{{ asset('assets/img/products/product-3-50.png') }}"
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
@@ -145,7 +146,8 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="mr-3 rounded" width="55" src="../assets/img/products/product-4-50.png"
+                            <img class="mr-3 rounded" width="55"
+                                src="{{ asset('assets/img/products/product-4-50.png') }}"
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
@@ -165,7 +167,8 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="mr-3 rounded" width="55" src="../assets/img/products/product-1-50.png"
+                            <img class="mr-3 rounded" width="55"
+                                src="{{ asset('assets/img/products/product-1-50.png') }}"
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
@@ -185,7 +188,8 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png"
+                            <img class="mr-3 rounded" width="55"
+                                src="{{ asset('assets/img/products/product-3-50.png') }}"
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
@@ -205,7 +209,8 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="mr-3 rounded" width="55" src="../assets/img/products/product-5-50.png"
+                            <img class="mr-3 rounded" width="55"
+                                src="{{ asset('assets/img/products/product-5-50.png') }}"
                                 alt="product">
                             <div class="media-body">
                                 <div class="float-right">
@@ -250,7 +255,9 @@
                         <div>
                             <div class="product-item pb-3">
                                 <div class="product-image">
-                                    <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
+                                    <img alt="image"
+                                        src="{{ asset('assets/img/products/product-4-50.png') }}"
+                                        class="img-fluid">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-name">iBook Pro 2018</div>
@@ -271,7 +278,9 @@
                         <div>
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
+                                    <img alt="image"
+                                        src="{{ asset('assets/img/products/product-3-50.png') }}"
+                                        class="img-fluid">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-name">oPhone S9 Limited</div>
@@ -292,7 +301,9 @@
                         <div>
                             <div class="product-item">
                                 <div class="product-image">
-                                    <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
+                                    <img alt="image"
+                                        src="{{ asset('assets/img/products/product-1-50.png') }}"
+                                        class="img-fluid">
                                 </div>
                                 <div class="product-details">
                                     <div class="product-name">Headphone Blitz</div>

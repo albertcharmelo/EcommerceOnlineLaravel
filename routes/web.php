@@ -16,8 +16,10 @@ Route::prefix('/')->group(function () {
 
 
 //Rutas del Panel
-Route::prefix('panel')->group(function () {
-    Route::get('/', 'PanelController@index');
+Route::prefix('panel')->middleware(['auth'])->group(function () {
+    Route::get('/dashboard/tienda', 'PanelController@index');
+    Route::get('/dashboard/usuarios', 'PanelController@usuarios');
+    Route::get('/dashboard/blog', 'PanelController@blog');
 });
 
 

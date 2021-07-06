@@ -11,4 +11,15 @@ class PanelController extends Controller
 
         return view('panel.dashboard.tienda.index');
     }
+
+    public function usuarios()
+    {
+
+        return view('panel.dashboard.usuarios.index');
+    }
+    public function blog()
+    {
+
+        return view('panel.dashboard.blog.index');
+    }
 }
