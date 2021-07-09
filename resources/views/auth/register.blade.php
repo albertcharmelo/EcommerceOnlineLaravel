@@ -98,8 +98,8 @@
                                     <div class="form-group col-6">
                                         <label>Provincias</label>
                                         <select class="form-control selectric" name="provincia">
-                                            <option value="West Java">West Java</option>
-                                            <option value="East Java">East Java</option>
+                                            <option value="West Java">Azua</option>
+                                            <option value="East Java">Santo domingo de Guzman</option>
                                         </select>
                                         @error('provincia')
                                             <span class="invalid-feedback" role="alert">

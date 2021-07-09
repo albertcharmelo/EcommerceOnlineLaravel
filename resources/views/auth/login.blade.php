@@ -93,36 +93,52 @@
                 </h4>
                 <p class="text-muted">‎Antes de comenzar, debe iniciar sesión o registrarse si aún no tiene una cuenta.‎
                 </p>
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <form method="POST" action="{{ route('login') }}" class="needs-validation"
+                    novalidate="">
+                    @csrf
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
-                        <input id="email" type="email" class="form-control" name="email" tabindex="1" required
+                        <input id="email" type="email" value="{{ old('email') }}"
+                            class="form-control @error('email') is-invalid @enderror" name="email" tabindex="1" required
                             autofocus>
                         <div class="invalid-feedback">
-                            Por favor complete su correo electrónicol
+                            Por favor complete su correo electrónico
                         </div>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <div class="d-block">
                             <label for="password" class="control-label">Contraseña</label>
                         </div>
-                        <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                        <input id="password" type="password"
+                            class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2"
+                            required>
                         <div class="invalid-feedback">
                             please fill in your password
                         </div>
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="remember" class="custom-control-input" tabindex="3"
-                                id="remember-me">
-                            <label class="custom-control-label" for="remember-me">Recuerdame</label>
+                            <input type="checkbox" name="remember"
+                                {{ old('remember') ? 'checked' : '' }}
+                                class="custom-control-input" tabindex="3" id="remember">
+                            <label class="custom-control-label" for="remember">Recuerdame</label>
                         </div>
                     </div>
 
                     <div class="form-group text-right">
-                        <a href="auth-forgot-password.html" class="float-left mt-3">
+                        <a href="{{ route('password.request') }}" class="float-left mt-3">
                             Olvidaste tu contraseña?
                         </a>
                         <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
@@ -131,7 +147,7 @@
                     </div>
 
                     <div class="mt-5 text-center">
-                        No tienes una cuenta? <a href="auth-register.html">Crea una cuenta</a>
+                        No tienes una cuenta? <a href="{{ route('register') }}">Crea una cuenta</a>
                     </div>
                 </form>
 

@@ -17,9 +17,17 @@ Route::prefix('/')->group(function () {
 
 //Rutas del Panel
 Route::prefix('panel')->middleware(['auth'])->group(function () {
-    Route::get('/dashboard/tienda', 'PanelController@index');
+    Route::get('/', function () {
+        return redirect()->route('dashboard.tienda');
+    });
+
+    //Dashboards
+    Route::get('/dashboard/tienda', 'PanelController@index')->name('dashboard.tienda');
     Route::get('/dashboard/usuarios', 'PanelController@usuarios');
     Route::get('/dashboard/blog', 'PanelController@blog');
+
+    //Blog
+    Route::get('/create/post', 'PostController@create');
 });
 
 

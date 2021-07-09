@@ -49,7 +49,8 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Blog</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="bootstrap-alert.html">Crear Noticias</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/create/post') }}">Crear
+                            Noticias</a></li>
                     <li><a class="nav-link" href="bootstrap-badge.html">Crear Categoria</a></li>
                 </ul>
             </li>
