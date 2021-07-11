@@ -25,6 +25,11 @@ class PostController extends Controller
     {
         return view('panel.blog.create');
     }
+    public function createCategory()
+    {
+        return view('panel.blog.createCategory');
+    }
+
 
     /**
      * Store a newly created resource in storage.

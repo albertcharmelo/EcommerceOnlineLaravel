@@ -1,5 +1,8 @@
-"use strict";
 
+
+// $(document).ready(function () {
+//   $('#summernote').summernote();
+// });
 $("select").selectric();
 $.uploadPreview({
   input_field: "#image-upload",   // Default: .image-upload

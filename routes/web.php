@@ -22,12 +22,24 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
     });
 
     //Dashboards
-    Route::get('/dashboard/tienda', 'PanelController@index')->name('dashboard.tienda');
-    Route::get('/dashboard/usuarios', 'PanelController@usuarios');
-    Route::get('/dashboard/blog', 'PanelController@blog');
+    Route::prefix('dashboard')->group(function () {
+        Route::get('/tienda', 'PanelController@index')->name('dashboard.tienda');
+        Route::get('/usuarios', 'PanelController@usuarios');
+        Route::get('/blog', 'PanelController@blog');
+    });
 
     //Blog
-    Route::get('/create/post', 'PostController@create');
+    Route::prefix('blog')->group(function () {
+        Route::get('/create/post', 'PostController@create');
+        Route::get('/create/categoria', 'PostController@createCategory');
+    });
+
+
+    //Articulos
+    Route::prefix('/articulos')->group(function () {
+        Route::get('/create/articulos', 'ArticulosController@create');
+        Route::get('/create/categoria', 'ArticulosController@createCategory');
+    });
 });
 
 

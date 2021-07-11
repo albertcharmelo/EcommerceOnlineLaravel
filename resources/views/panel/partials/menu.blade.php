@@ -40,7 +40,9 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="layout-default.html">Inventario</a></li>
                     <li><a class="nav-link" href="layout-transparent.html">Crear Articulo</a></li>
-                    <li><a class="nav-link" href="layout-top-navigation.html">Crear Categorias</a></li>
+                    <li><a class="nav-link"
+                            href="{{ url('/panel/articulos/create/categoria') }}">Crear
+                            Categorias</a></li>
                     <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li>
 
                 </ul>
@@ -49,9 +51,11 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Blog</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/create/post') }}">Crear
+                    <li><a class="nav-link" href="{{ url('/panel/blog/create/post') }}">Crear
                             Noticias</a></li>
-                    <li><a class="nav-link" href="bootstrap-badge.html">Crear Categoria</a></li>
+                    <li><a class="nav-link"
+                            href="{{ url('/panel/blog/create/categoria') }}">Crear
+                            Categoria</a></li>
                 </ul>
             </li>
             <li><a class="nav-link" href="blank.html"><i class="far fa-clipboard-list "></i> <span>Reportes</span></a>

@@ -1,7 +1,7 @@
 @extends('panel.layout')
 @section('css')
-<link rel="stylesheet" {{ asset('css/bootstrap-tagsinput.css') }}">
-<link rel="stylesheet" {{ asset('/summernote/dist/summernote-bs4.css') }}">
+<link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}">
+<link rel=" stylesheet" href="{{ asset('summernote/dist/summernote-bs4.css') }}">
 @endsection
 @section('content')
 <section class="section">
@@ -11,49 +11,52 @@
         </div>
         <h1>Create New Post</h1>
         <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="#">Posts</a></div>
-            <div class="breadcrumb-item">Create New Post</div>
+            <div class="breadcrumb-item active"><a href="/panel/tienda">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="#">Blog</a></div>
+            <div class="breadcrumb-item">Creear Nueva Noticia</div>
         </div>
     </div>
 
     <div class="section-body">
-        <h2 class="section-title">Create New Post</h2>
-        <p class="section-lead">
-            On this page you can create a new post and fill in all fields.
+        <h2 class="section-title">Crear Nueva Noticia</h2>
+        <p class="section-lead pb-0 mb-0">
+            En esta página se pueden crear Noticias destinadas al Blog, solo debe rellenar los siguientes campos. <p
+                class=" section-lead text-danger pt-0 mt-0"> Nota: el usuario plublicador solo puede crear Noticias en
+                esttado PENDIENTE, a la espera de la validación del administrador</p>
         </p>
 
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Write Your Post</h4>
+                        <h4>Escribe Tu Noticia</h4>
                     </div>
                     <div class="card-body">
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titulo</label>
                             <div class="col-sm-12 col-md-7">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Categoría</label>
                             <div class="col-sm-12 col-md-7">
                                 <select class="form-control selectric">
                                     <option>Tech</option>
                                     <option>News</option>
                                     <option>Political</option>
                                 </select>
+                                <button class="btn btn-primary mt-3">Añadir nueva Categoria</button>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Contenido</label>
                             <div class="col-sm-12 col-md-7">
                                 <textarea class="summernote-simple"></textarea>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Thumbnail</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Portada</label>
                             <div class="col-sm-12 col-md-7">
                                 <div id="image-preview" class="image-preview">
                                     <label for="image-upload" id="image-label">Choose File</label>
@@ -68,12 +71,12 @@
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Estado de
+                                inicio</label>
                             <div class="col-sm-12 col-md-7">
                                 <select class="form-control selectric">
-                                    <option>Publish</option>
-                                    <option>Draft</option>
-                                    <option>Pending</option>
+                                    <option>Publico</option>
+                                    <option>Pendiente</option>
                                 </select>
                             </div>
                         </div>
@@ -91,9 +94,10 @@
 </section>
 @endsection
 @section('js')
-<script src="{{ asset('summernote/dist/summernote-bs4.js') }}"></script>
+
 <script src="{{ asset('js/jquery.selectric.js') }}"></script>
 <script src="{{ asset('js/jquery.uploadPreview.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>
-<script src="{{ asset('/js/panel/page/features-post-create.js') }}"></script>
+<script src="{{ asset('summernote/dist/summernote-bs4.js') }}"></script>
+<script src="{{ asset('js/panel/page/features-post-create.js') }}"></script>
 @endsection
