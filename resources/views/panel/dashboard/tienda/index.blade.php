@@ -65,14 +65,14 @@
                     <canvas id="balance-chart" height="80"></canvas>
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
-                    <i class="fas fa-dollar-sign"></i>
+                    <i class="fas fa-box-open"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Balance</h4>
+                        <h4>Productos</h4>
                     </div>
                     <div class="card-body">
-                        $187,13
+                        256
                     </div>
                 </div>
             </div>
