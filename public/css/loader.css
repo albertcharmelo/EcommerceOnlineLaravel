@@ -1,0 +1,41 @@
+
+
+.spinner {
+position: fixed;
+z-index: 1000;
+width: 50%;
+height: 50%;
+margin-left: auto;
+margin-right: auto;
+opacity: 1;
+margin-left:50%;
+left:-200px;
+}
+
+.bg{
+z-index: 999;
+width: 100%;
+height: 100vh;
+position: fixed;
+background-color: rgb(252, 249, 249);
+opacity: 0.6;
+
+}
+
+
+/* Para 480px */  
+@media only screen and (max-width: 500px) and (min-width: 300px) {  
+
+    .spinner{
+        width: 100%;
+        height: 100vh;
+        margin-top: 51%;
+        margin-left: 60%;
+    }
+       
+ }
+
+  
+
+
+

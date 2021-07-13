@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Articulo;
+use App\Http\Requests\StoreArticulosRequest;
 use Illuminate\Http\Request;
 
 class ArticulosController extends Controller
@@ -38,11 +40,43 @@ class ArticulosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreArticulosRequest $request)
     {
-        //
-    }
+        $producto = Articulo::create([
+            'atributo' => $request->atributo,
+            'nombre' => $request->nombre,
+            'categoria_id' => $request->categoria_id,
+            'descripcion' => $request->descripcion,
+            'referencia' => $request->referencia,
+            'stock' => $request->stock,
+            'precio' => $request->precio,
+            'tipo_unidad' => $request->tipo_unidad,
+            'garantia' => $request->garantia,
+            'estado' => $request->estado
+        ]);
 
+        return $producto;
+    }
+    public function storeImagen(Request $request)
+    {
+        if ($request->hasFile('file')) {
+
+            foreach ($request->file('file') as $file) {
+                $extension = $file->getClientOriginalExtension();
+                $fileName = time() . $file->getClientOriginalName();
+                $destinationPath = 'productoImagenes/';
+                $file->move($destinationPath, $fileName);
+                $folderPath = $destinationPath . $fileName;
+                // ArticuloFichero::create([
+                //     'folder' => $folderPath,
+                //     'file' => $request->file('file')->getClientOriginalName(),
+                //     'articulo_id' => $request->articulo,
+                // ]);
+            }
+
+            // return $destinationPath . $fileName . $extension;
+        }
+    }
     /**
      * Display the specified resource.
      *

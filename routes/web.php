@@ -39,6 +39,9 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
     Route::prefix('/articulos')->group(function () {
         Route::get('/create/articulos', 'ArticulosController@create');
         Route::get('/create/categoria', 'ArticulosController@createCategory');
+
+        Route::post('/store/articulos', 'ArticulosController@store');
+        Route::post('/store/articuloImagen', 'ArticulosController@storeImagen');
     });
 });
 

@@ -36,10 +36,12 @@
             <li class="menu-header">Tienda</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
-                    <span>Articulos</span></a>
+                    <span>Productos</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="layout-default.html">Inventario</a></li>
-                    <li><a class="nav-link" href="layout-transparent.html">Crear Articulo</a></li>
+                    <li><a class="nav-link"
+                            href="{{ url('/panel/articulos/create/articulos') }}">Crear
+                            Articulo</a></li>
                     <li><a class="nav-link"
                             href="{{ url('/panel/articulos/create/categoria') }}">Crear
                             Categorias</a></li>
