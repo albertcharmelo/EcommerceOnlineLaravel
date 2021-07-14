@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Articulo;
 use App\Http\Requests\StoreArticulosRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticulosController extends Controller
 {
@@ -15,7 +16,21 @@ class ArticulosController extends Controller
      */
     public function index()
     {
+        return view('panel.producto.index');
         //
+    }
+
+    public function listaproductos()
+    {
+
+        $productos = DB::table('productos')
+            ->select('productos.*')
+            ->get();
+        return datatables()
+            ->of($productos)
+            ->addColumn('btn', 'panel.producto.opciones')
+            ->rawColumns(['btn'])
+            ->toJson();
     }
 
     /**

@@ -39,9 +39,13 @@
                     <span>Productos</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="layout-default.html">Inventario</a></li>
+<<<<<<< Updated upstream
                     <li><a class="nav-link"
                             href="{{ url('/panel/articulos/create/articulos') }}">Crear
                             Articulo</a></li>
+=======
+                    <li><a class="nav-link" href="{{ url('/panel/articulos/index') }}">Crear Productos</a></li>
+>>>>>>> Stashed changes
                     <li><a class="nav-link"
                             href="{{ url('/panel/articulos/create/categoria') }}">Crear
                             Categorias</a></li>
