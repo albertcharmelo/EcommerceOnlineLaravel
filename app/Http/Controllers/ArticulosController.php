@@ -23,7 +23,7 @@ class ArticulosController extends Controller
     public function listaproductos()
     {
 
-        $productos = DB::table('productos')
+        $productos = DB::table('productos')            
             ->select('productos.*')
             ->get();
         return datatables()
@@ -67,7 +67,7 @@ class ArticulosController extends Controller
             'precio' => $request->precio,
             'tipo_unidad' => $request->tipo_unidad,
             'garantia' => $request->garantia,
-            'estado' => $request->estado
+            'estado' => $request->estado,
         ]);
 
         return $producto;

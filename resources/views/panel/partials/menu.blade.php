@@ -26,7 +26,7 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link"
-                            href="{{ url('/panel/dashboard/tienda') }}">Publicaciones Tienda</a>
+                            href="{{ url('/panel/articulos/index') }}">Publicaciones Tienda</a>
                     </li>
                     <li><a class="nav-link" href="index.html">Publicaciones Blog</a></li>
                     <li><a class="nav-link" href="index.html">Crear usuario publicador</a></li>
@@ -39,13 +39,8 @@
                     <span>Productos</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="layout-default.html">Inventario</a></li>
-<<<<<<< Updated upstream
-                    <li><a class="nav-link"
-                            href="{{ url('/panel/articulos/create/articulos') }}">Crear
-                            Articulo</a></li>
-=======
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/index') }}">Crear Productos</a></li>
->>>>>>> Stashed changes
+                    <li><a class="nav-link"                           
+                            href="{{ url('/panel/articulos/create/articulos') }}">Crear Productos</a></li>
                     <li><a class="nav-link"
                             href="{{ url('/panel/articulos/create/categoria') }}">Crear
                             Categorias</a></li>

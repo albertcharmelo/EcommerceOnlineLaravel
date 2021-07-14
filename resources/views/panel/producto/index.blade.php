@@ -13,7 +13,7 @@
         <div class="section-header">
             <h1>Productos</h1>
             <div class="section-header-button">
-                <a href="{{ url('/panel/create/articulos') }}" class="btn btn-primary">Crear Producto</a>
+                <a href="{{ url('/panel/articulos/create/articulos') }}" class="btn btn-primary">Crear Producto</a>
             </div>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -125,7 +125,16 @@
                     data: 'precio'
                 },
                 {
-                    data: 'estado'
+                    data: 'estado',
+                    render(data) {
+                        if (data == 1) {
+                            return '<span class="badge badge-pill badge-success text-center">' + 'Activado' +
+                                '</span>';
+                        } else {
+                            return '<span class="badge badge-pill badge-danger text-white text-center">' +
+                                'Desactivado' + '</sapn>';
+                        }
+                    }
                 },
                 {
                     data: 'btn'
