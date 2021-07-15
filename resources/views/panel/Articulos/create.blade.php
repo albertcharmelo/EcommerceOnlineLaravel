@@ -1,37 +1,41 @@
 @extends('panel.layout')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}">
+<link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/dropzone.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
 
 <link rel=" stylesheet" href="{{ asset('summernote/dist/summernote-bs4.css') }}">
 @endsection
 @section('content')
+@include('panel.Articulos.plantilla-modal')
 <section class="section">
     <div class="section-header">
         <div class="section-header-back">
             <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
         </div>
-        <h1>Create New Post</h1>
+        <h1>Crear un nuevo producto</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="/panel/tienda">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="#">Blog</a></div>
-            <div class="breadcrumb-item">Creear Nueva Noticia</div>
+            <div class="breadcrumb-item"><a href="#">Producto</a></div>
+            <div class="breadcrumb-item">Crear Producto</div>
         </div>
     </div>
 
     <div class="section-body">
-        <h2 class="section-title">Crear Nueva Noticia</h2>
+        <h2 class="section-title">Crear producto</h2>
         <p class="section-lead pb-0 mb-0">
-            En esta página se pueden crear Noticias destinadas al Blog, solo debe rellenar los siguientes campos. <p
-                class=" section-lead text-danger pt-0 mt-0"> Nota: el usuario plublicador solo puede crear Noticias en
-                esttado PENDIENTE, a la espera de la validación del administrador</p>
+            En esta página se pueden crear productos destinados a la Tienda, solo debe rellenar los siguientes campos.
+            <p class=" section-lead text-danger pt-0 mt-0"> Nota: el usuario plublicador solo puede crear productos en
+                estado PENDIENTE, a la espera de la validación del administrador</p>
         </p>
 
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Escribe Tu Noticia</h4>
+                        <h4>Agrega tu producto</h4>
                     </div>
                     <div class="card-body">
                         <div class="form-group row mb-4">
@@ -56,8 +60,7 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Unidades por
                                 venta</label>
                             <div class="col-sm-12 col-md-4">
-                                <input min="1" max="9" id="Uventa" value="1" type="number" class="form-control"
-                                    required>
+                                <input min="1" id="Uventa" value="1" type="number" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
@@ -77,33 +80,38 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Categoría</label>
                             <div class="col-sm-12 col-md-7">
                                 <select id="categoria" class="form-control selectric">
-                                    <option value="1">Tech</option>
-                                    <option value="2">News</option>
-                                    <option value="3">Political</option>
+                                    <option value="1">Plotter Hidrogel</option>
+                                    <option value="2">Protector de pantalla</option>
+                                    <option value="3">Vinilos Traseros</option>
+                                    <option value="4">Accesorios Plotter</option>
+                                    <option value="5">Accesorios para móviles</option>
+
+
                                 </select>
                                 <button class="btn btn-primary mt-3">Añadir nueva Categoria</button>
                             </div>
+                        </div>
+
+                        <div class="form-group row mb-4">
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripcion</label>
+                            <div class="col-sm-12 col-md-7">
+                                <textarea id="descripcion" class="summernote-simple"></textarea>
+                            </div>
+
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Característica</label>
                             <div class="col-sm-12 col-md-7">
                                 <textarea id="caracteristica" class="summernote-simple"></textarea>
                             </div>
-
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripcion</label>
-                            <div class="col-sm-12 col-md-7">
-                                <textarea id="descripcion" class="summernote-simple"></textarea>
-                            </div>
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Elejir
                                 plantilla</label>
                             <div class="col-sm-12 col-md-7 row">
-                                <button class="btn btn-primary col-md-3 col-sm-12 mr-2">Añadir nueva Plantilla</button>
+                                <button class="btn btn-primary col-md-2 col-sm-12 mr-2" data-toggle="modal"
+                                    data-target="#pantilla-modal">+ Plantilla</button>
                                 <div class="col-md-8 col-sm-12">
-                                    <select class="form-control selectric ">
-                                        <option>Plantilla 1</option>
-                                        <option>Plantilla 2</option>
+                                    <select id="plantilla" class="form-control selectric ">
+                                        <option disabled selected hidden value="">Selecciona una plantilla</option>
                                     </select>
                                 </div>
                             </div>
@@ -143,12 +151,12 @@
 </section>
 @endsection
 @section('js')
-
 <script src="{{ asset('js/jquery.selectric.js') }}"></script>
 <script src="{{ asset('js/jquery.uploadPreview.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>
 <script src="{{ asset('summernote/dist/summernote-bs4.js') }}"></script>
 <script src="{{ asset('js/dropzone.min.js') }}"></script>
+<script src="{{ asset('js/iziToast.min.js') }}"></script>
 <script src="{{ asset('js/panel/page/features-post-create.js') }}"></script>
 <script src="{{ asset('js/panel/page/components-multiple-upload.js') }}"></script>
 <script src="{{ asset('js/ArticulosCreate.js') }}"></script>

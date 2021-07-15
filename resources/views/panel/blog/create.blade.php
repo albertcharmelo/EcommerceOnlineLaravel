@@ -9,11 +9,11 @@
         <div class="section-header-back">
             <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
         </div>
-        <h1>Create New Post</h1>
+        <h1>Crear Nueva Noticia</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="/panel/tienda">Dashboard</a></div>
             <div class="breadcrumb-item"><a href="#">Blog</a></div>
-            <div class="breadcrumb-item">Creear Nueva Noticia</div>
+            <div class="breadcrumb-item">Crear Nueva Noticia</div>
         </div>
     </div>
 
@@ -59,17 +59,17 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Portada</label>
                             <div class="col-sm-12 col-md-7">
                                 <div id="image-preview" class="image-preview">
-                                    <label for="image-upload" id="image-label">Choose File</label>
+                                    <label for="image-upload" id="image-label">Imagen</label>
                                     <input type="file" name="image" id="image-upload" />
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-4">
+                        {{-- <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tags</label>
                             <div class="col-sm-12 col-md-7">
                                 <input type="text" class="form-control">
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Estado de
                                 inicio</label>

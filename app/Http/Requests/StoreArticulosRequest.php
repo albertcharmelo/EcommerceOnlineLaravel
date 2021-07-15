@@ -31,7 +31,7 @@ class StoreArticulosRequest extends FormRequest
             'atributo' => 'required|min:1',
             'stock' => 'required|min:0|numeric',
             'precio' => 'required|numeric',
-            'tipo_unidad' => 'required|numeric|min:1|max:9',
+            'tipo_unidad' => 'required|numeric|min:1',
             'garantia' => 'required|numeric|min:0',
             'estado' => 'required',
             'atributo' => 'required|string'

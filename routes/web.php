@@ -36,17 +36,32 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
 
     //Articulos
-    Route::prefix('/articulos')->group(function () {
+    Route::prefix('articulos')->group(function () {
         Route::get('/create/articulos', 'ArticulosController@create');
         Route::get('/create/categoria', 'ArticulosController@createCategory');
 
         Route::post('/store/articulos', 'ArticulosController@store');
         Route::post('/store/articuloImagen', 'ArticulosController@storeImagen');
+
+        Route::post('/store/plantilla', 'ArticulosController@storePlantilla');
+        Route::post('/list/plantilla', 'ArticulosController@getPlantilla');
+        Route::post('/set/plantilla', 'ArticulosController@setPlantilla');
+
+
+
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('index', 'ArticulosController@index');
         Route::get('show', 'ArticulosController@show');
         Route::get('edit', 'ArticulosController@edit');
         Route::post('destroy', 'ArticulosController@destroy');
+    });
+
+    //Administración
+    Route::prefix('administracion')->group(function () {
+        Route::get('/create/usuario', 'UsuarioController@index');
+        Route::get('/list/usuario', 'UsuarioController@list');
+        Route::post('/changeTipo/usuario', 'UsuarioController@changeTipoUser');
+        Route::post('/changeTipoRegular/usuario', 'UsuarioController@changeTipoUserRegular');
     });
 });
 

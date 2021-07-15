@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="{{ asset('css/selectric.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
+
     @yield('css')
     <!-- Template CSS -->
     <link rel="stylesheet" href="/css/panel/style.css">
@@ -49,7 +52,7 @@
             <div class="main-content">
                 @yield('content')
             </div>
-            <footer class="main-footer">
+            {{-- <footer class="main-footer">
                 <div class="footer-left">
                     Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad
                         Nauval Azhar</a>
@@ -57,7 +60,7 @@
                 <div class="footer-right">
                     2.3.0
                 </div>
-            </footer>
+            </footer> --}}
         </div>
 
 
@@ -71,8 +74,14 @@
         <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
         <script src="{{ asset('js/moment.min.js') }}"></script>
         <script src="{{ asset('js/jquery.selectric.js') }}"></script>
+        <script src="{{ asset('js/prism.js') }}"></script>
+
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
         <script src="{{ asset('js/panel/stisla.js') }}"></script>
-        <!-- Template JS File --> var loader = document.getElementById('loader');
+        <script src="{{ asset('js/iziToast.min.js') }}"></script>
+        <!-- Template JS File -->
         @yield('js')
         <script src="{{ asset('js/panel/scripts.js') }}"></script>
         <script src="{{ asset('js/panel/custom.js') }}"></script>

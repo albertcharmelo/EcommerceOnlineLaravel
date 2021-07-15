@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Articulo;
 use App\Http\Requests\StoreArticulosRequest;
+use App\ProductoPlantilla;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -23,7 +24,7 @@ class ArticulosController extends Controller
     public function listaproductos()
     {
 
-        $productos = DB::table('productos')            
+        $productos = DB::table('productos')
             ->select('productos.*')
             ->get();
         return datatables()
@@ -42,7 +43,6 @@ class ArticulosController extends Controller
     {
         return view('panel.articulos.create');
     }
-
     public function createCategory()
     {
 
@@ -82,14 +82,35 @@ class ArticulosController extends Controller
                 $destinationPath = 'productoImagenes/';
                 $file->move($destinationPath, $fileName);
                 $folderPath = $destinationPath . $fileName;
-                // ArticuloFichero::create([
-                //     'folder' => $folderPath,
-                //     'file' => $request->file('file')->getClientOriginalName(),
-                //     'articulo_id' => $request->articulo,
-                // ]);
             }
+        }
+    }
 
-            // return $destinationPath . $fileName . $extension;
+    public static function getPlantilla(Request $request)
+    {
+        $plantillas = ProductoPlantilla::all();
+        if (isset($plantillas)) {
+
+            return $plantillas;
+        }
+    }
+
+    public static function storePlantilla(Request $request)
+    {
+        if (isset($request->titulo) && isset($request->atributo)) {
+            ProductoPlantilla::create([
+                'titulo' => $request->titulo,
+                'plantilla' => $request->atributo
+            ]);
+            return  ProductoPlantilla::all();
+        }
+    }
+
+    public static function setPlantilla(Request $request)
+    {
+        if (isset($request->plantilla_id)) {
+            $plantilla = ProductoPlantilla::where('id', '=', $request->plantilla_id)->get()->first();
+            return $plantilla;
         }
     }
     /**
