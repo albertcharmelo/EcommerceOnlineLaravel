@@ -27,6 +27,7 @@ class ArticulosController extends Controller
         $productos = DB::table('productos')
             ->select('productos.*')
             ->get();
+
         return datatables()
             ->of($productos)
             ->addColumn('btn', 'panel.producto.opciones')

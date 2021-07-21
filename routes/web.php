@@ -39,6 +39,7 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
     Route::prefix('articulos')->group(function () {
         Route::get('/create/articulos', 'ArticulosController@create');
         Route::get('/create/categoria', 'ArticulosController@createCategory');
+<<<<<<< Updated upstream
 
         Route::post('/store/articulos', 'ArticulosController@store');
         Route::post('/store/articuloImagen', 'ArticulosController@storeImagen');
@@ -49,11 +50,16 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
 
 
+=======
+        Route::post('/store/articulos', 'ArticulosController@store');
+        Route::post('/store/articuloImagen', 'ArticulosController@storeImagen');
+>>>>>>> Stashed changes
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('index', 'ArticulosController@index');
         Route::get('show', 'ArticulosController@show');
         Route::get('edit', 'ArticulosController@edit');
         Route::post('destroy', 'ArticulosController@destroy');
+<<<<<<< Updated upstream
     });
 
     //Administración
@@ -62,6 +68,8 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::get('/list/usuario', 'UsuarioController@list');
         Route::post('/changeTipo/usuario', 'UsuarioController@changeTipoUser');
         Route::post('/changeTipoRegular/usuario', 'UsuarioController@changeTipoUserRegular');
+=======
+>>>>>>> Stashed changes
     });
 });
 
