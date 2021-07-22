@@ -1,0 +1,33 @@
+
+        @page {
+            margin: 0cm 0cm;
+            font-size: 1em;
+        }
+
+        body {
+            margin: 2cm 1cm 1cm;
+        }
+
+        header {
+            position: fixed;
+            top: 0cm;
+            left: 0cm;
+            right: 0cm;
+            height: 2cm;
+            background-color: #c7dae2;
+            color: #f5f8f8;
+            text-align: right;
+            line-height: 15px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0cm;
+            left: 1cm;
+            right: 1cm;
+            height: 1cm;
+            background-color: #144646;
+            color: rgb(33, 105, 110);
+            text-align: center;
+            line-height: 35px;
+        }
