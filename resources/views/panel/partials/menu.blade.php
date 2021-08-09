@@ -19,17 +19,48 @@
                     {{-- <li><a class="nav-link"  href="{{ url('/panel/dashboard/usuarios') }}">Usuarios</a>
             </li> --}}
 
-                </ul>
-            </li>
-            <li class="nav-item dropdown ">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/index') }}">Publicaciones
-                            Tienda</a>
-                    </li>
-                    {{-- <li><a class="nav-link" href="index.html">Publicaciones Blog</a></li> --}}
-                    <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
-                            usuario publicador</a></li>
+        </ul>
+        </li>
+        <li class="nav-item dropdown ">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{ url('/panel/articulos/index') }}">Publicaciones
+                        Tienda</a>
+                </li>
+                {{-- <li><a class="nav-link" href="index.html">Publicaciones Blog</a></li> --}}
+                <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
+                        usuario publicador</a></li>
+
+            </ul>
+        </li>
+        <li class="menu-header">Tienda</li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
+                <span>Productos</span></a>
+            <ul class="dropdown-menu">
+                {{-- <li><a class="nav-link" href="layout-default.html">Inventario</a></li> --}}
+                <li><a class="nav-link" href="{{ url('/panel/articulos/create/articulos') }}">Crear
+                        Productos</a></li>
+                <li><a class="nav-link" href="{{ url('/panel/articulos/create/combo') }}">Crear
+                        Combos</a></li>
+                <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Crear
+                        Categorias</a></li>
+                {{-- <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li> --}}
+
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
+                <span>Blog</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{ url('/panel/blog/create/post') }}">Crear
+                        Noticias</a></li>
+                <li><a class="nav-link" href="{{ url('/panel/blog/create/categoria') }}">Crear
+                        Categoria</a></li>
+            </ul>
+        </li>
+        {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-clipboard-list "></i> <span>Reportes</span></a> --}}
+        </li>
 
                 </ul>
             </li>

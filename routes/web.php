@@ -12,6 +12,9 @@ Route::prefix('/')->group(function () {
     Route::get('/', function () {
         return view('welcome');
     });
+    Route::get('/shop', function ($id) {
+        
+    });
 });
 
 
@@ -26,6 +29,8 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::get('/tienda', 'PanelController@index')->name('dashboard.tienda');
         Route::get('/usuarios', 'PanelController@usuarios');
         Route::get('/blog', 'PanelController@blog');
+
+        Route::post('/get/usuarios', 'PanelController@getUsuarios');
     });
 
     //Blog
@@ -47,7 +52,7 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::post('/list/plantilla', 'ArticulosController@getPlantilla');
         Route::post('/set/plantilla', 'ArticulosController@setPlantilla');
 
-
+        Route::get('/create/combo', 'ArticulosController@createCombo');
 
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('index', 'ArticulosController@index');

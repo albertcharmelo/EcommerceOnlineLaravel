@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="stylesheet" href="{{ asset('css/selectric.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
 
     @yield('css')
@@ -73,14 +72,14 @@
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
         <script src="{{ asset('js/moment.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.selectric.js') }}"></script>
+
         <script src="{{ asset('js/prism.js') }}"></script>
 
 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
         <script src="{{ asset('js/panel/stisla.js') }}"></script>
-        <script src="{{ asset('js/iziToast.min.js') }}"></script>
+
         <!-- Template JS File -->
         @yield('js')
         <script src="{{ asset('js/panel/scripts.js') }}"></script>

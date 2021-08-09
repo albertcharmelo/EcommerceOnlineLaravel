@@ -49,7 +49,11 @@ class ArticulosController extends Controller
 
         return view('panel.articulos.createCategory');
     }
+    public function createCombo()
+    {
 
+        return view('panel.articulos.createCombo');
+    }
     /**
      * Store a newly created resource in storage.
      *

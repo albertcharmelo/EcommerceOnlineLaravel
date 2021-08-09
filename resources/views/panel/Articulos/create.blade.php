@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}">
 <link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/dropzone.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/selectric.css') }}">
 
 <link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
 

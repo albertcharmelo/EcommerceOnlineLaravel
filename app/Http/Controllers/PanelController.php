@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class PanelController extends Controller
@@ -21,5 +22,13 @@ class PanelController extends Controller
     {
 
         return view('panel.dashboard.blog.index');
+    }
+
+
+
+    public static function getUsuarios()
+    {
+        $usuarios = User::all();
+        return $usuarios;
     }
 }
