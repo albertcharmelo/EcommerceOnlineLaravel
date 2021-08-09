@@ -1,0 +1,1 @@
+<a onClick="SeleccionarProducto(data.categoria_id)" class="btn btn-primary btn-sm"><i class="fas fa-check"></i></a>

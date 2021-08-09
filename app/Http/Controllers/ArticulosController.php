@@ -35,6 +35,16 @@ class ArticulosController extends Controller
             ->toJson();
     }
 
+    public function productosActivos() {
+        $productos = DB::table('productos')
+            ->select('productos.*')
+            ->get();
+
+            return datatables()
+            ->of($productos)            
+            ->toJson();      
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -105,9 +115,9 @@ class ArticulosController extends Controller
         if (isset($request->titulo) && isset($request->atributo)) {
             ProductoPlantilla::create([
                 'titulo' => $request->titulo,
-                'plantilla' => $request->atributo
+                'plantilla' => $request->atributo,
             ]);
-            return  ProductoPlantilla::all();
+            return ProductoPlantilla::all();
         }
     }
 
@@ -162,4 +172,19 @@ class ArticulosController extends Controller
     {
         //
     }
+
+    public function productoget(Request $request)
+    {
+        try {
+            $caballos = DB::table('productos')
+                ->join('categorias', 'productos.categoria_id', '=', 'categorias.id')
+                ->select('productos.*', 'categorias.nombre as categoria')
+                ->where('productos.id', request()->productoId)
+                ->get();
+        } catch (\Exception $exception) {
+            return response()->json(['message' => 'Hubo un error al recuperar los registros desde productos...'], 500);
+        }
+        return $caballos;
+    }
+
 }

@@ -11,9 +11,9 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Productos</h1>
+            <h1>Proveedores</h1>
             <div class="section-header-button">
-                <a href="{{ url('/panel/articulos/create/articulos') }}" class="btn btn-primary">Crear Producto</a>
+                <a href="{{ url('/panel/articulos/create/articulos') }}" class="btn btn-primary">Crear Proveedor</a>
             </div>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -70,7 +70,7 @@
                             </div> --}}
 
                             <div class="table-responsive table-sm">
-                                <table class="table table-striped" id="productos">
+                                <table class="table table-striped" id="proveedores">
                                     <thead class="thead-dark">
                                         <tr>
                                             {{-- <th class="text-center pt-2">
@@ -80,12 +80,11 @@
                                                 <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                                             </div>
                                         </th> --}}
-                                            <th width="15%">Categoría</th>
-                                            <th width="10%">Referencia</th>
-                                            <th width="40%">Producto</th>
-                                            <th>Stock</th>
-                                            <th>Precio</th>
-                                            <th>Estado</th>
+                                            <th width="40%">Proveedor</th>
+                                            <th width="5%">Tipo/Documento</th>
+                                            <th>N°.Documento</th>
+                                            <th>Teléfono</th>
+                                            <th>Email</th>
                                             <th width="12%">Opciones</th>
                                         </tr>
                                     </thead>
@@ -108,37 +107,34 @@
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>
     <script>
-        $('#productos').DataTable({
+        $('#proveedores').DataTable({
             responsive: true,
             autoWidth: false,
-            "ajax": "{{ route('producto.cargarproductos') }}",
+            "ajax": "{{ route('proveedor.cargarproveedores') }}",
             "paginate": 3,
             "columns": [{
-                    data: 'categoria_id'
-                },
-                {
-                    data: 'codigo'
-                },
-                {
                     data: 'nombre'
                 },
                 {
-                    data: 'stock'
-                },
-                {
-                    data: 'precio_venta'
-                },
-                {
-                    data: 'estado',
+                    data: 'tipo_documento',
                     render(data) {
                         if (data == 1) {
-                            return '<span class="badge badge-pill badge-success text-center">' + 'Activado' +
+                            return '<span class="badge badge-pill badge-success text-center">' + 'CIE' +
                                 '</span>';
                         } else {
                             return '<span class="badge badge-pill badge-danger text-white text-center">' +
-                                'Desactivado' + '</sapn>';
+                                'Dni' + '</sapn>';
                         }
                     }
+                },
+                {
+                    data: 'num_documento'
+                },
+                {
+                    data: 'telefono'
+                },
+                {
+                    data: 'email'
                 },
                 {
                     data: 'btn'
@@ -155,7 +151,7 @@
                                                                                                                           <option value ='100'>100</option>
                                                                                                                           <option value ='-1'>All</option>
                                                                                                                           </select>` +
-                    " productos por página",
+                    " proveedores por página",
                 "zeroRecords": "No se encontraron resultados!",
                 "emptyTable": "Ningún dato disponible en esta tabla",
                 "info": "Mostrando la página _PAGE_ de _PAGES_",

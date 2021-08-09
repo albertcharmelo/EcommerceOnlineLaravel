@@ -1,11 +1,7 @@
 <?php
 
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-
-
 
 //Rutas de Cliente
 Route::prefix('/')->group(function () {
@@ -16,7 +12,6 @@ Route::prefix('/')->group(function () {
         
     });
 });
-
 
 //Rutas del Panel
 Route::prefix('panel')->middleware(['auth'])->group(function () {
@@ -39,7 +34,6 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::get('/create/categoria', 'PostController@createCategory');
     });
 
-
     //Articulos
     Route::prefix('articulos')->group(function () {
         Route::get('/create/articulos', 'ArticulosController@create');
@@ -52,13 +46,44 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::post('/list/plantilla', 'ArticulosController@getPlantilla');
         Route::post('/set/plantilla', 'ArticulosController@setPlantilla');
 
+<<<<<<< Updated upstream
         Route::get('/create/combo', 'ArticulosController@createCombo');
 
+=======
+>>>>>>> Stashed changes
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
+        Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
+      
         Route::get('index', 'ArticulosController@index');
         Route::get('show', 'ArticulosController@show');
         Route::get('edit', 'ArticulosController@edit');
         Route::post('destroy', 'ArticulosController@destroy');
+
+        Route::post('productoget', 'ArticulosController@productoget');
+
+    });
+
+    // proveedores
+    Route::prefix('proveedores')->group(function () {
+        Route::get('proveedores', 'ProveedorController@listaproveedores')->name('proveedor.cargarproveedores');
+        Route::get('index', 'ProveedorController@index');
+        Route::get('create', 'ProveedorController@create');
+        Route::get('show', 'ProveedorController@show');
+        Route::get('edit', 'ProveedorController@edit');
+        Route::post('destroy', 'ProveedorController@destroy');
+    });
+
+    // compras
+    Route::prefix('compras')->group(function () {
+        Route::get('compras', 'CompraController@listacompras')->name('compra.cargarcompras');
+
+        Route::resource('compra', 'CompraController');
+
+        Route::get('index', 'CompraController@index');
+        Route::get('create', 'CompraController@create');
+        Route::get('show', 'CompraController@show');
+        Route::get('edit', 'CompraController@edit');
+        Route::post('destroy', 'CompraController@destroy');
     });
 
     //Inventario
@@ -75,7 +100,6 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::post('/changeTipoRegular/usuario', 'UsuarioController@changeTipoUserRegular');
     });
 });
-
 
 Auth::routes();
 

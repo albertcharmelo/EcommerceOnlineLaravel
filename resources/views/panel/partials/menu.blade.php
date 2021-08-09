@@ -19,6 +19,7 @@
                     {{-- <li><a class="nav-link"  href="{{ url('/panel/dashboard/usuarios') }}">Usuarios</a>
             </li> --}}
 
+<<<<<<< Updated upstream
         </ul>
         </li>
         <li class="nav-item dropdown ">
@@ -61,19 +62,33 @@
         </li>
         {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-clipboard-list "></i> <span>Reportes</span></a> --}}
         </li>
+=======
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ url('/panel/articulos/index') }}">Publicaciones
+                            Tienda</a>
+                    </li>
+                    {{-- <li><a class="nav-link" href="index.html">Publicaciones Blog</a></li> --}}
+                    <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
+                            usuario publicador</a></li>
+                    <li><a class="nav-link" href="{{ url('') }}">Tipo de Documentos</a>
+                    </li>
+>>>>>>> Stashed changes
 
                 </ul>
             </li>
             <li class="menu-header">Tienda</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
-                    <span>Productos</span></a>
+                    <span>Almacén</span></a>
                 <ul class="dropdown-menu">
                     {{-- <li><a class="nav-link" href="layout-default.html">Inventario</a></li> --}}
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/articulos') }}">Crear
-                            Productos</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Crear
-                            Categorias</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/articulos') }}">Productos</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Categorías</a></li>
+                    <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
                     {{-- <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li> --}}
 
                 </ul>
@@ -92,8 +107,10 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Compras</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('') }}">Crear
-                            Compra</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/compras/index') }}">Ingresos</a></li>
+                </ul>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ url('/panel/proveedores/index') }}">Proveedores</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -101,6 +118,9 @@
                     <span>Inventario</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Generar Inventario</a></li>
+                </ul>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a></li>
                 </ul>
 
         </ul>
