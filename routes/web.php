@@ -46,11 +46,8 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::post('/list/plantilla', 'ArticulosController@getPlantilla');
         Route::post('/set/plantilla', 'ArticulosController@setPlantilla');
 
-<<<<<<< Updated upstream
         Route::get('/create/combo', 'ArticulosController@createCombo');
 
-=======
->>>>>>> Stashed changes
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
       
