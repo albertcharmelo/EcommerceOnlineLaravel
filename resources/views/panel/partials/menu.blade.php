@@ -30,7 +30,7 @@
                     {{-- <li><a class="nav-link" href="index.html">Publicaciones Blog</a></li> --}}
                     <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
                             usuario publicador</a></li>
-                    <li><a class="nav-link" href="{{ url('') }}">Tipo de Documentos</a>
+                    <li><a class="nav-link" href="{{ route('tipodocumento.index') }}">Tipo de Documentos</a>
                     </li>
 
                 </ul>
@@ -100,7 +100,7 @@
                     <li><a class="nav-link" href="{{ url('/panel/compras/index') }}">Ingresos</a></li>
                 </ul>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/proveedores/index') }}">Proveedores</a></li>
+                    <li><a class="nav-link" href="{{ route('proveedor.index') }}">Proveedores</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">

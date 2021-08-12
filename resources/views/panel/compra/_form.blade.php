@@ -13,6 +13,7 @@
     </div>
 
     <div class="section-body">
+
         <div class="row mb-4">
             <div class="col-4 col-12 col-md-6 col-lg-6">
                 <form id="search-form">
@@ -36,6 +37,7 @@
                 <input type="text" class="form-control form-control-sm" name="date" id="date" required readonly>
             </div>
         </div>
+
         <div class="row mb-4">
             <div class="col-md-4">
                 <label for="tipodoc" class="form-label">Tipo Comprobante</label>
@@ -53,7 +55,7 @@
                 <input type="text" class="form-control form-control-sm" id="serie">
             </div>
             <div class="col-md-3">
-                <label for="numero" class="form-label">Número</label>
+                <label for="numero" class="form-label">Número (NCF)</label>
                 <input type="text" class="form-control form-control-sm" id="numero">
             </div>
 
@@ -80,13 +82,11 @@
                                 <th>Producto</th>
                                 <th>Cantidad</th>
                                 <th>Precio/Compra</th>
-                                <th>Sub-total</th>                                
+                                <th>Sub-total</th>
                                 <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tbody id="tblProductos">>
-
-
                         </tbody>
                     </table>
                 </div>

@@ -13,7 +13,7 @@ class StorePersonaPost extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,24 @@ class StorePersonaPost extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        return [        
+        'nombre' => 'required|min:5|max:60',
+        'tipo_documento'=> 'required|string|min:1',
+        'num_documento'=> 'required',
+        'direccion'=> 'required',
+        'telefono'=> 'required', 
+        'email'=> 'required', 
         ];
+    }
+    public function attributes()
+    {
+    return [
+        'nombre' => 'nombre del proveedor',
+        'tipo_documento' => 'Tipo de Documento',
+        'num_documento' => 'Número de Documento',
+        'direccion'=> 'Dirección',
+        'telefono'=> 'Telefono',
+        'email'=> 'Email',
+    ];
     }
 }

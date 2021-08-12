@@ -5,5 +5,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class TipoDocumento extends Model
 {    
-    protected $fillable = ['nombre','operacion'];
+    protected $fillable = ['nombre','operacion', 'descripcion'];
 }

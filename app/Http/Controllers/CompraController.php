@@ -44,8 +44,10 @@ class CompraController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        $tipodocumentos= TipoDocumento::all();
+    {        
+        $tipodocumentos = DB::table('tipo_documentos')                
+                ->where('operacion','1')
+                ->get();
         return view("panel.compra.create",compact('tipodocumentos'),['compra' => new Compra()]);
     }
 

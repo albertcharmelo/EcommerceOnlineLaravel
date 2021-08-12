@@ -176,7 +176,7 @@ class ArticulosController extends Controller
     public function productoget(Request $request)
     {
         try {
-            $caballos = DB::table('productos')
+            $productos = DB::table('productos')
                 ->join('categorias', 'productos.categoria_id', '=', 'categorias.id')
                 ->select('productos.*', 'categorias.nombre as categoria')
                 ->where('productos.id', request()->productoId)
@@ -184,7 +184,7 @@ class ArticulosController extends Controller
         } catch (\Exception $exception) {
             return response()->json(['message' => 'Hubo un error al recuperar los registros desde productos...'], 500);
         }
-        return $caballos;
+        return $productos;
     }
 
 }
