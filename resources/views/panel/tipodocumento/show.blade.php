@@ -7,7 +7,6 @@
 @section('content')
     @include('panel.partials.validation-error')
 
-
     <section class="section">
 
         <div class="section-header">
@@ -18,9 +17,8 @@
                 <div class="breadcrumb-item">Geocoding</div>
             </div>
         </div>
-
+        
         <div class="section-body">
-
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -30,7 +28,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nombre</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input readonly type="text" id="nombre"
+                                    <input readonly type="text" id="nombre" name="nombre"
                                         value="{{ old('nombre', $tipodocumento->nombre) }}" class="form-control">
                                 </div>
                             </div>
@@ -39,7 +37,7 @@
                                 <label for="operacion" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tipo de
                                     Operación</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <select readonly title="Indique el tipo de operación" name="operacion" id="operacion"
+                                    <select readonly title="Indique el tipo de operación" id="operacion" name="operacion"
                                         class="form-control selectric">
                                         @include('panel.partials.programa-estado',['val' => $tipodocumento->operacion])
                                     </select>
@@ -49,7 +47,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <textarea readonly id="descripcion"
+                                    <textarea readonly name="descripcion" id="descripcion"
                                         value="{{ old('descripcion', $tipodocumento->descripcion) }}"
                                         class="summernote-simple"></textarea>
                                 </div>
@@ -75,7 +73,6 @@
 @endsection
 
 @section('js')
-
     <script src="{{ asset('js/jquery.selectric.js') }}"></script>
     <script src="{{ asset('js/jquery.uploadPreview.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>

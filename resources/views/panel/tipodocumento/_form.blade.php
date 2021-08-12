@@ -2,7 +2,7 @@
     <div class="form-group row mb-4">
         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nombre</label>
         <div class="col-sm-12 col-md-7">
-            <input type="text" id="nombre" value="{{ old('nombre', $tipodocumento->nombre) }}" class="form-control">
+            <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $tipodocumento->nombre) }}" class="form-control">
         </div>
     </div>
 
@@ -19,7 +19,7 @@
     <div class="form-group row mb-4">
         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
         <div class="col-sm-12 col-md-7">
-            <textarea id="descripcion" value="{{ old('descripcion', $tipodocumento->descripcion) }}"
+            <textarea name="descripcion" id="descripcion" value="{{ old('descripcion', $tipodocumento->descripcion) }}"
                 class="summernote-simple"></textarea>
         </div>
     </div>

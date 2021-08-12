@@ -31,7 +31,7 @@
                                 <table class="table table-striped" id="tipodocumentos">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th>Id</th>
+                                           
                                             <th width="40%">Nombre</th>
                                             <th width="5%">Tipo/Operación</th>
                                             <th>Descripción<noscript></noscript></th>
@@ -62,9 +62,7 @@
             autoWidth: false,
             "ajax": "{{ route('tipodocumento.cargartipodocumentos') }}",
             "paginate": 3,
-            "columns": [{
-                    data: 'id'
-                },
+            "columns": [
                 {
                     data: 'nombre'
                 },
@@ -72,13 +70,17 @@
                     data: 'operacion',
                     render(data) {
                         if (data == 1) {
-                            return '<span class="badge badge-pill badge-success text-center">' + 'Compra' +
+                            return '<span class="badge badge-pill badge-success text-center">' + 'Compras' +
                                 '</span>';
-                        } else {
+                        } else if (data == 0) {
                             return '<span class="badge badge-pill badge-danger text-white text-center">' +
-                                'Proveedor' + '</sapn>';
+                                'Proveedores' + '</sapn>';
+                        } else {
+                            return '<span class="badge badge-pill badge-primary text-white text-center">' +
+                                'Clientes' + '</sapn>';
                         }
                     }
+
                 },
                 {
                     data: 'descripcion'

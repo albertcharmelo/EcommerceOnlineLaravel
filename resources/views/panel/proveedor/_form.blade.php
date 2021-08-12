@@ -2,7 +2,8 @@
 <div class="form-group row mb-4">
     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nombre</label>
     <div class="col-sm-12 col-md-7">
-        <input type="text" id="nombre" value="{{ old('nombre', $proveedor->nombre) }}" class="form-control">
+        <input type="text" id="nombre" name="nombre" value="{{ old('nombre', $proveedor->nombre) }}"
+            class="form-control">
     </div>
 </div>
 
@@ -10,7 +11,7 @@
     <label for="tipo_documento" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tipo
         Documento</label>
     <div class="col-sm-12 col-md-7">
-        <select title="Indique el tipo de documento" name="tipodocumento" id="tipo_documento"
+        <select title="Indique el tipo de documento" name="tipo_documento_id" id="tipo_documento"
             class="form-control selectric">
             @foreach ($tipodocumentos as $tipodocumento)
                 <option value="{{ $tipodocumento->id }}"
@@ -24,15 +25,15 @@
 <div class="form-group row mb-4">
     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Número</label>
     <div class="col-sm-12 col-md-4">
-        <input min="0" id="numero" type="text" value="{{ old('num_documento', $proveedor->num_documento) }}"
-            class="form-control" required>
+        <input min="0" id="numero" name="num_documento" type="text"
+            value="{{ old('num_documento', $proveedor->num_documento) }}" class="form-control" required>
     </div>
 </div>
 
 <div class="form-group row mb-4">
     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Dirección</label>
     <div class="col-sm-12 col-md-7">
-        <textarea id="direccion" value="{{ old('direccion', $proveedor->direccion) }}"
+        <textarea id="direccion" name="direccion" value="{{ old('direccion', $proveedor->direccion) }}"
             class="summernote-simple"></textarea>
     </div>
 </div>
@@ -40,14 +41,14 @@
 <div class="form-group row mb-4">
     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Telefono</label>
     <div class="col-sm-12 col-md-4">
-        <input id="telefono" type="text" value="{{ old('telefono', $proveedor->telefono) }}" class="form-control"
-            required>
+        <input id="telefono" name="telefono" type="text" value="{{ old('telefono', $proveedor->telefono) }}"
+            class="form-control" required>
     </div>
 </div>
 <div class="form-group row mb-4">
     <label for="email" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Email</label>
     <div class="col-sm-12 col-md-6">
-        <input type="email" value="{{ old('email', $proveedor->email) }}" class="form-control" id="email"
+        <input type="email" id="email" name="email" value="{{ old('email', $proveedor->email) }}" class="form-control"
             placeholder="Email">
     </div>
 </div>

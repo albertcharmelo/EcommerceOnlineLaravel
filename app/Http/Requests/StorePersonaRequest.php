@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePersonaPost extends FormRequest
+class StorePersonaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,22 +25,22 @@ class StorePersonaPost extends FormRequest
     {
         return [        
         'nombre' => 'required|min:5|max:60',
-        'tipo_documento'=> 'required|string|min:1',
+        'tipo_documento_id'=> 'required',
         'num_documento'=> 'required',
         'direccion'=> 'required',
-        'telefono'=> 'required', 
-        'email'=> 'required', 
+        'telefono'=> 'required',
+        'email'=> 'required',        
         ];
     }
-    public function attributes()
-    {
-    return [
-        'nombre' => 'nombre del proveedor',
-        'tipo_documento' => 'Tipo de Documento',
-        'num_documento' => 'Número de Documento',
-        'direccion'=> 'Dirección',
-        'telefono'=> 'Telefono',
-        'email'=> 'Email',
-    ];
-    }
+    // public function attributes()
+    // {
+    // return [
+    //     'nombre' => 'Nombre del Proveedor',
+    //     'tipo_documento' => 'Tipo de Documento',
+    //     'num_documento' => 'Número de Documento',
+    //     'direccion'=> 'Dirección',
+    //     'telefono'=> 'Telefono',
+    //     'email'=> 'Email',
+    // ];
+    // }
 }

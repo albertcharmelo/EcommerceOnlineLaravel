@@ -28,8 +28,8 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nombre</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input readonly type="text" id="nombre"
-                                        value="{{ old('nombre', $persona->nombre) }}" class="form-control">
+                                    <input readonly type="text" id="nombre" name="nombre"
+                                        value="{{ old('nombre', $proveedor->nombre) }}" class="form-control">
                                 </div>
                             </div>
 
@@ -38,11 +38,11 @@
                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tipo
                                     Documento</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <select readonly title="Indique el tipo de documento" name="tipodocumento"
-                                        id="tipo_documento" class="form-control selectric">
+                                    <select readonly title="Indique el tipo de documento" name="tipo_documento_id"
+                                        id="tipo_documento_id" class="form-control selectric">
                                         @foreach ($tipodocumentos as $tipodocumento)
                                             <option value="{{ $tipodocumento->id }}"
-                                                {{ $persona->tipo_documento_id == $tipodocumento->id ? 'selected' : '' }}>
+                                                {{ $proveedor->tipo_documento_id == $tipodocumento->id ? 'selected' : '' }}>
                                                 {{ $tipodocumento->nombre }}</option>
                                         @endforeach
                                     </select>
@@ -52,8 +52,8 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Número</label>
                                 <div class="col-sm-12 col-md-4">
-                                    <input readonly min="0" id="num_documento" type="text"
-                                        value="{{ old('num_documento', $persona->num_documento) }}" class="form-control"
+                                    <input readonly min="0" id="num_documento" name="num_documento" type="text"
+                                        value="{{ old('num_documento', $proveedor->num_documento) }}" class="form-control"
                                         required>
                                 </div>
                             </div>
@@ -61,8 +61,8 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Dirección</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <textarea readonly id="direccion"
-                                        value="{{ old('direccion', $persona->direccion) }}"
+                                    <textarea readonly id="direccion" name="direccion"
+                                        value="{{ old('direccion', $proveedor->direccion) }}"
                                         class="summernote-simple"></textarea>
                                 </div>
                             </div>
@@ -70,16 +70,16 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Telefono</label>
                                 <div class="col-sm-12 col-md-4">
-                                    <input readonly id="telefono" type="text"
-                                        value="{{ old('telefono', $persona->telefono) }}" class="form-control" required>
+                                    <input readonly id="telefono" name="telefono" type="text"
+                                        value="{{ old('telefono', $proveedor->telefono) }}" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label for="email"
                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Email</label>
                                 <div class="col-sm-12 col-md-6">
-                                    <input readonly type="email" value="{{ old('email', $persona->email) }}"
-                                        class="form-control" id="email" placeholder="Email">
+                                    <input readonly type="email" name="email" value="{{ old('email', $proveedor->email) }}"
+                                        class="form-control" id="email">
                                 </div>
                             </div>
 

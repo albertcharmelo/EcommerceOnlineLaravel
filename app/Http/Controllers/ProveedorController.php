@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePersonaPost;
+use App\Http\Requests\StorePersonaRequest;
 use App\Persona;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +25,8 @@ class ProveedorController extends Controller
     {
 
         $personas = DB::table('personas')
-            ->select('personas.*')
+            ->join('tipo_documentos', 'personas.tipo_documento_id', '=', 'tipo_documentos.id')
+            ->select('personas.*', 'tipo_documentos.nombre as tipodoc')
             ->where('tipo_persona', '1')
             ->get();
 
@@ -44,7 +45,7 @@ class ProveedorController extends Controller
     public function create()
     {
         $tipodocumentos = DB::table('tipo_documentos')
-            ->where('operacion', '=', '1')
+            ->where('operacion', '=', '0')
             ->get();
 
         return view("panel.proveedor.create", compact('tipodocumentos'), ['proveedor' => new Persona()]);
@@ -57,23 +58,22 @@ class ProveedorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePersonaPost $request)
+    public function store(StorePersonaRequest $request)
     {
-        Persona::create($request->validated());
+        // $request->tipo_persona == '1';
+        // Persona::create($request->validated());
+        // return back()->with('crear', 'ok');
+        $proveedor = Persona::create([
+            'nombre' => $request->nombre,
+            'tipo_documento_id' => $request->tipo_documento_id,
+            'num_documento' => $request->num_documento,
+            'direccion' => $request->direccion,
+            'telefono' => $request->telefono,
+            'email' => $request->email,
+            'tipo_persona' => '1',
+        ]);
         return back()->with('crear', 'ok');
-
-        // $proveedor = Persona::create([
-        //     'nombre' => $request->nombre,
-        //     'tipo_documento_id' => $request->tipo_documento,
-        //     'num_documento' => $request->num_documento,
-        //     'direccion' => $request->direccion,
-        //     'telefono' => $request->telefono,
-        //     'email' => $request->email,
-        //     'tipo_persona' => '1',
-        // ]);
-
         // return $proveedor;
-
     }
 
     /**
@@ -82,13 +82,13 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Persona $persona)
+    public function show(Persona $proveedor)
     {
-        //  dd($persona);
+        // dd($proveedor);
         $tipodocumentos = DB::table('tipo_documentos')
-            ->where('operacion', '=', '1')
+            ->where('operacion', '=', '0')
             ->get();
-        return view('panel.proveedor.show', compact('tipodocumentos'), ["persona" => $persona]);
+        return view('panel.proveedor.show', compact('tipodocumentos'), ["proveedor" => $proveedor]);
     }
 
     /**
@@ -97,12 +97,13 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Persona $persona)
+    public function edit(Persona $proveedor)
     {
+
         $tipodocumentos = DB::table('tipo_documentos')
-            ->where('operacion', '=', '1')
+            ->where('operacion', '=', '0')
             ->get();
-        return view('panel.proveedor.edit', compact('tipodocumentos'), ["proveedor" => $persona]);
+        return view('panel.proveedor.edit', compact('tipodocumentos'), ["proveedor" => $proveedor]);
     }
 
     /**
@@ -112,10 +113,26 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StorePersonaPost $request, Persona $persona)
+    public function update(StorePersonaRequest $request, Persona $proveedor)
     {
-        $persona->update($request->validated());
+         //dd($request);
+        // $proveedor = new Persona();
+        // $proveedor = $proveedor->find($request->id);
+        
+        if (isset($proveedor->id)) {
+            $proveedor->nombre = $request->nombre;
+            $proveedor->tipo_documento_id = $request->tipo_documento_id;
+            $proveedor->num_documento = $request->num_documento;
+            $proveedor->direccion = $request->direccion;
+            $proveedor->telefono = $request->telefono;
+            $proveedor->email = $request->email;
+            $proveedor->tipo_persona = '1';
+            $proveedor->save();
+        }
         return back()->with('actualizar', 'ok');
+
+        // $proveedor->update($request->validated());
+        // return back()->with('actualizar', 'ok');
     }
 
     /**
@@ -124,9 +141,9 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Persona $persona)
+    public function destroy(Persona $proveedor)
     {
-        $persona->delete();
+        $proveedor->delete();
         return redirect()->route('proveedor.index')->with('eliminar', 'ok');
     }
 }

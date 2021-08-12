@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTipoDocumentoPost extends FormRequest
+class StoreTipoDocumentoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,8 @@ class StoreTipoDocumentoPost extends FormRequest
     public function rules()
     {
         return [        
-        'nombre' => 'required|min:5|max:50',
-        'operacion'=> 'required|string',
+        'nombre' => 'required|min:3|max:50',
+        'operacion'=> 'required',
         'descripcion'=> 'required',
         ];
     }

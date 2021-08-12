@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreTipoDocumentoPost;
+use App\Http\Requests\StoreTipoDocumentoRequest;
 use App\TipoDocumento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +23,7 @@ class TipoDocumentoController extends Controller
     public function listatipodocumentos()
     {
 
-        $tipodocumentos = DB::table('tipo_documentos')
+        $tipodocumentos = DB::table('tipo_documentos')            
             ->select('tipo_documentos.*')
             ->get();
 
@@ -50,7 +50,7 @@ class TipoDocumentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTipoDocumentoPost $request)
+    public function store(StoreTipoDocumentoRequest $request)
     {
         TipoDocumento::create($request->validated());
         return back()->with('crear', 'ok');
@@ -64,7 +64,7 @@ class TipoDocumentoController extends Controller
      */
     public function show(Tipodocumento $tipodocumento)
     {
-        // dd($tipodocumento);
+        //dd($tipodocumento);
         return view('panel.tipodocumento.show', ["tipodocumento" => $tipodocumento]);
     }
 
@@ -85,14 +85,13 @@ class TipoDocumentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */    
+     */
 
-    public function update(StoreTipoDocumentoPost $request, Tipodocumento $tipodocumento)
+    public function update(StoreTipoDocumentoRequest $request, Tipodocumento $tipodocumento)
     {
         $tipodocumento->update($request->validated());
         return back()->with('actualizar', 'ok');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -100,7 +99,6 @@ class TipoDocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
 
     public function destroy(Tipodocumento $tipodocumento)
     {
