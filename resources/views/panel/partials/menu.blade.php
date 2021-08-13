@@ -33,11 +33,11 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
                     <span>Productos</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/producto/index') }}">Productos</a>
+                    <li><a class="nav-link" href="{{ route('producto.index') }}">Productos</a>
                     </li>
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/combo') }}">Crear
+                    <li><a class="nav-link" href="{{ url('/panel/productos/create/combo') }}">Crear
                             Combos</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Crear
+                    <li><a class="nav-link" href="{{ url('/panel/productos/create/categoria') }}">Crear
                             Categorias</a></li>
                     <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
                 </ul>

@@ -17,7 +17,7 @@
                 <div class="breadcrumb-item">Geocoding</div>
             </div>
         </div>
-        
+
         <div class="section-body">
             <div class="row">
                 <div class="col-12">
@@ -48,8 +48,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
                                 <div class="col-sm-12 col-md-7">
                                     <textarea readonly name="descripcion" id="descripcion"
-                                        value="{{ old('descripcion', $tipodocumento->descripcion) }}"
-                                        class="summernote-simple"></textarea>
+                                        class="summernote-simple">{{ old('descripcion', $tipodocumento->descripcion) }}</textarea>
                                 </div>
                             </div>
 

@@ -35,8 +35,8 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
     });
 
     //Articulos
-    Route::prefix('articulos')->group(function () {
-        Route::get('/create/articulos', 'ProductoController@create');
+    Route::prefix('productos')->group(function () {
+        // Route::get('/create/productos', 'ProductoController@create');
         Route::get('/create/categoria', 'ProductoController@createCategory');
 
         Route::post('/store/articulos', 'ProductoController@store');
@@ -49,8 +49,8 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::get('/create/combo', 'ProductoController@createCombo');
 
         Route::get('productos/cargar', 'ProductoController@listaproductos')->name('producto.cargarproductos');
-        Route::get('productos', 'ProductoController@productosactivos')->name('producto.productosactivos');
-        
+        // Route::get('productos', 'ProductoController@productosactivos')->name('producto.productosactivos');
+
         Route::post('productoget', 'ProductoController@productoget');
 
         Route::resource('producto', 'ProductoController');

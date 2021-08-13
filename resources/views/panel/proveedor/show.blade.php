@@ -62,8 +62,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Dirección</label>
                                 <div class="col-sm-12 col-md-7">
                                     <textarea readonly id="direccion" name="direccion"
-                                        value="{{ old('direccion', $proveedor->direccion) }}"
-                                        class="summernote-simple"></textarea>
+                                        class="summernote-simple">{{ old('direccion', $proveedor->direccion) }}</textarea>
                                 </div>
                             </div>
 
@@ -78,8 +77,8 @@
                                 <label for="email"
                                     class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Email</label>
                                 <div class="col-sm-12 col-md-6">
-                                    <input readonly type="email" name="email" value="{{ old('email', $proveedor->email) }}"
-                                        class="form-control" id="email">
+                                    <input readonly type="email" name="email"
+                                        value="{{ old('email', $proveedor->email) }}" class="form-control" id="email">
                                 </div>
                             </div>
 
