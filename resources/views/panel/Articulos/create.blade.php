@@ -143,6 +143,8 @@
                             <div class="col-sm-12 col-md-7">
                                 <button class="btn btn-primary" id="saveBtn">Crear Articulo</button>
                             </div>
+                            <a class="btn btn-primary mt-3 mb-3" href="{{ route('articulos.index') }}"><i
+                                class="fa fa-arrow-circle-left"></i> Regresar</a>
                         </div>
                     </div>
                 </div>

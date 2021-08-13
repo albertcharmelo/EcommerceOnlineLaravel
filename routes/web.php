@@ -36,28 +36,24 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
     //Articulos
     Route::prefix('articulos')->group(function () {
-        Route::get('/create/articulos', 'ArticulosController@create');
-        Route::get('/create/categoria', 'ArticulosController@createCategory');
+        Route::get('/create/articulos', 'ProductoController@create');
+        Route::get('/create/categoria', 'ProductoController@createCategory');
 
-        Route::post('/store/articulos', 'ArticulosController@store');
-        Route::post('/store/articuloImagen', 'ArticulosController@storeImagen');
+        Route::post('/store/articulos', 'ProductoController@store');
+        Route::post('/store/articuloImagen', 'ProductoController@storeImagen');
 
-        Route::post('/store/plantilla', 'ArticulosController@storePlantilla');
-        Route::post('/list/plantilla', 'ArticulosController@getPlantilla');
-        Route::post('/set/plantilla', 'ArticulosController@setPlantilla');
+        Route::post('/store/plantilla', 'ProductoController@storePlantilla');
+        Route::post('/list/plantilla', 'ProductoController@getPlantilla');
+        Route::post('/set/plantilla', 'ProductoController@setPlantilla');
 
-        Route::get('/create/combo', 'ArticulosController@createCombo');
+        Route::get('/create/combo', 'ProductoController@createCombo');
 
-        Route::get('productos/cargar', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
-        Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
+        Route::get('productos/cargar', 'ProductoController@listaproductos')->name('producto.cargarproductos');
+        Route::get('productos', 'ProductoController@productosactivos')->name('producto.productosactivos');
         
+        Route::post('productoget', 'ProductoController@productoget');
 
-        Route::get('index', 'ArticulosController@index');
-        Route::get('show', 'ArticulosController@show');
-        Route::get('edit', 'ArticulosController@edit');
-        Route::post('destroy', 'ArticulosController@destroy');
-//prueba
-        Route::post('productoget', 'ArticulosController@productoget');
+        Route::resource('producto', 'ProductoController');
 
     });
 
