@@ -56,7 +56,7 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::get('show', 'ArticulosController@show');
         Route::get('edit', 'ArticulosController@edit');
         Route::post('destroy', 'ArticulosController@destroy');
-
+//prueba
         Route::post('productoget', 'ArticulosController@productoget');
 
     });
