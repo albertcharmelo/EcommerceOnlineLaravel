@@ -16,10 +16,7 @@
                     <li><a class="nav-link" href="{{ url('/panel/dashboard/tienda') }}">Tienda</a></li>
                     <li><a class="nav-link" href="{{ url('/panel/dashboard/blog') }}">Blog</a>
                     </li>
-                    {{-- <li><a class="nav-link"  href="{{ url('/panel/dashboard/usuarios') }}">Usuarios</a>
-            </li> --}}
-
-                     </ul>
+                </ul>
             </li>
             <li class="nav-item dropdown ">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
@@ -80,7 +77,7 @@
                     <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Categorías</a></li>
                     <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
                     {{-- <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li> --}}
-    
+
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -110,20 +107,18 @@
                     <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Generar Inventario</a></li>
                 </ul>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a>
+                    </li>
                 </ul>
-    
-                </ul>
-    
-                <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-                    <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                        <i class="fas fa-rocket"></i> Ir a la Tienda
-                    </a>
-                </div>
-            </li>
-        </ul>
-       
 
-       
+        </ul>
+
+        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+            <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-rocket"></i> Ir a la Tienda
+            </a>
+        </div>
+        </li>
+        </ul>
     </aside>
 </div>

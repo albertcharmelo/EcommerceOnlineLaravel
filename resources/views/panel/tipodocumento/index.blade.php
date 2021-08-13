@@ -34,7 +34,6 @@
                                            
                                             <th width="40%">Nombre</th>
                                             <th width="5%">Tipo/Operación</th>
-                                            <th>Descripción<noscript></noscript></th>
                                             <th width="12%">Opciones</th>
                                         </tr>
                                     </thead>
@@ -81,9 +80,6 @@
                         }
                     }
 
-                },
-                {
-                    data: 'descripcion'
                 },
                 {
                     data: 'btn'

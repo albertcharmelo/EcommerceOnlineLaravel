@@ -75,7 +75,8 @@ class TipoDocumentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Tipodocumento $tipodocumento)
-    {
+    {   
+        
         return view('panel.tipodocumento.edit', ["tipodocumento" => $tipodocumento]);
     }
 

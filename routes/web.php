@@ -48,8 +48,9 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
         Route::get('/create/combo', 'ArticulosController@createCombo');
 
-        Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
+        Route::get('productos/cargar', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
+        
 
         Route::get('index', 'ArticulosController@index');
         Route::get('show', 'ArticulosController@show');

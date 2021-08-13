@@ -19,8 +19,10 @@
     <div class="form-group row mb-4">
         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
         <div class="col-sm-12 col-md-7">
-            <textarea name="descripcion" id="descripcion" value="{{ old('descripcion', $tipodocumento->descripcion) }}"
-                class="summernote-simple"></textarea>
+            <textarea name="descripcion" id="descripcion" 
+                class="summernote-simple">
+                {{ old('descripcion', $tipodocumento->descripcion) }}
+            </textarea>
         </div>
     </div>
 
