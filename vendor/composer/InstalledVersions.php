@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '29c2e0a3fdc0958231613f585dba04af83e6b7ad',
+    'reference' => '502fd004b6f9795bdacb4af14a7b2689053a7dee',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -43,6 +43,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
+    ),
+    'barryvdh/laravel-dompdf' => 
+    array (
+      'pretty_version' => 'v0.9.0',
+      'version' => '0.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5b99e1f94157d74e450f4c97e8444fcaffa2144b',
     ),
     'biscolab/laravel-recaptcha' => 
     array (
@@ -76,6 +85,15 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'defuse/php-encryption' => 
+    array (
+      'pretty_version' => 'v2.3.1',
+      'version' => '2.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '77880488b9954b7884c25555c2a0ea9e7053f9d2',
+    ),
     'doctrine/inflector' => 
     array (
       'pretty_version' => '2.0.3',
@@ -102,6 +120,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
+    ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
     ),
     'dragonmantank/cron-expression' => 
     array (
@@ -174,6 +201,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '2edbc73a4687d9085c8f20f398eebade844e8424',
+    ),
+    'firebase/php-jwt' => 
+    array (
+      'pretty_version' => 'v5.4.0',
+      'version' => '5.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd2113d9b2e0e349796e72d2a63cf9319100382d2',
     ),
     'fruitcake/laravel-cors' => 
     array (
@@ -430,6 +466,24 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'laminas/laminas-diactoros' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7d2034110ae18afe05050b796a3ee4b3fe177876',
+    ),
+    'laminas/laminas-zendframework-bridge' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '13af2502d9bb6f7d33be2de4b51fb68c6cdb476e',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v7.30.4',
@@ -446,7 +500,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '29c2e0a3fdc0958231613f585dba04af83e6b7ad',
+      'reference' => '502fd004b6f9795bdacb4af14a7b2689053a7dee',
+    ),
+    'laravel/passport' => 
+    array (
+      'pretty_version' => 'v9.4.0',
+      'version' => '9.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '011bd500e8ae3d459b692467880a49ff1ecd60c0',
     ),
     'laravel/tinker' => 
     array (
@@ -466,6 +529,24 @@ private static $installed = array (
       ),
       'reference' => 'f5398544a9cd4804a42d09ce51735e37cd51ea2d',
     ),
+    'lcobucci/clock' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '353d83fe2e6ae95745b16b3d911813df6a05bfb3',
+    ),
+    'lcobucci/jwt' => 
+    array (
+      'pretty_version' => '4.0.3',
+      'version' => '4.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ae4165a76848e070fdac691e773243d10cd06ce1',
+    ),
     'league/commonmark' => 
     array (
       'pretty_version' => '1.6.5',
@@ -474,6 +555,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '44ffd8d3c4a9133e4bd0548622b09c55af39db5f',
+    ),
+    'league/event' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd2cc124cf9a3fab2bb4ff963307f60361ce4d119',
     ),
     'league/flysystem' => 
     array (
@@ -492,6 +582,29 @@ private static $installed = array (
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
+    ),
+    'league/oauth2-server' => 
+    array (
+      'pretty_version' => '8.3.2',
+      'version' => '8.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0809487d33dd8a2c8c8c04e4a599ba4aadba1ae6',
+    ),
+    'league/oauth2server' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'lncd/oauth2' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'mockery/mockery' => 
     array (
@@ -551,6 +664,15 @@ private static $installed = array (
       ),
       'reference' => '7c125dc2463f3e144ddc7e05e63077109508c94e',
     ),
+    'nyholm/psr7' => 
+    array (
+      'pretty_version' => '1.4.1',
+      'version' => '1.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2212385b47153ea71b1c1b1374f8cb5e4f7892ec',
+    ),
     'opis/closure' => 
     array (
       'pretty_version' => '3.6.2',
@@ -559,6 +681,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
     'phar-io/manifest' => 
     array (
@@ -577,6 +708,33 @@ private static $installed = array (
       array (
       ),
       'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
+    ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
+    ),
+    'php-http/message-factory' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a478cb11f66a6ac48d8954216cfed9aa06a501a1',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -613,6 +771,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
+    ),
+    'phpseclib/phpseclib' => 
+    array (
+      'pretty_version' => '2.0.33',
+      'version' => '2.0.33.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fb53b7889497ec7c1362c94e61d8127ac67ea094',
     ),
     'phpspec/prophecy' => 
     array (
@@ -725,6 +892,22 @@ private static $installed = array (
         0 => '1.0',
       ),
     ),
+    'psr/http-factory' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+    ),
+    'psr/http-factory-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
     'psr/http-message' => 
     array (
       'pretty_version' => '1.0.1',
@@ -809,6 +992,15 @@ private static $installed = array (
       array (
         0 => '4.1.1',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sebastian/cli-parser' => 
     array (
@@ -1159,6 +1351,15 @@ private static $installed = array (
       ),
       'reference' => '714b47f9196de61a196d86c4bad5f09201b307df',
     ),
+    'symfony/psr-http-message-bridge' => 
+    array (
+      'pretty_version' => 'v2.1.1',
+      'version' => '2.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c9012994c4b4fb23e7c57dd86b763a417a04feba',
+    ),
     'symfony/routing' => 
     array (
       'pretty_version' => 'v5.3.0',
@@ -1273,6 +1474,13 @@ private static $installed = array (
       array (
       ),
       'reference' => '7148225d52bcdfdd77c24e8d456058f1150b84e7',
+    ),
+    'zendframework/zend-diactoros' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '^2.2.1',
+      ),
     ),
   ),
 );

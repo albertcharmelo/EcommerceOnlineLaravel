@@ -81,10 +81,10 @@
         <script src="{{ asset('js/panel/stisla.js') }}"></script>
 
         <!-- Template JS File -->
-        @yield('js')
         <script src="{{ asset('js/panel/scripts.js') }}"></script>
         <script src="{{ asset('js/panel/custom.js') }}"></script>
-
+        
+        @yield('js')
 
 </body>
 

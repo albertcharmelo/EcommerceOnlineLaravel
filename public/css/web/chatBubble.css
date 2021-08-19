@@ -1,0 +1,137 @@
+/* Chat Client */
+.card {
+    position: relative;
+    border: solid 1px rgb(43, 127, 140);
+    padding: 45px 50px 25px 60px;
+    /* margin-top: 200px; */
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+    border-radius: 10px;
+    color: #fff
+  }
+  
+  .post-txt {
+    font-family: Poppins-Medium;
+    font-size: 20px;
+    margin-bottom: 0
+  }
+  
+  .quote-img {
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    width: 30px;
+    height: 30px
+  }
+  
+  .nice-img {
+    width: 20px;
+    height: 25px;
+    margin-bottom: 7px
+  }
+  
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 20px solid rgb(43, 127, 140);
+    margin-left: 85px
+  }
+  
+  .fit-image {
+    width: 100%;
+    object-fit: cover
+  }
+  
+  .profile-pic {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    left: 65px;
+    margin-top: 15px
+  }
+  
+  .profile-name {
+    position: absolute;
+    font-family: Poppins-Bold;
+    font-size: 22px;
+    margin-top: 60px;
+    left: 210px;
+    color: #616161
+  }
+  
+  .client-sec {
+    background-color: #fafafa;
+  }
+  
+  .sub-text {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .card-r {
+    position: relative;
+    border: solid 1px rgb(43, 127, 140);
+    padding: 45px 50px 25px 60px;
+    /* margin-top: 40px; */
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+    border-radius: 10px;
+    color: #fff
+  }
+  
+  .post-txt-r {
+    font-family: Poppins-Medium;
+    font-size: 20px;
+    margin-bottom: 0
+  }
+  
+  .quote-img-r {
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    width: 30px;
+    height: 30px
+  }
+  
+  .nice-img-r {
+    width: 20px;
+    height: 25px;
+    margin-bottom: 7px
+  }
+  
+  .arrow-down-r {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 20px solid rgb(43, 127, 140);
+    margin-left: 88%;
+  }
+  
+  .fit-image-r {
+    width: 100%;
+    object-fit: cover
+  }
+  
+  .profile-pic-r {
+    /* position: absolute; */
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    left: 60px;
+    margin-top: 15px
+  }
+  
+  .profile-name-r {
+    /* position: absolute; */
+    font-family: Poppins-Bold;
+    font-size: 22px;
+    margin-top: 60px;
+    left: 200px;
+    color: #616161;
+    margin-right: 15px
+  }

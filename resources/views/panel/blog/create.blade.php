@@ -2,6 +2,8 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}">
 <link rel=" stylesheet" href="{{ asset('summernote/dist/summernote-bs4.css') }}">
+<link rel="stylesheet" href="{{ asset('css/selectric.css') }}">
+
 @endsection
 @section('content')
 <section class="section">

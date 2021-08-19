@@ -23,11 +23,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
                             usuario publicador</a></li>
-<<<<<<< Updated upstream
-                    <li><a class="nav-link" href="{{ route('tipodocumento.index') }}">Tipo de Documentos</a>
-=======
                     <li><a class="nav-link" href="{{ url('') }}">Tipo de Documentos</a>
->>>>>>> Stashed changes
                     </li>
 
                 </ul>
@@ -37,45 +33,9 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
                     <span>Almacén</span></a>
                 <ul class="dropdown-menu">
-<<<<<<< Updated upstream
-                    <li><a class="nav-link" href="{{ route('producto.index') }}">Productos</a>
-                    </li>
-                    <li><a class="nav-link" href="{{ url('/panel/productos/create/combo') }}">Crear
-                            Combos</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/productos/create/categoria') }}">Crear
-                            Categorias</a></li>
-                    <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
-                    <span>Blog</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/blog/create/post') }}">Crear
-                            Noticias</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/blog/create/categoria') }}">Crear
-                            Categoria</a></li>
-                </ul>
-            </li>
-            {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-clipboard-list "></i> <span>Reportes</span></a> --}}
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
-                    <span>Inventario</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Generar Inventario</a></li>
-                </ul>
-            </li>
-            <li class="menu-header">Tienda</li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
-                    <span>Almacén</span></a>
-                <ul class="dropdown-menu">
-=======
                     {{-- <li><a class="nav-link" href="layout-default.html">Inventario</a></li> --}}
                     <li><a class="nav-link" href="{{ url('/panel/articulos/create/articulos') }}">Productos</a></li>
                     <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Categorías</a></li>
->>>>>>> Stashed changes
                     <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
                     {{-- <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li> --}}
 
@@ -98,11 +58,7 @@
                     <li><a class="nav-link" href="{{ url('/panel/compras/index') }}">Ingresos</a></li>
                 </ul>
                 <ul class="dropdown-menu">
-<<<<<<< Updated upstream
-                    <li><a class="nav-link" href="{{ route('proveedor.index') }}">Proveedores</a></li>
-=======
                     <li><a class="nav-link" href="{{ url('/panel/proveedores/index') }}">Proveedores</a></li>
->>>>>>> Stashed changes
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -111,14 +67,11 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Generar Inventario</a></li>
                 </ul>
+
                 <ul class="dropdown-menu">
-<<<<<<< Updated upstream
-                    <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a>
-                    </li>
-=======
                     <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a></li>
->>>>>>> Stashed changes
                 </ul>
+          
 
         </ul>
 

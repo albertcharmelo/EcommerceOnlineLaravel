@@ -10,12 +10,9 @@ Route::prefix('/')->group(function () {
     });
     Route::get('/shop', function ($id) {
 
-<<<<<<< Updated upstream
     });
 });
 
-=======
->>>>>>> Stashed changes
 //Rutas del Panel
 Route::prefix('panel')->middleware(['auth'])->group(function () {
     Route::get('/', function () {
@@ -51,21 +48,6 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
         Route::get('/create/combo', 'ProductoController@createCombo');
 
-<<<<<<< Updated upstream
-        Route::get('productos/cargar', 'ProductoController@listaproductos')->name('producto.cargarproductos');
-        // Route::get('productos', 'ProductoController@productosactivos')->name('producto.productosactivos');
-
-        Route::post('productoget', 'ProductoController@productoget');
-
-        Route::resource('producto', 'ProductoController');
-
-    });
-
-    // tipo_documentos
-    Route::prefix('tipodocumentos')->group(function () {
-        Route::get('tipodocumentos', 'TipoDocumentoController@listatipodocumentos')->name('tipodocumento.cargartipodocumentos');
-        Route::resource('tipodocumento', 'TipoDocumentoController');
-=======
         Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
         Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
       
@@ -76,21 +58,16 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
 
         Route::post('productoget', 'ArticulosController@productoget');
 
->>>>>>> Stashed changes
     });
 
     // proveedores
     Route::prefix('proveedores')->group(function () {
         Route::get('proveedores', 'ProveedorController@listaproveedores')->name('proveedor.cargarproveedores');
-<<<<<<< Updated upstream
-        Route::resource('proveedor', 'ProveedorController');
-=======
         Route::get('index', 'ProveedorController@index');
         Route::get('create', 'ProveedorController@create');
         Route::get('show', 'ProveedorController@show');
         Route::get('edit', 'ProveedorController@edit');
         Route::post('destroy', 'ProveedorController@destroy');
->>>>>>> Stashed changes
     });
 
     // compras
