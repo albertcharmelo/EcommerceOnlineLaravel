@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button id="allCategory" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
 						Todos los productos
 					</button>
 
@@ -67,33 +67,29 @@
 
 							<ul>
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Defecto
+									<a href="#" class="filter-link stext-106 trans-04 filter-link-active" data-filter="news">
+										Mas nuevos
 									</a>
 								</li>
+							
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="popularidad">
 										Popularidad
 									</a>
 								</li>
 
 							
 
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Mas nuevos
-									</a>
-								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="toHigh">
 										Precio: Menor a Mayor
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="toLow">
 										Price: Mayor a Menor
 									</a>
 								</li>
@@ -107,37 +103,37 @@
 
 							<ul>
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
+									<a href="#" class="filter-link filter-price stext-106 trans-04 filter-link-active" data-filter-price="all">
 										Todos
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link filter-price stext-106 trans-04" data-filter-price="10">
 										$0.00 - $10.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link filter-price stext-106 trans-04" data-filter-price="30" >
 										$10.00 - $30.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link filter-price stext-106 trans-04" data-filter-price="50">
 										$30.00 - $50.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link filter-price stext-106 trans-04" data-filter-price="100">
 										$50.00 - $100.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link filter-price stext-106 trans-04" data-filter-price="plus">
 										$100.00+
 									</a>
 								</li>
@@ -154,12 +150,17 @@
 				@include('web.partials.accesorios')
 			</div>
 
-			<!-- Load more -->
+			{{-- <!-- Load more -->
 			<div class="flex-c-m flex-w w-full p-t-45">
 				<a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
 					Load More
 				</a>
-			</div>
+			</div> --}}
 		</div>
 	</div>
+@endsection
+
+
+@section('js')
+	<script src="{{ asset('js/web/shop.js') }}"></script>
 @endsection

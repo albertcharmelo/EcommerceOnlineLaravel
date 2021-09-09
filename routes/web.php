@@ -1,20 +1,27 @@
 <?php
 
+use App\ProductoCarrito;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 //Rutas de Cliente
 Route::prefix('/')->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    Route::get('/shop', function ($id) {
+    Route::get('/','WebController@index');
+  
+    //Blog
+    Route::get('/blog/{categoria_slug?}','PostController@blog');
+    Route::get('/blog/post/{slug}','PostController@show');
+    Route::post('/blog/search','PostController@bsuqueda');
+    //Shop
+    Route::post('/shop/filterProduct','WebController@filterPrice');
+    Route::get('/shop','WebController@shop');
 
-    });
+    //Contacto
+    Route::get('/contacto','WebController@contacto');
 });
 
 //Rutas del Panel
-Route::prefix('panel')->middleware(['auth'])->group(function () {
+Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
     Route::get('/', function () {
         return redirect()->route('dashboard.tienda');
     });
@@ -32,11 +39,14 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
     Route::prefix('blog')->group(function () {
         Route::get('/create/post', 'PostController@create');
         Route::get('/create/categoria', 'PostController@createCategory');
+        Route::post('/store/categoria','PostController@StoreCategory');
+        Route::post('/store/post','PostController@store')->name('post.store');
+        Route::post('/getPosts','PostController@getPosts');
     });
 
     //Articulos
     Route::prefix('productos')->group(function () {
-        // Route::get('/create/productos', 'ProductoController@create');
+        Route::get('/create/productos', 'ProductoController@create');
         Route::get('/create/categoria', 'ProductoController@createCategory');
 
         Route::post('/store/articulos', 'ProductoController@store');
@@ -96,6 +106,23 @@ Route::prefix('panel')->middleware(['auth'])->group(function () {
         Route::post('/changeTipo/usuario', 'UsuarioController@changeTipoUser');
         Route::post('/changeTipoRegular/usuario', 'UsuarioController@changeTipoUserRegular');
     });
+
+    //Modificar Index
+    Route::prefix('modificar')->group(function () {
+        //index
+        Route::get('/index','ModificarController@index');
+        Route::post('/uploadSliderImage','ModificarController@createImageSlider');
+        Route::post('/toogleCheck','ModificarController@toogleCheck');
+        Route::post('/comentarios','ModificarController@comentarios');
+        // Producto (agregar imagen y categorias)
+        Route::get('/producto','ModificarController@producto');
+
+
+    });
+
+
+
+
 });
 
 Auth::routes();

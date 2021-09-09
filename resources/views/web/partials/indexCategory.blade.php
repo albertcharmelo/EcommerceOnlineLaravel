@@ -4,7 +4,7 @@
         <div class="size-202 m-lr-auto respon4">
             <!-- Block1 -->
             <div class="block1 wrap-pic-w">
-                <img src="web/fundas_banner.jpg" height="371.44px" alt="IMG-BANNER">
+                <img src="web/fundas_banner.jpg" style="object-fit: cover"height="371.44px" alt="IMG-BANNER">
 
                 <a href="product.html"
                     class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
@@ -20,7 +20,7 @@
 
                     <div class="block1-txt-child2 p-b-4 trans-05">
                         <div class="block1-link stext-101 cl0 trans-09">
-                            Comprar Ahora
+                            ir a la tienda
                         </div>
                     </div>
                 </a>
@@ -30,7 +30,7 @@
         <div class="size-202 m-lr-auto respon4">
             <!-- Block1 -->
             <div class="block1 wrap-pic-w">
-                <img src="web/auriculares_banner.jpg" height="371.44px" alt="IMG-BANNER">
+                <img src="web/auriculares_banner.jpg" style="object-fit: cover" height="371.44px" alt="IMG-BANNER">
 
                 <a href="product.html"
                     class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
@@ -46,7 +46,7 @@
 
                     <div class="block1-txt-child2 p-b-4 trans-05">
                         <div class="block1-link stext-101 cl0 trans-09">
-                            Comprar Ahora
+                            ir a la tienda
                         </div>
                     </div>
                 </a>
@@ -56,7 +56,7 @@
         <div class="size-202 m-lr-auto respon4">
             <!-- Block1 -->
             <div class="block1 wrap-pic-w">
-                <img src="web/Beis-Blanco-Proposito-Ano-Nuevo-Instagram-Publicacion.png" style="object-fit: cover;"
+                <img src="web/Beis-Blanco-Proposito-Ano-Nuevo-Instagram-Publicacion.png" style="object-fit: cover" style="object-fit: cover;"
                     height="371.44px" alt="IMG-BANNER">
 
                 <a href="product.html"
@@ -73,7 +73,7 @@
 
                     <div class="block1-txt-child2 p-b-4 trans-05">
                         <div class="block1-link stext-101 cl0 trans-09">
-                            Shop Now
+                           ir a la tienda
                         </div>
                     </div>
                 </a>

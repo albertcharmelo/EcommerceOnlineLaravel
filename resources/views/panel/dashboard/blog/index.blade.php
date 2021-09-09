@@ -28,17 +28,15 @@
                     <div class="card-body">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Todos <span class="badge badge-white">5</span></a>
+                                <a class="nav-link filtro  active" href="#">Todos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Publicados <span class="badge badge-primary">1</span></a>
+                                <a class="nav-link filtro" href="#">Publicados </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pendiente <span class="badge badge-primary">1</span></a>
+                                <a class="nav-link filtro" href="#">Pendiente</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Eliminados <span class="badge badge-primary">0</span></a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -55,7 +53,7 @@
                         <div class="float-right">
                             <form>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" id="palabraBusqueda"  placeholder="Buscar">
                                     <div class="input-group-append">
                                         <button class="btn btn-primary"><i class="fas fa-search"></i></button>
                                     </div>
@@ -67,214 +65,22 @@
 
                         <div class="table-responsive">
                             <table class="table table-striped">
-                                <tr>
-                                    <th class="text-center pt-2">
-                                        <div class="custom-checkbox custom-checkbox-table custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
-                                                class="custom-control-input" id="checkbox-all">
-                                            <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </th>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Author</th>
-                                    <th>Created At</th>
-                                    <th>Status</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup"
-                                                class="custom-control-input" id="checkbox-2">
-                                            <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td>Laravel 5 Tutorial: Introduction
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">Web Developer</a>,
-                                        <a href="#">Tutorial</a>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img alt="image"
-                                                src="{{ asset('/assets/img/avatar/avatar-5.png') }}"
-                                                class="rounded-circle" width="35" data-toggle="title" title="">
-                                            <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                        </a>
-                                    </td>
-                                    <td>2018-01-20</td>
-                                    <td>
-                                        <div class="badge badge-primary">Published</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup"
-                                                class="custom-control-input" id="checkbox-3">
-                                            <label for="checkbox-3" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td>Laravel 5 Tutorial: Installing
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">Web Developer</a>,
-                                        <a href="#">Tutorial</a>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img alt="image"
-                                                src="{{ asset('/assets/img/avatar/avatar-5.png') }}"
-                                                class="rounded-circle" width="35" data-toggle="title" title="">
-                                            <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                        </a>
-                                    </td>
-                                    <td>2018-01-20</td>
-                                    <td>
-                                        <div class="badge badge-primary">Published</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup"
-                                                class="custom-control-input" id="checkbox-4">
-                                            <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td>Laravel 5 Tutorial: MVC
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">Web Developer</a>,
-                                        <a href="#">Tutorial</a>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img alt="image"
-                                                src="{{ asset('/assets/img/avatar/avatar-5.png') }}"
-                                                class="rounded-circle" width="35" data-toggle="title" title="">
-                                            <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                        </a>
-                                    </td>
-                                    <td>2018-01-20</td>
-                                    <td>
-                                        <div class="badge badge-primary">Published</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup"
-                                                class="custom-control-input" id="checkbox-5">
-                                            <label for="checkbox-5" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td>Laravel 5 Tutorial: CRUD
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">Web Developer</a>,
-                                        <a href="#">Tutorial</a>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img alt="image"
-                                                src="{{ asset('/assets/img/avatar/avatar-5.png') }}"
-                                                class="rounded-circle" width="35" data-toggle="title" title="">
-                                            <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                        </a>
-                                    </td>
-                                    <td>2018-01-20</td>
-                                    <td>
-                                        <div class="badge badge-danger">Draft</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-checkbox custom-control">
-                                            <input type="checkbox" data-checkboxes="mygroup"
-                                                class="custom-control-input" id="checkbox-1">
-                                            <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
-                                        </div>
-                                    </td>
-                                    <td>Laravel 5 Tutorial: Deployment
-                                        <div class="table-links">
-                                            <a href="#">View</a>
-                                            <div class="bullet"></div>
-                                            <a href="#">Edit</a>
-                                            <div class="bullet"></div>
-                                            <a href="#" class="text-danger">Trash</a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">Web Developer</a>,
-                                        <a href="#">Tutorial</a>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img alt="image"
-                                                src="{{ asset('/assets/img/avatar/avatar-5.png') }}"
-                                                class="rounded-circle" width="35" data-toggle="title" title="">
-                                            <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                        </a>
-                                    </td>
-                                    <td>2018-01-20</td>
-                                    <td>
-                                        <div class="badge badge-warning">Pending</div>
-                                    </td>
-                                </tr>
                             </table>
                         </div>
                         <div class="float-right">
                             <nav>
                                 <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
+                                    <li class="page-item  disabled" id="minus">
+                                        <a class="page-link" href="#" onclick="minusPage()" aria-label="Previous">
                                             <span aria-hidden="true">&laquo;</span>
                                             <span class="sr-only">Previous</span>
                                         </a>
                                     </li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
+
+                                    <li class="page-item " id="plus" " >
+                                        <a class=" page-link" href="#" onclick="plusPage()" aria-label="Next">
+                                        <span aria-hidden="true" ">&raquo;</span>
+                                            <span class=" sr-only">Next</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -290,4 +96,189 @@
 @section('js')
 <script src="{{ asset('js/panel/page/features-posts.js') }}"></script>
 
+<script>
+    var _token = $('meta[name="csrf-token"]').attr('content');
+var page = 1;
+$(document).ready(function () {
+        getPosts(page)
+    });
+
+    var filtro = 'Todos';
+
+    var palabra = $('#palabraBusqueda').val();
+
+    function plusPage(){
+        page = page+1;
+       if (page > 1) {
+        $('#minus').removeClass('disabled')
+        getPosts(page);
+        
+       }
+        
+    }
+    function minusPage(){
+       
+        if (page > 1) {
+        page = page-1 
+        $('#minus').removeClass('disabled')
+        getPosts(page)
+        
+        } 
+        
+        if(page ==1){
+            $('#minus').addClass('disabled')
+        }
+    }
+
+    $('#palabraBusqueda').change(function (e) { 
+        e.preventDefault();
+        getPosts(page)
+    });
+
+    function getPosts(page){
+        
+        if (document.getElementById('palabraBusqueda').value.length  >=1) {
+            
+        var data ={
+            _token:_token,
+            palabra:document.getElementById('palabraBusqueda').value,
+            filtro: filtro
+            }
+
+        }else if(document.getElementById('palabraBusqueda').value.length  < 1){
+            var data ={
+                _token:_token,
+             filtro: filtro,
+            }
+
+
+        }
+        console.log(data)
+       
+    $.ajax({
+        type: "POST",
+        url: "/panel/blog/getPosts?page="+page,
+        data: data,
+        dataType: false,
+        success: function (response) {
+            console.log(page)
+            showRows(response)
+        }
+    });
+
+
+    }
+    function showRows(datas){
+        $('.table').empty();
+        
+        let fragment = document.createDocumentFragment();
+
+        let tr_header = document.createElement('tr');
+        tr_header.classList.add('table-header')
+        let titulo = document.createElement('th')
+        titulo.textContent = "Titulo"
+        let categoria = document.createElement('th')
+        categoria.textContent = 'Categoria'
+        let autor = document.createElement('th')
+        autor.textContent = 'Autor'
+        let fecha = document.createElement('th')
+        fecha.textContent = 'Fecha'
+        let estado = document.createElement('th')
+        estado.textContent = 'Estado'
+        
+        tr_header.append(titulo)
+        tr_header.append(categoria)
+        tr_header.append(autor)
+        tr_header.append(fecha)
+        tr_header.append(estado)
+
+        fragment.append(tr_header);
+
+        for (const data of datas.data) {
+        let tr = document.createElement('tr');
+        let bullet = document.createElement('div')
+        bullet.classList.add('bullet');
+
+        let bullet1 = document.createElement('div')
+        bullet1.classList.add('bullet');
+
+        let titulo = document.createElement('td');
+        titulo.textContent = data.titulo;
+        let div_titulo = document.createElement('div');
+        div_titulo.classList.add('table-links');
+        let a_titulo_1 = document.createElement('a');
+        a_titulo_1.textContent = 'Ver';
+        a_titulo_1.href = '#'
+        let a_titulo_2 = document.createElement('a');
+        a_titulo_2.textContent = 'Editar';
+        a_titulo_2.href = '#'
+        let a_titulo_3 = document.createElement('a');
+        a_titulo_3.classList.add('text-danger');
+        a_titulo_3.href = '#'
+        a_titulo_3.textContent = 'Eliminar';
+
+        div_titulo.append(a_titulo_1)
+        div_titulo.append(bullet)
+        div_titulo.append(a_titulo_2)
+        div_titulo.append(bullet1)
+        div_titulo.append(a_titulo_3)
+        titulo.append(div_titulo);
+
+
+        let categoria = document.createElement('td');
+        let a_categoria = document.createElement('a');
+        a_categoria.textContent = data.categoria;
+        categoria.append(a_categoria);
+
+
+
+        let autor = document.createElement('td');
+        let a_autor_1 = document.createElement('a');
+        let div_autor = document.createElement('div');
+        div_autor.textContent = data.autor;
+        a_autor_1.append(div_autor);
+        autor.append(a_autor_1);
+
+        let creacion = document.createElement('td');
+        creacion.textContent = data.created_at
+        
+
+        let status = document.createElement('td');
+        let div_status = document.createElement('div');
+        
+        if (data.estado == 'Publico') {
+            div_status.classList.add('badge','badge-primary');
+            div_status.textContent = data.estado
+        }else{
+            div_status.classList.add('badge','badge-warning');
+            div_status.textContent = data.estado
+
+        }
+        status.append(div_status)
+
+            tr.append(titulo)
+            tr.append(categoria)
+            tr.append(autor)
+            tr.append(creacion)
+            tr.append(status)
+
+
+
+
+
+            fragment.append(tr)
+   
+        }
+       $('.table').append(fragment);
+        
+
+    }
+    $('.filtro').click(function (e) { 
+        $('.active').removeClass('active');
+        this.classList.add('active')
+        filtro = this.textContent;
+        getPosts(page)
+    });
+
+</script>
 @endsection

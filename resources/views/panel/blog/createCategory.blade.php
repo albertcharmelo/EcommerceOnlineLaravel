@@ -34,14 +34,14 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titulo</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="categoria">
                             </div>
                         </div>
 
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                             <div class="col-sm-12 col-md-7">
-                                <button class="btn btn-primary">Create Categoría</button>
+                                <button class="btn btn-primary" id="save">Crear Categoría</button>
                             </div>
                         </div>
                     </div>
@@ -58,4 +58,32 @@
 <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>
 <script src="{{ asset('summernote/dist/summernote-bs4.js') }}"></script>
 <script src="{{ asset('js/panel/page/features-post-create.js') }}"></script>
+<script>
+$('#save').click(function (e) { 
+    e.preventDefault();
+    var _token = $('meta[name="csrf-token"]').attr('content');
+    let data = {
+        _token:_token,
+        categoria:$('#categoria').val(),
+
+    }
+    $.ajax({
+        type: "POST",
+        url: "/panel/blog/store/categoria",
+        data: data,
+        dataType: false,
+        success: function (response) {
+            iziToast.success({
+            title: 'Categoria creada satisfactoriamente',
+            message: 'Categoria disponible al crear un Post para el blog',
+            position: 'bottomRight' 
+        });
+        $('#categoria').val(' ');
+        }
+    });
+});
+    
+
+
+</script>
 @endsection

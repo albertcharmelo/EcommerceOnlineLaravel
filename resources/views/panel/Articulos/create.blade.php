@@ -81,6 +81,8 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Categoría</label>
                             <div class="col-sm-12 col-md-7">
                                 <select id="categoria" class="form-control selectric">
+                                   
+
                                     <option value="1">Plotter Hidrogel</option>
                                     <option value="2">Protector de pantalla</option>
                                     <option value="3">Vinilos Traseros</option>
@@ -142,7 +144,7 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                             <div class="col-sm-12 col-md-7">
                                 <button class="btn btn-primary" id="saveBtn">Crear Articulo</button>
-                                <a class="btn btn-primary mt-3 mb-3" href="{{ route('producto.index') }}"><i
+                                <a class="btn btn-primary mt-3 mb-3" ><i
                                     class="fa fa-arrow-circle-left"></i> Regresar</a>
                             </div>                            
                         </div>

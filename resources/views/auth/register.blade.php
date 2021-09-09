@@ -89,6 +89,21 @@
                                         <input id="password2" type="password" class="form-control"
                                             name="password_confirmation" required autocomplete="new-password">
                                     </div>
+                                    <div class="form-group col-6">
+                                        <label for="password2" class="d-block">Telefono</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">+1</div>
+                                            </div>
+                                            <input id="telefono" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control @error('telefono') is-invalid @enderror""
+                                               maxlength="12"  name="telefono" required >
+                                        </div>
+                                        @error('telefono')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </div>
                                 </div>
 
                                 <div class="form-divider">

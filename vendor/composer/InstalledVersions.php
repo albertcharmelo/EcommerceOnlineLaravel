@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '502fd004b6f9795bdacb4af14a7b2689053a7dee',
+    'reference' => '279fcf0128b1ac803bf07ffa9ffceff5471abd7b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -71,12 +71,30 @@ private static $installed = array (
       ),
       'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
     ),
+    'cocur/slugify' => 
+    array (
+      'pretty_version' => 'v4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3f1ffc300f164f23abe8b64ffb3f92d35cec8307',
+    ),
     'cordoval/hamcrest-php' => 
     array (
       'replaced' => 
       array (
         0 => '*',
       ),
+    ),
+    'cviebrock/eloquent-sluggable' => 
+    array (
+      'pretty_version' => '7.0.0',
+      'version' => '7.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4543263ebcb889845abef09ea40979a1a454612d',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -500,7 +518,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '502fd004b6f9795bdacb4af14a7b2689053a7dee',
+      'reference' => '279fcf0128b1ac803bf07ffa9ffceff5471abd7b',
     ),
     'laravel/passport' => 
     array (

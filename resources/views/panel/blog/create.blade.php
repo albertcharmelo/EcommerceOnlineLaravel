@@ -33,28 +33,31 @@
                     <div class="card-header">
                         <h4>Escribe Tu Noticia</h4>
                     </div>
+
                     <div class="card-body">
+                        @csrf
+
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titulo</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control">
+                                <input type="text" name="titulo" id="titulo" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Categoría</label>
                             <div class="col-sm-12 col-md-7">
-                                <select class="form-control selectric">
-                                    <option>Tech</option>
-                                    <option>News</option>
-                                    <option>Political</option>
+                                <select class="form-control selectric" id="categoria" name="categoria">
+                                    @foreach ($categorias as $categoria)
+                                    <option value="{{ $categoria->id}}">{{ $categoria->categoria }}</option>
+                                    @endforeach
                                 </select>
-                                <button class="btn btn-primary mt-3">Añadir nueva Categoria</button>
+
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Contenido</label>
                             <div class="col-sm-12 col-md-7">
-                                <textarea class="summernote-simple"></textarea>
+                                <textarea class="summernote-simple" name="contenido"></textarea>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
@@ -62,33 +65,28 @@
                             <div class="col-sm-12 col-md-7">
                                 <div id="image-preview" class="image-preview">
                                     <label for="image-upload" id="image-label">Imagen</label>
-                                    <input type="file" name="image" id="image-upload" />
+                                    <input type="file" name="file" class="form-control" id="image-upload" />
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tags</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div> --}}
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Estado de
                                 inicio</label>
                             <div class="col-sm-12 col-md-7">
-                                <select class="form-control selectric">
-                                    <option>Publico</option>
-                                    <option>Pendiente</option>
+                                <select class="form-control selectric" id="estado" name="estado">
+                                    <option value="0">Publico</option>
+                                    <option value="1">Pendiente</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                             <div class="col-sm-12 col-md-7">
-                                <button class="btn btn-primary">Create Post</button>
+                                <button class="btn btn-primary" id="saveBtn">Crear Post</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -102,4 +100,60 @@
 <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>
 <script src="{{ asset('summernote/dist/summernote-bs4.js') }}"></script>
 <script src="{{ asset('js/panel/page/features-post-create.js') }}"></script>
+
+
+<script>
+    var _token = $('meta[name="csrf-token"]').attr('content');
+    $('#saveBtn').click(function (e) { 
+        e.preventDefault();
+        let data ={
+        _token:_token,
+        titulo:$('#titulo').val(),
+        categoria:$('#categoria').val(),
+        estado:$('#estado').val(),
+        file:$('#image-upload')[0].files[0],
+        contenido:$('.summernote-simple').summernote('code')
+    }
+
+    var formData = new FormData();
+    formData.append('image',$('#image')[0].files[0]);
+    formData.append('titulo',data.titulo);
+    formData.append('categoria',data.categoria);
+    formData.append('estado',data.estado);
+    formData.append('contenido',data.contenido);
+
+    // console.log(data);
+    // $.post("/panel/blog/store/post", data,function (resp) {
+    //        console.log(resp) 
+    // });
+        $.ajax({
+            headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+            type: "POST",
+            url: "/panel/blog/store/post",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                iziToast.success({
+                title: 'Post creado satisfactoriamente',
+                message: 'Post publicado en la seccion de blog enla web oficial',
+                position: 'bottomRight' 
+                });
+                $('#titulo').val(' ');
+                $('#categoria').val(' ');
+                $('#estado').val(' ');
+                $('#image-upload').val(' ');
+                $('.summernote-simple').summernote('code', '');
+
+
+            }
+        });
+    });
+    
+   
+</script>
+
+
 @endsection

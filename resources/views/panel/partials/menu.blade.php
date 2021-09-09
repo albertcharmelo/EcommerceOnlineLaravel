@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand mt-3">
-            <a href="index.html"><img src="{{ asset('assets/img/devian rd.png') }}" alt="Logo DeviaRD" width="70"
+            <a href="/"><img src="{{ asset('assets/img/devian rd.png') }}" alt="Logo DeviaRD" width="70"
                     height="70" srcset=""></a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm mt-3">
@@ -21,26 +21,26 @@
             <li class="nav-item dropdown ">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Administración</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crear
-                            usuario publicador</a></li>
-                    <li><a class="nav-link" href="{{ url('') }}">Tipo de Documentos</a>
-                    </li>
+                    {{-- <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crea usuario publicador</a></li> --}}
+                            <li><a class="nav-link" href="{{ url('/panel/modificar/index') }}">Modificar Web</a></li>
+                            <li><a class="nav-link" href="{{ url('/panel/modificar/index') }}">Publicar Articulo</a></li>
+                   
 
                 </ul>
             </li>
             <li class="menu-header">Tienda</li>
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-mobile-alt"></i>
                     <span>Almacén</span></a>
                 <ul class="dropdown-menu">
-                    {{-- <li><a class="nav-link" href="layout-default.html">Inventario</a></li> --}}
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/articulos') }}">Productos</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/articulos/create/categoria') }}">Categorías</a></li>
+                    
+                    <li><a class="nav-link" href="{{ url('/panel/productos/create/productos') }}">Productos</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/productos/create/categoria') }}">Categorías</a></li>
                     <li><a class="nav-link" href="{{ url('') }}">Unidades de Medida</a></li>
-                    {{-- <li><a class="nav-link" href="layout-top-navigation.html">Crear Etiquetas</a></li> --}}
+                    
 
                 </ul>
-            </li>
+            </li> --}}
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Blog</span></a>
@@ -51,7 +51,7 @@
                             Categoria</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Compras</span></a>
                 <ul class="dropdown-menu">
@@ -60,7 +60,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/proveedores/index') }}">Proveedores</a></li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
                     <span>Inventario</span></a>
@@ -71,7 +71,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/inventario/index') }}">Inventario Valorizado</a></li>
                 </ul>
-          
+            </li>
 
         </ul>
 

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
+    <link rel="stylesheet" href="{{ asset('css/iziToast.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
 
     @yield('css')
@@ -64,6 +64,7 @@
 
 
         <!-- General JS Scripts -->
+
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}">
@@ -72,7 +73,7 @@
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
         <script src="{{ asset('js/moment.min.js') }}"></script>
-
+<script src="{{ asset('js/iziToast.min.js') }}"></script>   
         <script src="{{ asset('js/prism.js') }}"></script>
 
 

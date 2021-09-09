@@ -20,7 +20,7 @@ class PanelController extends Controller
     }
     public function blog()
     {
-
+        
         return view('panel.dashboard.blog.index');
     }
 
