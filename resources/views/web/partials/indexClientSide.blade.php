@@ -18,7 +18,7 @@
 
 							<div class="card">
 								<p class="post"> <span><img class="quote-img"
-											src="https://i.imgur.com/i06xx2I.png"></span>
+											src="{{asset('assets/img/comillas.png')}}"></span>
 									<span class="post-txt">{{ $comentario1->contenido }} </span>  </p>
 							</div>
 							<div class="arrow-down"></div>
@@ -37,7 +37,7 @@
 
 							<div class="card-r">
 								<p class="post"> <span><img class="quote-img-r"
-											src="https://i.imgur.com/i06xx2I.png"></span>
+											src="{{asset('assets/img/comillas.png')}}"></span>
 									<span class="post-txt">{{ $comentario2->contenido }}</span>  </p>
 							</div>
 							<div class=" arrow-down-r"></div>
@@ -61,7 +61,7 @@
 
 							<div class="card">
 								<p class="post"> <span><img class="quote-img"
-											src="https://i.imgur.com/i06xx2I.png"></span>
+											src="{{asset('assets/img/comillas.png')}}"></span>
 									<span class="post-txt">{{ $comentario3->contenido }} </span> </p>
 							</div>
 							<div class="arrow-down"></div>
@@ -81,7 +81,7 @@
 
 							<div class="card-r">
 								<p class="post"> <span><img class="quote-img-r"
-											src="https://i.imgur.com/i06xx2I.png"></span>
+											src="{{asset('assets/img/comillas.png')}}"></span>
 									<span class="post-txt  ">{{ $comentario4->contenido }}</span>  </p>
 							</div>
 							<div class=" arrow-down-r"></div>

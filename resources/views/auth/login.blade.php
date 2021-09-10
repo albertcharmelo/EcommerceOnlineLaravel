@@ -75,7 +75,9 @@
                         No tienes una cuenta? <a href="{{ route('register') }}">Crea una cuenta</a>
                     </div>
                 </form>
-
+                <div class="text-center mt-5 text-small">
+                    <img src="{{ asset('assets/img/Bonao_logo.png') }}" style="max-width: 280px;max-height:400px"   alt="">
+                </div>
                 <div class="text-center mt-5 text-small">
                     Copyright &copy; DeviaRD
                     <div class="mt-2">

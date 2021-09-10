@@ -2,6 +2,7 @@
 
 use App\ProductoCarrito;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 //Rutas de Cliente
@@ -126,5 +127,8 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
 });
 
 Auth::routes();
-
+Route::post('/cargar/provincias', function () {
+    $provincias = DB::table('provincias')->get();
+    return $provincias;
+});
 Route::get('/home', 'HomeController@index')->name('home');

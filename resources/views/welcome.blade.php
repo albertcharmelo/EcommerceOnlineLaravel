@@ -64,7 +64,7 @@
 			padding: 45px 50px 25px 60px;
 			/* margin-top: 40px; */
 			background-color: transparent;
-			background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+			background-image: linear-gradient(180deg, #4BBBCD 0%, #2aadc1 100%);
 			border-radius: 10px;
 			color: #fff
 		}
@@ -72,7 +72,8 @@
 		.post-txt-r {
 			font-family: Poppins-Medium;
 			font-size: 20px;
-			margin-bottom: 0
+			margin-bottom: 0;
+			color:#f0e7e7;
 		}
 
 		.quote-img-r {
@@ -135,7 +136,8 @@
 			padding: 45px 50px 25px 60px;
 			/* margin-top: 200px; */
 			background-color: transparent;
-			background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+			background-image: linear-gradient(180deg, #4BBBCD 0%, #2aadc1 100%);
+
 			border-radius: 10px;
 			color: #fff
 		}
@@ -143,7 +145,9 @@
 		.post-txt {
 			font-family: Poppins-Medium;
 			font-size: 20px;
-			margin-bottom: 0
+			margin-bottom: 0;
+			color:#f0e7e7;
+
 		}
 
 		.quote-img {
@@ -199,6 +203,17 @@
 		}
 	</style>
 	<style>
+		@media only screen and (max-width: 1320px) {
+
+			.main-menu > li > a {
+					font-size: 11px;
+			}
+			.login {
+					font-size: 14px;
+			}
+		
+		
+		}
 		@media only screen and (max-width: 600px) {
 			.sub-text {
 				font-size: 20px;
@@ -212,7 +227,8 @@
 				padding: 45px 50px 25px 60px;
 				/* margin-top: 200px; */
 				background-color: transparent;
-				background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+			background-image: linear-gradient(180deg, #4BBBCD 0%, #2aadc1 100%);
+				
 				border-radius: 10px;
 				color: #fff;
 				margin-top: 20px;
@@ -225,13 +241,15 @@
 				padding: 45px 50px 25px 60px;
 				/* margin-top: 200px; */
 				background-color: transparent;
-				background-image: linear-gradient(180deg, #4BBBCD 0%, #2A7D8A 100%);
+			background-image: linear-gradient(180deg, #4BBBCD 0%, #2aadc1 100%);
+				
 				border-radius: 10px;
 				color: #fff;
 				margin-top: 20px;
 			}
 
 			.post-txt-r {
+				color:#f0e7e7;
 				font-family: Poppins-Medium;
 				font-size: 20px;
 				margin-bottom: 0
@@ -300,7 +318,7 @@
 
 		}
 	</style>
-
+	@yield('css')
 </head>
 
 <body class="animsition">
@@ -777,8 +795,9 @@
 					</form>
 				</div>
 			</div>
+			<div class="col-12 d-flex justify-content-center"><img src="{{ asset('assets/img/Bonao_logo.png') }}" style="max-width: 300px;max-height:400px"   alt="Bonao-logo"></div>
 			<div class="p-t-40">
-				{{-- <div class="flex-c-m flex-w p-b-18">
+				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">
 						<img src="{{ asset("images/icons/icon-pay-01.png") }}" alt="ICON-PAY">
 				</a>
@@ -798,18 +817,17 @@
 				<a href="#" class="m-all-1">
 					<img src="{{ asset("images/icons/icon-pay-05.png") }}" alt="ICON-PAY">
 				</a>
-			</div> --}}
+			</div>
 
-			{{-- <p class="stext-107 cl6 txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			<p class="stext-107 cl6 txt-center">
+					
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
-					</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-						href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a
-						href="https://themewagon.com" target="_blank">ThemeWagon</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</script> <a
+						href="https://vissionsolutions.com/" target="_blank">VissionSolutions</a> | All rights reserved 
+					
 
-				</p> --}}
+				</p>
 		</div>
 		</div>
 	</footer>

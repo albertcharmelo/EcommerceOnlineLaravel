@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('css')
+<link rel="icon" type="image/png" href="{{ asset('images/cropped-favicon-2.png') }}">
+    
+@endsection
 @section('content')
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,7 +24,9 @@
                     <div class="login-brand">
 
                         <img src="{{ asset('assets/img/devian rd.png') }}" alt="logo"
-                            width="150" class=" ">
+                            width="150" style="height: auto" class=" ">
+                            <img src="{{ asset('assets/img/Bonao_logo.png') }}" alt="logo"
+                            width="150" height="134" style="height: auto" class=" ">
                     </div>
 
                     <div class="card card-primary">
@@ -56,7 +61,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email">Correo Electronico</label>
+                                    <label for="email">Correo Electrónico</label>
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email">
                                     <div class="invalid-feedback">
@@ -70,14 +75,11 @@
 
                                 <div class="row">
                                     <div class="form-group col-6">
-                                        <label for="password" class="d-block">Conreaseña</label>
+                                        <label for="password" class="d-block">Contraseña</label>
                                         <input id="password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror pwstrength"
-                                            data-indicator="pwindicator" name="password">
-                                        <div id="pwindicator" class="pwindicator">
-                                            <div class="bar"></div>
-                                            <div class="label"></div>
-                                        </div>
+                                            class="form-control @error('password') is-invalid @enderror "
+                                             name="password">
+                                       
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -90,12 +92,12 @@
                                             name="password_confirmation" required autocomplete="new-password">
                                     </div>
                                     <div class="form-group col-6">
-                                        <label for="password2" class="d-block">Telefono</label>
+                                        <label for="password2" class="d-block">Teléfono</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text">+1</div>
                                             </div>
-                                            <input id="telefono" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control @error('telefono') is-invalid @enderror""
+                                            <input id="telefono" placeholder="formato: 123-456-7890" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control @error('telefono') is-invalid @enderror""
                                                maxlength="12"  name="telefono" required >
                                         </div>
                                         @error('telefono')
@@ -112,9 +114,8 @@
                                 <div class="row">
                                     <div class="form-group col-6">
                                         <label>Provincias</label>
-                                        <select class="form-control selectric" name="provincia">
-                                            <option value="West Java">Azua</option>
-                                            <option value="East Java">Santo domingo de Guzman</option>
+                                        <select class="form-control selectric" name="provincia" id="provincia">
+                                          
                                         </select>
                                         @error('provincia')
                                             <span class="invalid-feedback" role="alert">
@@ -179,10 +180,44 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-<script src="{{ asset('js/jquery.pwstrength.min.js') }}"></script>
+
 <script src="{{ asset('js/panel/page/auth-register.js') }}"></script>
 <script src="{{ asset('js/panel/stisla.js') }}"></script>
 <script src="{{ asset('js/panel/scripts.js') }}"></script>
 <script src="{{ asset('js/panel/custom.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script>
+    $(document).ready(function () {
+            cargarProvincias()
+
+
+    });
+
+    function cargarProvincias(){
+
+        $.ajax({
+            type: "POST",
+            url: '/cargar/provincias',
+            data: '',
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success: function (response) {
+                    let fragment = document.createDocumentFragment();
+                    for (const provincia of response) {
+                        let option = document.createElement('option');
+                        option.value = provincia.provincia;
+                        option.textContent = provincia.provincia;
+
+                        fragment.append(option)
+                    }
+
+                    $('#provincia').append(fragment);
+
+
+
+            }
+        });
+
+
+    }
+</script>
 @endsection

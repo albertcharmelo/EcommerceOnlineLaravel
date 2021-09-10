@@ -22,6 +22,7 @@ class WebController extends Controller
         $comentario2=$comentarios[1];
         $comentario3=$comentarios[2];
         $comentario4=$comentarios[3];
+       
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
             ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();
