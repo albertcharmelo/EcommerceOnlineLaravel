@@ -23,7 +23,7 @@
                 <ul class="dropdown-menu">
                     {{-- <li><a class="nav-link" href="{{ url('/panel/administracion/create/usuario') }}">Crea usuario publicador</a></li> --}}
                             <li><a class="nav-link" href="{{ url('/panel/modificar/index') }}">Modificar Web</a></li>
-                            <li><a class="nav-link" href="{{ url('/panel/modificar/index') }}">Publicar Articulo</a></li>
+                            <li><a class="nav-link" href="{{ url('/panel/modificar/producto') }}">Publicar Articulo</a></li>
                    
 
                 </ul>

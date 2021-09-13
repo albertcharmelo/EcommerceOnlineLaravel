@@ -39,6 +39,8 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/main.css') }}">
+<link rel="stylesheet" href="{{ asset('css/web/jquery-ui.css') }}">
+
 	<!--===============================================================================================-->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -338,7 +340,12 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
+							@foreach ($categoriasProducto as $categoria)
 							<li class="">
+								<a class=" text-uppercase" href="/shop/{{ $categoria->slug }}">{{ $categoria->categoria }}</a>
+							</li>
+							@endforeach
+							{{-- <li class="">
 								<a href="/shop">PLOTTER HIDROGEL</a>
 							</li>
 
@@ -352,7 +359,7 @@
 
 							<li>
 								<a href="/shop">ACCESORIOS PLOTTER</a>
-							</li>
+							</li> --}}
 
 							<li>
 								<a href="/blog">BLOG</a>
@@ -404,7 +411,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html"><img src="assets/img/devian rd2.png" alt="IMG-LOGO"></a>
+				<a href="index.html"><img src="{{asset('assets/img/devian rd2.png')}}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -596,66 +603,67 @@
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-
+					
 					@foreach ($productosCarrito as $producto)
-
-
+					
+					
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
 							<img src="{{ asset("images/item-cart-01.jpg") }}" alt="IMG">
 						</div>
-
+						
 						<div class="header-cart-item-txt p-t-8">
 							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
 								{{ $producto->titulo }}
 							</a>
-
+							
 							<span class="header-cart-item-info">
 								{{ $producto->cantidad }} x ${{ $producto->precio }}
 							</span>
 						</div>
 					</li>
-
+					
 					@endforeach
-
+					
 				</ul>
-
+				
 				<div class="w-full">
 					{{-- <div class="header-cart-total w-full p-tb-40">
-							Total: $75.00
-						</div> --}}
-
+						Total: $75.00
+					</div> --}}
+					
 					<div class="header-cart-buttons flex-w w-full">
 						<a href="shoping-cart.html"
-							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-							Ver Carrito
-						</a>
-
-						<a href="shoping-cart.html"
-							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Pagar
-						</a>
-					</div>
-				</div>
+						class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						Ver Carrito
+					</a>
+					
+					<a href="shoping-cart.html"
+					class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+					Pagar
+				</a>
 			</div>
 		</div>
 	</div>
+</div>
+</div>
 
-	@endauth
-	<!-- Cart -->
-
-
-
-	@yield('content')
+@endauth
+<!-- Cart -->
 
 
-	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Categorias
+
+@include('web.partials.producto')
+@yield('content')
+
+
+<!-- Footer -->
+<footer class="bg3 p-t-75 p-b-32">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-lg-3 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Categorias
 					</h4>
 
 					<ul>
@@ -840,7 +848,6 @@
 		</span>
 	</div>
 
-	@include('web.partials.modal-producto')
 
 	<!--===============================================================================================-->
 	<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
@@ -946,6 +953,8 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="{{ asset('js/web/main.js') }}"></script>
+<script src="{{ asset('js/web/jquery-ui.min.js') }}"></script>
+
 	@yield('js')
 </body>
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Articulo;
 use App\Http\Requests\StoreArticulosRequest;
+use App\ProductoApi;
+use App\ProductoImagen;
 use App\ProductoPlantilla;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -35,14 +37,15 @@ class ProductoController extends Controller
             ->toJson();
     }
 
-    public function productosActivos() {
+    public function productosActivos()
+    {
         $productos = DB::table('productos')
             ->select('productos.*')
             ->get();
 
-            return datatables()
-            ->of($productos)            
-            ->toJson();      
+        return datatables()
+            ->of($productos)
+            ->toJson();
     }
 
     /**
@@ -54,6 +57,36 @@ class ProductoController extends Controller
     {
         return view('panel.articulos.create');
     }
+    public function list(Request $request)
+    {
+        $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->get();
+        $data = [];
+        foreach ($producto as $producto) {
+            $data[] = [
+                'label' => $producto->titulo,
+                'url' => '/blog/post/' . $producto->slug,
+                'id' => $producto->id,
+            ];
+        }
+
+        return $data;
+    }
+    public function asignarCategoria(Request $request)
+    {
+        if ($request->producto && $request->categoria_id) {
+            
+            $producto = ProductoApi::find($request->producto)->update(['categoria_id'=>$request->categoria_id]);
+        }
+
+        return $producto;
+
+    }
+    public function GalerryGet($id)
+    {
+        $producto = ProductoApi::findOrFail($id);
+
+        return $producto->imagenes;
+    }
     public function createCategory()
     {
 
@@ -64,12 +97,7 @@ class ProductoController extends Controller
 
         return view('panel.articulos.createCombo');
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(StoreArticulosRequest $request)
     {
         $producto = Articulo::create([
@@ -97,6 +125,10 @@ class ProductoController extends Controller
                 $destinationPath = 'productoImagenes/';
                 $file->move($destinationPath, $fileName);
                 $folderPath = $destinationPath . $fileName;
+                ProductoImagen::create([
+                    'path' => $folderPath,
+                    'producto_id' => $request->producto_id
+                ]);
             }
         }
     }
@@ -128,50 +160,7 @@ class ProductoController extends Controller
             return $plantilla;
         }
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     public function productoget(Request $request)
     {
@@ -186,5 +175,4 @@ class ProductoController extends Controller
         }
         return $productos;
     }
-
 }

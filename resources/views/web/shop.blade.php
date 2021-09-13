@@ -1,25 +1,27 @@
 @extends('welcome')
 @section('content')
+<style>
 
+</style>
     
 	<!-- Product -->
 	<div class="bg0 m-t-23 p-b-140">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button id="allCategory" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button id="allCategory"  class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
 						Todos los productos
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 plotters_de_hidrogel"  data-filter=".women">
 						Plotters de hidrogel
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 protectores_de_pantalla" data-filter=".men">
 						Protectores de Pantalla
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 laminas_para_vinilos" data-filter=".bag">
 						Láminas para Vinilos
 					</button>
 
@@ -27,7 +29,7 @@
 						
 					</button> --}}
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 accesorios" data-filter=".watches">
 						Accesorios
 					</button>
 				</div>
@@ -53,7 +55,7 @@
 							<i class="zmdi zmdi-search"></i>
 						</button>
 
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Buscar Producto">
+						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" id="search-product" placeholder="Buscar Producto">
 					</div>	
 				</div>
 
@@ -163,4 +165,54 @@
 
 @section('js')
 	<script src="{{ asset('js/web/shop.js') }}"></script>
+	<script>
+		var producto = null;
+		var categoria = "{{ $slug }}";
+			if (categoria.length >=1) {
+				let divCategory = document.getElementsByClassName(categoria)
+			divCategory[0].click()
+			}
+			
+		
+
+
+
+		$('#search-product').autocomplete({
+		   source:(request,response)=>{
+			$.ajax({
+			type: "POST",
+			url: "/search/producto",
+			data: {
+			busqueda: request.term
+			},
+			headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			},
+			dataType: "json",
+			success: function (data) {
+			response(data);
+			}
+			});
+			},
+			select: function(event, ui) {
+				producto=`${ui.item.id}`;
+			showImages(producto)
+			},
+			messages: {
+			noResults: 'No hay Produto',
+			results: function() {}
+			}
+		})
+	</script>
+	<script>
+		$('.js-show-modal1').click(function (e) { 
+			e.preventDefault();
+			let src = e.target.previousElementSibling.src
+			document.getElementsByClassName('slick-active')[0].childNodes[0].src = src
+			document.getElementById('imagenPrincipal').src = src
+			document.getElementsByClassName('mfp-img').src = src
+			
+
+		});
+	</script>
 @endsection

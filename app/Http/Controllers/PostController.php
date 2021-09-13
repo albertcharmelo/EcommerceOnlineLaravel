@@ -3,14 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\PostCategoria;
 use App\ProductoApi;
+use App\PostCategoria;
 use App\ProductoCarrito;
+use App\CategoriaProducto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+
+
+    protected $categoriasProducto;
+
+    public function __construct() 
+    {
+        // Fetch the Site Settings object
+        $this->categoriasProducto = CategoriaProducto::all();
+        
+    }
     /**
      * Display a listing of the resource.
      *
@@ -76,6 +87,7 @@ class PostController extends Controller
 
     public function blog($slug = null)
     {
+        $categoriasProducto =  $this->categoriasProducto;
 
         $categorias = PostCategoria::all();
         if ($slug == null) {
@@ -88,9 +100,9 @@ class PostController extends Controller
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
                 ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
-            return view('web.blog')->with(compact('productosCarrito', 'posts', 'categorias'));
+            return view('web.blog')->with(compact('productosCarrito', 'posts', 'categorias','categoriasProducto'));
         } else {
-            return view('web.blog')->with(compact('posts', 'categorias'));
+            return view('web.blog')->with(compact('posts', 'categorias','categoriasProducto'));
         }
     }
 

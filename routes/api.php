@@ -21,6 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('producto')->middleware('auth:api')->group(function () {
     Route::post('/create', 'Api\ProductoController@create');
+    Route::post('/edit', 'Api\ProductoController@edit');
+    Route::post('/destroy', 'Api\ProductoController@destroy');
+
 });
 
 Route::post('/login', 'Api\AuthApiController@login');

@@ -15,8 +15,10 @@ Route::prefix('/')->group(function () {
     Route::post('/blog/search','PostController@bsuqueda');
     //Shop
     Route::post('/shop/filterProduct','WebController@filterPrice');
-    Route::get('/shop','WebController@shop');
+    Route::get('/shop/{slug?}','WebController@shop');
+    
 
+    Route::post('/search/producto', 'ProductoController@list');
     //Contacto
     Route::get('/contacto','WebController@contacto');
 });
@@ -49,6 +51,9 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
     Route::prefix('productos')->group(function () {
         Route::get('/create/productos', 'ProductoController@create');
         Route::get('/create/categoria', 'ProductoController@createCategory');
+        Route::get('/GaleryGet/{id}', 'ProductoController@GalerryGet');
+        Route::post('/asignarCategoria', 'ProductoController@asignarCategoria');
+        Route::post('/search/list', 'ProductoController@list');
 
         Route::post('/store/articulos', 'ProductoController@store');
         Route::post('/store/articuloImagen', 'ProductoController@storeImagen');
@@ -58,14 +63,6 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
         Route::post('/set/plantilla', 'ProductoController@setPlantilla');
 
         Route::get('/create/combo', 'ProductoController@createCombo');
-
-        Route::get('productos', 'ArticulosController@listaproductos')->name('producto.cargarproductos');
-        Route::get('productos', 'ArticulosController@productosactivos')->name('producto.productosactivos');
-      
-        Route::get('index', 'ArticulosController@index');
-        Route::get('show', 'ArticulosController@show');
-        Route::get('edit', 'ArticulosController@edit');
-        Route::post('destroy', 'ArticulosController@destroy');
 
         Route::post('productoget', 'ArticulosController@productoget');
 

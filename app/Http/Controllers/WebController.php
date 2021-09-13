@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CategoriaProducto;
 use App\ModificacionIndex;
 use App\Post;
 use App\ProductoApi;
@@ -12,8 +13,20 @@ use Illuminate\Support\Facades\Auth;
 
 class WebController extends Controller
 {
+
+
+    protected $categoriasProducto;
+
+    public function __construct() 
+    {
+        // Fetch the Site Settings object
+        $this->categoriasProducto = CategoriaProducto::all();
+        
+    }
     public function index()
     {
+
+        $categoriasProducto =  $this->categoriasProducto;
         $categorias = PostCategoria::all();
         $posts = Post::orderBy('created_at','DESC')->limit(3)->get();
         $sliderImages = ModificacionIndex::where('tipo','slider')->where('check','true')->limit(3)->get();
@@ -26,36 +39,38 @@ class WebController extends Controller
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
             ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();
-            return view('web.index')->with(compact('productosCarrito','categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4'));
+            return view('web.index')->with(compact('productosCarrito','categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4',"categoriasProducto"));
         }
-        return view('web.index')->with(compact('categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4'));
+        return view('web.index')->with(compact('categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4','categoriasProducto'));
     }
 
 
     public function contacto(){
-
+        $categoriasProducto =  $this->categoriasProducto;
         $categorias = PostCategoria::all();
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
             ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();
-            return view('web.contacto')->with(compact('productosCarrito','categorias'));
+            return view('web.contacto')->with(compact('productosCarrito','categorias',"categoriasProducto"));
         }
-        return view('web.contacto')->with(compact('categorias'));
+        return view('web.contacto')->with(compact('categorias',"categoriasProducto"));
 
     }
 
 
-    public function shop()
-    {
+    public function shop($slug = null)
+    {   $categoriasProducto =  $this->categoriasProducto;
         $categorias = PostCategoria::all();
 
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
             ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();       
-            return view('web.shop')->with(compact('productosCarrito','categorias'));
+            return view('web.shop')->with(compact('productosCarrito','categorias','slug',"categoriasProducto"));
         }
-        return view('web.shop')->with(compact('categorias'));
+        return view('web.shop')->with(compact('categorias','slug',"categoriasProducto"));
     }
+
+
 
     public function filterPrice(Request $request)
     {
