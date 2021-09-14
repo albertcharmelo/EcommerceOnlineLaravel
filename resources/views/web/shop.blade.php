@@ -1,6 +1,14 @@
 @extends('welcome')
 @section('content')
 <style>
+@media (max-width: 1360px) {
+  .stext-103 {
+    font-family: Poppins-Regular;
+    font-size: 12px !important;
+    line-height: 1.466667;
+  }
+
+}
 
 </style>
     
@@ -92,7 +100,7 @@
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="toLow">
-										Price: Mayor a Menor
+										Precio: Mayor a Menor
 									</a>
 								</li>
 							</ul>

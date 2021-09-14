@@ -16,11 +16,12 @@ Route::prefix('/')->group(function () {
     //Shop
     Route::post('/shop/filterProduct','WebController@filterPrice');
     Route::get('/shop/{slug?}','WebController@shop');
-    
-
     Route::post('/search/producto', 'ProductoController@list');
     //Contacto
     Route::get('/contacto','WebController@contacto');
+    //Nosotros
+    Route::get('/nosotros','WebController@about');
+
 });
 
 //Rutas del Panel

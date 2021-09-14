@@ -30,16 +30,16 @@ CREATE TABLE IF NOT EXISTS `blog_post` (
 -- Volcando datos para la tabla devian.blog_post: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `blog_post` DISABLE KEYS */;
 REPLACE INTO `blog_post` (`id`, `titulo`, `slug`, `contenido`, `autor`, `categoria_id`, `imagen`, `estado`, `created_at`, `updated_at`) VALUES
-	(10, 'Quia et qui qui at', 'qui-et-qui-qui-at', '<span style="color: rgb(77, 81, 86); font-family: arial, sans-serif;">La pisca andina es una sopa o caldo de preparación sencilla, hecho a base de cilantro, cebollín y agua, papas cortadas en trozos, huevo y leche. La pisca andina es representativa y nativa de los Andes venezolanos y es comúnmente consumida durante el desayuno</span>', 'Nathaniel Barber Britanni Wong', 3, 'BlogPostImages/1630540716banner-slide-mydeviacom4-min.jpg', 'Publico', '2021-09-02 03:58:36', '2021-09-02 03:58:36'),
-	(11, 'Tempor et et soluta', 'tempor-et-et-soluta', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540735banner-8en1-02.jpg', 'Publico', '2021-09-02 03:58:55', '2021-09-02 03:58:55'),
-	(12, 'Tempor et et soluta', 'tempor-ret-et-soluta-1', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/163054074503-min.jpg', 'Publico', '2021-09-02 03:59:05', '2021-09-02 03:59:05'),
-	(13, 'Tempor et et soluta', 'tempor-et-et-soluta-2', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540753banner-8en1-02.jpg', 'Publico', '2021-09-02 03:59:13', '2021-09-02 03:59:13'),
-	(14, 'Tempor et et soluta', 'tempor-et-et-soluta-3', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540760VCL11.png', 'Publico', '2021-09-02 03:59:20', '2021-09-02 03:59:20'),
-	(15, 'Tempor et et soluta', 'tempor-et-et-soluta-4', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540768VCL11.png', 'Publico', '2021-09-02 03:59:28', '2021-09-02 03:59:28'),
-	(16, 'Tempor et et soluta', 'tempor-et-et-soluta-5', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540769VCL11.png', 'Publico', '2021-09-02 03:59:29', '2021-09-02 03:59:29'),
-	(17, 'Tempor et et soluta', 'tempor-et-et-soluta-6', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540769VCL11.png', 'Privado', '2021-09-02 03:59:29', '2021-09-02 03:59:29'),
-	(18, 'Tempor et et soluta', 'tempor-et-et-soluta-7', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540770VCL11.png', 'Privado', '2021-09-02 03:59:30', '2021-09-02 03:59:30'),
-	(19, 'Quae qui aute aliqua', 'quae-qui-aute-aliqua', 'Rerum neque obcaecat.', 'Nathaniel Barber Britanni Wong', 4, 'BlogPostImages/1630549605VCL01.png', 'Publico', '2021-09-02 06:26:45', '2021-09-02 06:26:45');
+	(10, 'Quia et qui qui at', 'qui-et-qui-qui-at', '<span style="color: rgb(77, 81, 86); font-family: arial, sans-serif;">La pisca andina es una sopa o caldo de preparación sencilla, hecho a base de cilantro, cebollín y agua, papas cortadas en trozos, huevo y leche. La pisca andina es representativa y nativa de los Andes venezolanos y es comúnmente consumida durante el desayuno</span>', 'Nathaniel Barber Britanni Wong', 3, 'BlogPostImages/1630540716banner-slide-mydeviacom4-min.jpg', 'Publico', '2021-09-01 23:58:36', '2021-09-01 23:58:36'),
+	(11, 'Tempor et et soluta', 'tempor-et-et-soluta', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540735banner-8en1-02.jpg', 'Publico', '2021-09-01 23:58:55', '2021-09-01 23:58:55'),
+	(12, 'Tempor et et soluta', 'tempor-ret-et-soluta-1', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/163054074503-min.jpg', 'Publico', '2021-09-01 23:59:05', '2021-09-01 23:59:05'),
+	(13, 'Tempor et et soluta', 'tempor-et-et-soluta-2', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540753banner-8en1-02.jpg', 'Publico', '2021-09-01 23:59:13', '2021-09-01 23:59:13'),
+	(14, 'Tempor et et soluta', 'tempor-et-et-soluta-3', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540760VCL11.png', 'Publico', '2021-09-01 23:59:20', '2021-09-01 23:59:20'),
+	(15, 'Tempor et et soluta', 'tempor-et-et-soluta-4', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540768VCL11.png', 'Publico', '2021-09-01 23:59:28', '2021-09-01 23:59:28'),
+	(16, 'Tempor et et soluta', 'tempor-et-et-soluta-5', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540769VCL11.png', 'Publico', '2021-09-01 23:59:29', '2021-09-01 23:59:29'),
+	(17, 'Tempor et et soluta', 'tempor-et-et-soluta-6', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540769VCL11.png', 'Privado', '2021-09-01 23:59:29', '2021-09-01 23:59:29'),
+	(18, 'Tempor et et soluta', 'tempor-et-et-soluta-7', 'Assumenda aut saepe .', 'Nathaniel Barber Britanni Wong', 5, 'BlogPostImages/1630540770VCL11.png', 'Privado', '2021-09-01 23:59:30', '2021-09-01 23:59:30'),
+	(19, 'Quae qui aute aliqua', 'quae-qui-aute-aliqua', 'Rerum neque obcaecat.', 'Nathaniel Barber Britanni Wong', 4, 'BlogPostImages/1630549605VCL01.png', 'Publico', '2021-09-02 02:26:45', '2021-09-02 02:26:45');
 /*!40000 ALTER TABLE `blog_post` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.blog_post_categoria
@@ -55,12 +55,12 @@ CREATE TABLE IF NOT EXISTS `blog_post_categoria` (
 -- Volcando datos para la tabla devian.blog_post_categoria: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `blog_post_categoria` DISABLE KEYS */;
 REPLACE INTO `blog_post_categoria` (`id`, `categoria`, `slug`, `created_at`, `updated_at`) VALUES
-	(1, 'Plotter Hidrogel', 'plotter_hidrogel', '2021-09-01 13:35:53', '2021-09-01 13:35:54'),
-	(2, 'Protector de pantalla', NULL, '2021-09-01 13:36:02', '2021-09-01 13:36:03'),
-	(3, 'Vinilos Traseros', NULL, '2021-09-01 13:36:10', '2021-09-01 13:36:11'),
-	(4, 'Accesorios Plotter', NULL, '2021-09-01 13:36:20', '2021-09-01 13:36:20'),
-	(5, 'Accesorios para móviles', NULL, '2021-09-01 13:36:27', '2021-09-01 13:36:28'),
-	(7, 'Plant vs Undead', 'plant-vs-undead', '2021-09-02 06:53:08', '2021-09-02 06:53:08');
+	(1, 'Plotter Hidrogel', 'plotter_hidrogel', '2021-09-01 09:35:53', '2021-09-01 09:35:54'),
+	(2, 'Protector de pantalla', 'protecto_de_pantalla', '2021-09-01 09:36:02', '2021-09-01 09:36:03'),
+	(3, 'Vinilos Traseros', 'vinilos_traseros', '2021-09-01 09:36:10', '2021-09-01 09:36:11'),
+	(4, 'Accesorios Plotter', 'accesorios_plotter', '2021-09-01 09:36:20', '2021-09-01 09:36:20'),
+	(5, 'Accesorios para móviles', 'accesorios_para_moviles', '2021-09-01 09:36:27', '2021-09-01 09:36:28'),
+	(7, 'Plant vs Undead', 'plant-vs-undead', '2021-09-02 02:53:08', '2021-09-02 02:53:08');
 /*!40000 ALTER TABLE `blog_post_categoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.combos
@@ -203,19 +203,19 @@ CREATE TABLE IF NOT EXISTS `modificaciones_index` (
 -- Volcando datos para la tabla devian.modificaciones_index: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `modificaciones_index` DISABLE KEYS */;
 REPLACE INTO `modificaciones_index` (`id`, `tipo`, `nombre`, `check`, `src`, `contenido`, `created_at`, `updated_at`) VALUES
-	(2, 'slider', NULL, 'false', 'indexSlider/1630446254screenshot.png', NULL, '2021-09-01 01:44:14', '2021-09-01 01:44:14'),
-	(3, 'slider', NULL, 'true', 'indexSlider/163044704802-min.jpeg', NULL, '2021-09-01 01:57:28', '2021-09-01 01:57:28'),
-	(4, 'slider', NULL, 'false', 'indexSlider/163044704803-min.jpg', NULL, '2021-09-01 01:57:28', '2021-09-01 03:41:16'),
-	(5, 'slider', NULL, 'true', 'indexSlider/1630447048banner-slide-mydeviacom4-min.jpg', NULL, '2021-09-01 01:57:28', '2021-09-01 01:57:28'),
-	(6, 'slider', NULL, 'false', 'indexSlider/1630447048banner-8en1-02.jpg', NULL, '2021-09-01 01:57:28', '2021-09-01 01:57:28'),
-	(7, 'slider', NULL, 'false', 'indexSlider/1630447579banner-slide-mydeviacom4-min.jpg', NULL, '2021-09-01 02:06:19', '2021-09-01 02:06:19'),
-	(8, 'slider', NULL, 'false', 'indexSlider/163044760902-min.jpeg', NULL, '2021-09-01 02:06:49', '2021-09-06 07:12:49'),
-	(9, 'slider', NULL, 'false', 'indexSlider/1630448557fundas_banner.jpg', NULL, '2021-09-01 02:22:37', '2021-09-06 07:14:40'),
-	(10, 'slider', NULL, 'true', 'indexSlider/1630450224powerbanks_banner-1.jpg', NULL, '2021-09-01 02:50:24', '2021-09-06 07:26:16'),
-	(11, 'comentario', 'Albert Charmelos', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisques ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-03 03:39:37', '2021-09-03 15:22:07'),
-	(12, 'comentario', 'Diorena Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-03 03:39:37', '2021-09-03 03:39:37'),
-	(13, 'comentario', 'Dionelys Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-03 03:39:37', '2021-09-03 03:39:37'),
-	(14, 'comentario', 'Oreanny Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-03 03:39:37', '2021-09-03 03:39:37');
+	(2, 'slider', NULL, 'false', 'indexSlider/1630446254screenshot.png', NULL, '2021-08-31 21:44:14', '2021-08-31 21:44:14'),
+	(3, 'slider', NULL, 'true', 'indexSlider/163044704802-min.jpeg', NULL, '2021-08-31 21:57:28', '2021-08-31 21:57:28'),
+	(4, 'slider', NULL, 'false', 'indexSlider/163044704803-min.jpg', NULL, '2021-08-31 21:57:28', '2021-08-31 23:41:16'),
+	(5, 'slider', NULL, 'true', 'indexSlider/1630447048banner-slide-mydeviacom4-min.jpg', NULL, '2021-08-31 21:57:28', '2021-08-31 21:57:28'),
+	(6, 'slider', NULL, 'false', 'indexSlider/1630447048banner-8en1-02.jpg', NULL, '2021-08-31 21:57:28', '2021-08-31 21:57:28'),
+	(7, 'slider', NULL, 'false', 'indexSlider/1630447579banner-slide-mydeviacom4-min.jpg', NULL, '2021-08-31 22:06:19', '2021-08-31 22:06:19'),
+	(8, 'slider', NULL, 'false', 'indexSlider/163044760902-min.jpeg', NULL, '2021-08-31 22:06:49', '2021-09-06 03:12:49'),
+	(9, 'slider', NULL, 'false', 'indexSlider/1630448557fundas_banner.jpg', NULL, '2021-08-31 22:22:37', '2021-09-06 03:14:40'),
+	(10, 'slider', NULL, 'true', 'indexSlider/1630450224powerbanks_banner-1.jpg', NULL, '2021-08-31 22:50:24', '2021-09-06 03:26:16'),
+	(11, 'comentario', 'Albert Charmelos', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisques ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-02 23:39:37', '2021-09-03 11:22:07'),
+	(12, 'comentario', 'Diorena Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-02 23:39:37', '2021-09-02 23:39:37'),
+	(13, 'comentario', 'Dionelys Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-02 23:39:37', '2021-09-02 23:39:37'),
+	(14, 'comentario', 'Oreanny Orea', 'true', 'En una de sus semanas de Clash, al HolaSilver y su equipo les toco jugar vs Pongan Tusa, el equipo de Fallen, Joker was here, Papisosa, Mechs y Relic', 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.', '2021-09-02 23:39:37', '2021-09-02 23:39:37');
 /*!40000 ALTER TABLE `modificaciones_index` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.municipio
@@ -405,12 +405,12 @@ CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
 -- Volcando datos para la tabla devian.oauth_access_tokens: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
 REPLACE INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
-	('3a5d0ce60918ff0fed0fbc5cddc7938fb627c3b446c9d1a6a3ec1323be8099b217374940c8c8d899', 4, 5, 'Api access Token', '[]', 0, '2021-08-20 00:36:18', '2021-08-20 00:36:18', '2022-08-19 20:36:18'),
-	('5f71bf69b9cbd6dc9724092216852d1933a2d6ae6be13a2498ee5ea6d39dd9ec7acef2b4a375445b', 4, 5, 'Api access Token', '[]', 0, '2021-08-20 00:32:07', '2021-08-20 00:32:07', '2022-08-19 20:32:07'),
-	('b29680eb14d60116ca7e0e37dedd33d2614c96b89e643e4891a25188ecf4edaffd4e324f108b194a', 4, 5, 'Api access Token', '[]', 0, '2021-08-20 00:39:04', '2021-08-20 00:39:04', '2022-08-19 20:39:04'),
-	('b91a55a9b82951e7eeaffaa41a65285312bc717645a5d8aafcb5a5dc5f6a63211e27b78c0ecd9d2b', 4, 5, 'Api Product access Token', '[]', 0, '2021-08-20 00:49:39', '2021-08-20 00:49:39', '2022-08-19 20:49:39'),
-	('cbc4d7ed8617661abed5ee67207e4955c5ddb3e5bf6789f35b03b9d713894134c94ecffb5faa1490', 4, 5, 'Api access Token', '[]', 0, '2021-08-20 00:41:44', '2021-08-20 00:41:44', '2022-08-19 20:41:44'),
-	('e6dacec62be45d029c07c30cb205f4f2b05ea2f4e413b46ea68b13b2f62287d864167eb0c1590401', 4, 5, 'Api access Token', '[]', 0, '2021-08-20 00:40:37', '2021-08-20 00:40:37', '2022-08-19 20:40:37');
+	('3a5d0ce60918ff0fed0fbc5cddc7938fb627c3b446c9d1a6a3ec1323be8099b217374940c8c8d899', 4, 5, 'Api access Token', '[]', 0, '2021-08-19 20:36:18', '2021-08-19 20:36:18', '2022-08-19 20:36:18'),
+	('5f71bf69b9cbd6dc9724092216852d1933a2d6ae6be13a2498ee5ea6d39dd9ec7acef2b4a375445b', 4, 5, 'Api access Token', '[]', 0, '2021-08-19 20:32:07', '2021-08-19 20:32:07', '2022-08-19 20:32:07'),
+	('b29680eb14d60116ca7e0e37dedd33d2614c96b89e643e4891a25188ecf4edaffd4e324f108b194a', 4, 5, 'Api access Token', '[]', 0, '2021-08-19 20:39:04', '2021-08-19 20:39:04', '2022-08-19 20:39:04'),
+	('b91a55a9b82951e7eeaffaa41a65285312bc717645a5d8aafcb5a5dc5f6a63211e27b78c0ecd9d2b', 4, 5, 'Api Product access Token', '[]', 0, '2021-08-19 20:49:39', '2021-08-19 20:49:39', '2022-08-19 20:49:39'),
+	('cbc4d7ed8617661abed5ee67207e4955c5ddb3e5bf6789f35b03b9d713894134c94ecffb5faa1490', 4, 5, 'Api access Token', '[]', 0, '2021-08-19 20:41:44', '2021-08-19 20:41:44', '2022-08-19 20:41:44'),
+	('e6dacec62be45d029c07c30cb205f4f2b05ea2f4e413b46ea68b13b2f62287d864167eb0c1590401', 4, 5, 'Api access Token', '[]', 0, '2021-08-19 20:40:37', '2021-08-19 20:40:37', '2022-08-19 20:40:37');
 /*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.oauth_auth_codes
@@ -449,12 +449,12 @@ CREATE TABLE IF NOT EXISTS `oauth_clients` (
 -- Volcando datos para la tabla devian.oauth_clients: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
 REPLACE INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
-	(1, NULL, 'DEVIA Personal Access Client', 'qXr5luECuigj48UJhQeqYsY3ALypaE8cWIesQtU9', NULL, 'http://localhost', 1, 0, 0, '2021-08-19 22:09:44', '2021-08-19 22:09:44'),
-	(2, NULL, 'DEVIA Password Grant Client', 'teJYmLc5EqLQzWgEQ8ITtXO9UUIzRIeoD27fND2E', 'users', 'http://localhost', 0, 1, 0, '2021-08-19 22:09:44', '2021-08-19 22:09:44'),
-	(3, NULL, 'DEVIA Personal Access Client', '5o5eU0W22DUPTA0QzkYfFOrqyAQ8F8mWVgps9hB1', NULL, 'http://localhost', 1, 0, 0, '2021-08-19 22:09:55', '2021-08-19 22:09:55'),
-	(4, NULL, 'DEVIA Password Grant Client', 'a6bLhVRTzsVY6oAaq03C43eiRy10JGgQnOiRtj0x', 'users', 'http://localhost', 0, 1, 0, '2021-08-19 22:09:55', '2021-08-19 22:09:55'),
-	(5, NULL, 'DEVIA Personal Access Client', 'B6hx0YU0A0tUcx82dhrQPZlGh2On0ZnA18a1vPbZ', NULL, 'http://localhost', 1, 0, 0, '2021-08-20 00:30:22', '2021-08-20 00:30:22'),
-	(6, 1, 'DEVIA Password Grant Client', 'AUkO3kF7NXFkjLSNDzyvRmcD8BpUBCnRkpypNL20', 'users', 'http://localhost', 0, 1, 0, '2021-08-20 00:30:22', '2021-08-20 00:30:22');
+	(1, NULL, 'DEVIA Personal Access Client', 'qXr5luECuigj48UJhQeqYsY3ALypaE8cWIesQtU9', NULL, 'http://localhost', 1, 0, 0, '2021-08-19 18:09:44', '2021-08-19 18:09:44'),
+	(2, NULL, 'DEVIA Password Grant Client', 'teJYmLc5EqLQzWgEQ8ITtXO9UUIzRIeoD27fND2E', 'users', 'http://localhost', 0, 1, 0, '2021-08-19 18:09:44', '2021-08-19 18:09:44'),
+	(3, NULL, 'DEVIA Personal Access Client', '5o5eU0W22DUPTA0QzkYfFOrqyAQ8F8mWVgps9hB1', NULL, 'http://localhost', 1, 0, 0, '2021-08-19 18:09:55', '2021-08-19 18:09:55'),
+	(4, NULL, 'DEVIA Password Grant Client', 'a6bLhVRTzsVY6oAaq03C43eiRy10JGgQnOiRtj0x', 'users', 'http://localhost', 0, 1, 0, '2021-08-19 18:09:55', '2021-08-19 18:09:55'),
+	(5, NULL, 'DEVIA Personal Access Client', 'B6hx0YU0A0tUcx82dhrQPZlGh2On0ZnA18a1vPbZ', NULL, 'http://localhost', 1, 0, 0, '2021-08-19 20:30:22', '2021-08-19 20:30:22'),
+	(6, 1, 'DEVIA Password Grant Client', 'AUkO3kF7NXFkjLSNDzyvRmcD8BpUBCnRkpypNL20', 'users', 'http://localhost', 0, 1, 0, '2021-08-19 20:30:22', '2021-08-19 20:30:22');
 /*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.oauth_personal_access_clients
@@ -469,9 +469,9 @@ CREATE TABLE IF NOT EXISTS `oauth_personal_access_clients` (
 -- Volcando datos para la tabla devian.oauth_personal_access_clients: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `oauth_personal_access_clients` DISABLE KEYS */;
 REPLACE INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
-	(1, 1, '2021-08-19 22:09:44', '2021-08-19 22:09:44'),
-	(2, 3, '2021-08-19 22:09:55', '2021-08-19 22:09:55'),
-	(3, 5, '2021-08-20 00:30:22', '2021-08-20 00:30:22');
+	(1, 1, '2021-08-19 18:09:44', '2021-08-19 18:09:44'),
+	(2, 3, '2021-08-19 18:09:55', '2021-08-19 18:09:55'),
+	(3, 5, '2021-08-19 20:30:22', '2021-08-19 20:30:22');
 /*!40000 ALTER TABLE `oauth_personal_access_clients` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.oauth_refresh_tokens
@@ -522,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `personas` (
 -- Volcando datos para la tabla devian.personas: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `personas` DISABLE KEYS */;
 REPLACE INTO `personas` (`id`, `nombre`, `tipo_documento_id`, `num_documento`, `direccion`, `telefono`, `email`, `tipo_persona`, `created_at`, `updated_at`) VALUES
-	(76, 'Ut veniam cumque om 01', 5, 'Qui possimus Nam se', '<p>dddddddd<br></p>', 'Eiusmod explicabo S', 'jivexus@mailinator.com', '1', '2021-08-12 23:32:11', '2021-08-13 03:02:28');
+	(76, 'Ut veniam cumque om 01', 5, 'Qui possimus Nam se', '<p>dddddddd<br></p>', 'Eiusmod explicabo S', 'jivexus@mailinator.com', '1', '2021-08-12 19:32:11', '2021-08-12 23:02:28');
 /*!40000 ALTER TABLE `personas` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.plantillas
@@ -550,13 +550,15 @@ CREATE TABLE IF NOT EXISTS `prodcuto_devia_api_categoria` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Categorias para añadir a los productos obtenidos por la API';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Categorias para añadir a los productos obtenidos por la API';
 
--- Volcando datos para la tabla devian.prodcuto_devia_api_categoria: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla devian.prodcuto_devia_api_categoria: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `prodcuto_devia_api_categoria` DISABLE KEYS */;
 REPLACE INTO `prodcuto_devia_api_categoria` (`id`, `categoria`, `slug`, `created_at`, `updated_at`) VALUES
-	(1, 'categoria1', 'categoria_1', '2021-09-06 03:50:12', NULL),
-	(2, 'categoria2', 'categoria_2', '2021-09-06 03:50:24', '2021-09-06 03:50:24');
+	(1, 'Plotters de hidrogel', 'plotters_de_hidrogel', '2021-09-05 23:50:12', '2021-09-12 22:23:43'),
+	(2, 'Protectores de Pantalla', 'protectores_de_pantalla', '2021-09-05 23:50:24', '2021-09-05 23:50:24'),
+	(3, 'Láminas para Vinilos', 'laminas_para_vinilos', '2021-09-12 22:24:30', '2021-09-12 22:24:31'),
+	(4, 'Accesorios', 'accesorios', '2021-09-12 22:24:47', '2021-09-12 22:24:47');
 /*!40000 ALTER TABLE `prodcuto_devia_api_categoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.productos
@@ -917,56 +919,90 @@ CREATE TABLE IF NOT EXISTS `producto_cart` (
   `lote` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  KEY `producto_id` (`producto_id`),
+  CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `producto_devia_api` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla devian.producto_cart: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla devian.producto_cart: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto_cart` DISABLE KEYS */;
-REPLACE INTO `producto_cart` (`id`, `producto_id`, `user_id`, `lote`, `created_at`, `updated_at`) VALUES
-	(1, 1, 5, 2, '2021-08-31 02:00:58', '2021-08-31 02:00:59'),
-	(2, 13, 5, 1, '2021-08-31 02:52:50', '2021-08-31 02:52:50');
 /*!40000 ALTER TABLE `producto_cart` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.producto_devia_api
 CREATE TABLE IF NOT EXISTS `producto_devia_api` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(50) DEFAULT '',
+  `titulo` varchar(355) DEFAULT NULL,
   `descripcion` longtext,
   `precio` varchar(50) DEFAULT NULL,
   `stock` varchar(50) DEFAULT NULL,
+  `categoria_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+  `disable` enum('false','true') DEFAULT 'false',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `titulo` (`titulo`),
+  KEY `FK1_producto_categoria` (`categoria_id`),
+  CONSTRAINT `FK1_producto_categoria` FOREIGN KEY (`categoria_id`) REFERENCES `prodcuto_devia_api_categoria` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla devian.producto_devia_api: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla devian.producto_devia_api: ~26 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto_devia_api` DISABLE KEYS */;
-REPLACE INTO `producto_devia_api` (`id`, `titulo`, `descripcion`, `precio`, `stock`, `created_at`, `updated_at`) VALUES
-	(1, 'Nuevo producto', 'hola como estas, que haces putito', '20', '2', '2021-08-20 00:50:56', '2021-08-20 00:50:56'),
-	(13, 'Otro articulo', 'hey', '10', '3', '2021-08-31 02:55:54', '2021-08-31 02:55:54');
+REPLACE INTO `producto_devia_api` (`id`, `titulo`, `descripcion`, `precio`, `stock`, `categoria_id`, `created_at`, `updated_at`, `disable`) VALUES
+	(14, 'Pack Devia Screen 15" - Protectores Para Portátiles Con 115 Láminas', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', 2, '2021-09-11 14:14:38', '2021-09-13 04:01:05', 'false'),
+	(15, 'Plotter Hidrogel Devia Compact 15" - Protectores Para Portátiles Con 115 Láminas + Tablet', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', 1, '2021-09-11 14:48:37', '2021-09-12 17:17:38', 'false'),
+	(16, 'Pack Devia Compact 12" - Maquina Hidrogel +50 Láminas', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', 1, '2021-09-11 14:48:37', '2021-09-13 04:01:30', 'false'),
+	(17, 'PACK LAMINAS HIDROGEL HD (50u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', 1, '2021-09-11 14:48:37', '2021-09-13 04:01:57', 'false'),
+	(18, 'PACK LAMINAS HIDROGEL ANTIHUELLA (50u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:48:37', '2021-09-11 14:48:37', 'false'),
+	(19, 'PACK LÁMINAS HIDROGEL FILTRO PRIVACIDAD (20u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:48:37', '2021-09-11 14:48:37', 'false'),
+	(20, 'PACK LAMINAS HIDROGEL AURORA (50u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(21, 'PACK VINILOS ORIGINALES SMARTPHONE (5u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(22, 'PACK VINILOS TEXTURAS SMARTPHONE (5u)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(23, 'PACK VINILOS TRENDY SMARTPHONE (5 Uds)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(25, 'Auriculares Kintone Series 3.5mm AZUL', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(27, 'Auriculares Metal 3.5mm PLATA', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(28, 'Powerbank Guardian Series (10.000mAh)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(29, 'Powerbank Guardian Series (20.000mAh)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(30, 'Cargador Rápido GaN USB & TIPO-C (65W)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(31, 'Cargador Multifunción Global (2USB 5V 2.4A)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(32, 'Cargador Smart Series 2 EU MFi (1USB 5V 2.1A)', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(33, 'DELUXE SERIES SPORT BAND (40mm) NECTARINE', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(34, 'DELUXE SERIES SPORT BAND (40mm) NEGRO', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(35, 'DELUXE SERIES SPORT BAND (44mm) NECTARINE', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(36, 'DELUXE SERIES SPORT BAND (44mm) PINK', 'Caja con 50 x Láminas TPU Soft', '100', '25', NULL, '2021-09-11 14:59:39', '2021-09-11 14:59:40', 'false'),
+	(38, 'VINILOS PREMIUM PORTÁTIL', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', NULL, '2021-09-11 14:48:37', '2021-09-11 14:48:37', 'false'),
+	(39, 'VINILOS TRENDY PORTÁTIL', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', NULL, '2021-09-11 14:48:37', '2021-09-11 14:48:37', 'false'),
+	(40, 'VINILOS TEXTURAS PORTÁTIL', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', NULL, '2021-09-11 14:48:37', '2021-09-11 14:48:37', 'false'),
+	(41, 'PACK VINILOS TEXTURAS TABLET (5 Uds)', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', 4, '2021-09-11 14:48:37', '2021-09-13 04:00:46', 'false'),
+	(42, 'PACK VINILOS PREMIUM TABLET (5 Uds)', 'Devia Screen 15. Plotter en el que puedes hacer cortes de hasta 15, para ofrecer protectores de móviles y Tablets de más de 12, además de protectores traseros para portátiles.', '100', '25', 4, '2021-09-11 15:23:51', '2021-09-13 04:00:38', 'false');
 /*!40000 ALTER TABLE `producto_devia_api` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.producto_has_image
 CREATE TABLE IF NOT EXISTS `producto_has_image` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `producto_id` bigint(20) NOT NULL DEFAULT '0',
+  `producto_id` int(11) NOT NULL DEFAULT '0',
   `path` varchar(300) CHARACTER SET latin1 NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `path` (`path`),
-  KEY `producto_id` (`producto_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `producto_id` (`producto_id`),
+  CONSTRAINT `FK1_producto` FOREIGN KEY (`producto_id`) REFERENCES `producto_devia_api` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla devian.producto_has_image: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla devian.producto_has_image: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto_has_image` DISABLE KEYS */;
 REPLACE INTO `producto_has_image` (`id`, `producto_id`, `path`, `created_at`, `updated_at`) VALUES
-	(1, 39, 'productoImagenes/1626220847DSC00729.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47'),
-	(2, 39, 'productoImagenes/1626220847DSC00730.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47'),
-	(3, 39, 'productoImagenes/1626220847DSC00731.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47'),
-	(4, 39, 'productoImagenes/1626220847DSC00732.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47'),
-	(5, 39, 'productoImagenes/1626220847DSC00733.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47'),
-	(6, 39, 'productoImagenes/1626220847DSC00734.JPG', '2021-07-14 04:00:47', '2021-07-14 04:00:47');
+	(7, 15, 'productoImagenes/1631392655plotter_devia_compact_15_tablet_115.jpg', '2021-09-11 20:37:35', '2021-09-11 20:37:35'),
+	(8, 15, 'productoImagenes/1631462484plotter_devia_compact_15_tablet_115.jpg', '2021-09-12 16:01:24', '2021-09-12 16:01:24'),
+	(9, 25, 'productoImagenes/1631505136auriculares_3.jpg', '2021-09-13 03:52:16', '2021-09-13 03:52:16'),
+	(10, 25, 'productoImagenes/1631505157auriculares_1.jpg', '2021-09-13 03:52:37', '2021-09-13 03:52:37'),
+	(11, 27, 'productoImagenes/1631505179auriculares_2.jpg', '2021-09-13 03:52:59', '2021-09-13 03:52:59'),
+	(12, 14, 'productoImagenes/1631505283pack_vinilos_laptop_texturas.jpg', '2021-09-13 03:54:43', '2021-09-13 03:54:43'),
+	(13, 16, 'productoImagenes/1631505304plotter_devia_compact_12_50.jpg', '2021-09-13 03:55:04', '2021-09-13 03:55:04'),
+	(14, 38, 'productoImagenes/1631505326pack_vinilos_smartphone_premium.jpg', '2021-09-13 03:55:26', '2021-09-13 03:55:26'),
+	(15, 41, 'productoImagenes/1631505620pack_vinilos_tablet_texturas.jpg', '2021-09-13 04:00:20', '2021-09-13 04:00:20'),
+	(16, 42, 'productoImagenes/1631505632Pack-20-laminas-antihuella-tablet.png', '2021-09-13 04:00:32', '2021-09-13 04:00:32'),
+	(17, 17, 'productoImagenes/1631505711pack_vinilos_smartphone_premium.jpg', '2021-09-13 04:01:51', '2021-09-13 04:01:51');
 /*!40000 ALTER TABLE `producto_has_image` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.provincias
@@ -1026,12 +1062,12 @@ CREATE TABLE IF NOT EXISTS `tipo_documentos` (
 -- Volcando datos para la tabla devian.tipo_documentos: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `tipo_documentos` DISABLE KEYS */;
 REPLACE INTO `tipo_documentos` (`id`, `nombre`, `operacion`, `descripcion`, `created_at`, `updated_at`) VALUES
-	(1, 'Factura', '1', '<p>Facturas de Compras<br></p>', '2021-07-29 21:15:20', '2021-08-13 02:59:49'),
-	(2, 'Boleta', '1', NULL, '2021-07-29 21:15:15', '2021-07-29 21:15:16'),
-	(3, 'Ticket', '1', NULL, '2021-07-29 21:15:40', '2021-07-29 21:15:40'),
-	(4, 'RNC', '0', '<p>-ñ-<br></p>', '2021-08-11 13:51:11', '2021-08-12 21:22:33'),
-	(5, 'CEDULA', '0', NULL, '2021-08-12 04:08:45', '2021-08-12 04:08:46'),
-	(10, 'CEDULA', '2', '<p>Documento Cédula para clientes<br></p>', '2021-08-13 03:00:46', '2021-08-13 03:00:46');
+	(1, 'Factura', '1', '<p>Facturas de Compras<br></p>', '2021-07-29 17:15:20', '2021-08-12 22:59:49'),
+	(2, 'Boleta', '1', NULL, '2021-07-29 17:15:15', '2021-07-29 17:15:16'),
+	(3, 'Ticket', '1', NULL, '2021-07-29 17:15:40', '2021-07-29 17:15:40'),
+	(4, 'RNC', '0', '<p>-ñ-<br></p>', '2021-08-11 09:51:11', '2021-08-12 17:22:33'),
+	(5, 'CEDULA', '0', NULL, '2021-08-12 00:08:45', '2021-08-12 00:08:46'),
+	(10, 'CEDULA', '2', '<p>Documento Cédula para clientes<br></p>', '2021-08-12 23:00:46', '2021-08-12 23:00:46');
 /*!40000 ALTER TABLE `tipo_documentos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.unidad_medidas
@@ -1079,11 +1115,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcando datos para la tabla devian.users: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `name`, `lname`, `ciudad`, `provincia`, `direccion`, `email`, `email_verified_at`, `password`, `telefono`, `rol_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(2, 'albert', 'charmelo', 'dfdfd', 'West Java', 'fdg fgd d fdfd f', 'albertcharmelo@gmail.com', NULL, '$2y$10$NWqtRaZF4.cqE3UjBmOYnO2A3w5gnCorP2PRdvNJPyJgpJ2yx6dq2', NULL, 2, NULL, '2021-07-11 01:23:10', '2021-07-11 01:23:10'),
-	(3, 'addmin', 'admin', 'Santo domingo de Guzman', 'West Java', 'Av. Ceballo 189, house b-18', 'admin@admin.com', NULL, '$2y$10$jhbpMQxUSCKi3fjAqtM5x.7TV4mjrWeGw/CBhMAeMkzQU5x8Du1r2', NULL, 1, NULL, '2021-08-13 23:37:51', '2021-08-13 23:37:51'),
-	(4, 'api', 'api', 'Santo domingo de Guzman', 'East Java', 'Av. Ceballo 189, house b-18', 'api@api.com', NULL, '$2y$10$jTeJd/6KZK2hOkju9B/Tx.yV6I3d.BPLj7Rij3GSSVDdwLVYs4xNe', NULL, 2, NULL, '2021-08-20 00:29:36', '2021-08-20 00:29:36'),
-	(5, 'Nathaniel Barber', 'Britanni Wong', 'Excepteur aspernatur', 'East Java', 'Dolorum voluptate al', 'albeert@gmail.com', NULL, '$2y$10$oKzX9HVbU74Yn3FigYaCOOiwibkU24FLrJIGYRD9lVpO.SEIN0lGK', NULL, 1, NULL, '2021-08-31 06:00:23', '2021-08-31 06:00:23'),
-	(6, 'Fredericka Hancock', 'Bertha Valenzuela', 'Aspernatur sit eaqu', 'East Java', 'Et quibusdam id omn', 'buki@mailinator.com', NULL, '$2y$10$5GkWKRYVSeXyIl6Seb.iUeojw1SBQqIPrywt2QmcWoKRJRNrLuBKS', '+1 123-456-7890', 2, NULL, '2021-08-31 19:02:47', '2021-08-31 19:02:47');
+	(2, 'albert', 'charmelo', 'dfdfd', 'West Java', 'fdg fgd d fdfd f', 'albertcharmelo@gmail.com', NULL, '$2y$10$NWqtRaZF4.cqE3UjBmOYnO2A3w5gnCorP2PRdvNJPyJgpJ2yx6dq2', NULL, 2, NULL, '2021-07-10 21:23:10', '2021-07-10 21:23:10'),
+	(3, 'addmin', 'admin', 'Santo domingo de Guzman', 'West Java', 'Av. Ceballo 189, house b-18', 'admin@admin.com', NULL, '$2y$10$jhbpMQxUSCKi3fjAqtM5x.7TV4mjrWeGw/CBhMAeMkzQU5x8Du1r2', NULL, 1, NULL, '2021-08-13 19:37:51', '2021-08-13 19:37:51'),
+	(4, 'api', 'api', 'Santo domingo de Guzman', 'East Java', 'Av. Ceballo 189, house b-18', 'api@api.com', NULL, '$2y$10$jTeJd/6KZK2hOkju9B/Tx.yV6I3d.BPLj7Rij3GSSVDdwLVYs4xNe', NULL, 2, NULL, '2021-08-19 20:29:36', '2021-08-19 20:29:36'),
+	(5, 'Nathaniel Barber', 'Britanni Wong', 'Excepteur aspernatur', 'East Java', 'Dolorum voluptate al', 'albeert@gmail.com', NULL, '$2y$10$oKzX9HVbU74Yn3FigYaCOOiwibkU24FLrJIGYRD9lVpO.SEIN0lGK', NULL, 1, NULL, '2021-08-31 02:00:23', '2021-08-31 02:00:23'),
+	(6, 'Fredericka Hancock', 'Bertha Valenzuela', 'Aspernatur sit eaqu', 'East Java', 'Et quibusdam id omn', 'buki@mailinator.com', NULL, '$2y$10$5GkWKRYVSeXyIl6Seb.iUeojw1SBQqIPrywt2QmcWoKRJRNrLuBKS', '+1 123-456-7890', 2, NULL, '2021-08-31 15:02:47', '2021-08-31 15:02:47');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.users_rol
@@ -1099,8 +1135,8 @@ CREATE TABLE IF NOT EXISTS `users_rol` (
 -- Volcando datos para la tabla devian.users_rol: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `users_rol` DISABLE KEYS */;
 REPLACE INTO `users_rol` (`id`, `rol`, `descripcion`, `created_at`, `updated_at`) VALUES
-	(1, 'admin', 'Administrador', '2021-08-31 14:35:58', '2021-08-31 14:35:58'),
-	(2, 'regular', 'Cliente', '2021-08-31 14:36:43', '2021-08-31 14:36:44');
+	(1, 'admin', 'Administrador', '2021-08-31 10:35:58', '2021-08-31 10:35:58'),
+	(2, 'regular', 'Cliente', '2021-08-31 10:36:43', '2021-08-31 10:36:44');
 /*!40000 ALTER TABLE `users_rol` ENABLE KEYS */;
 
 -- Volcando estructura para tabla devian.valoraciones

@@ -7,7 +7,7 @@
 	{{ header('Content-Type: text/html; charset=UTF-8') }}
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" type="image/png" href="{{ asset('images/cropped-favicon-2.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset('assets/img/devian-iso.png') }}">
 	<!--===============================================================================================-->
 	{{-- <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}"/> --}}
 	<!--===============================================================================================-->
@@ -205,7 +205,7 @@
 		}
 	</style>
 	<style>
-		@media only screen and (max-width: 1320px) {
+		@media only screen and (max-width: 1400px) {
 
 			.main-menu > li > a {
 					font-size: 11px;
@@ -306,7 +306,7 @@
 		}
 		}
 
-		@media only screen and (max-width: 800px) {
+		@media only screen and (max-width: 1351px) {
 			.profile-name-r {
 				/* position: absolute; */
 				position: absolute;
@@ -316,7 +316,6 @@
 				left: 30%;
 				color: #616161
 			}
-
 
 		}
 	</style>
@@ -367,6 +366,11 @@
 
 							<li>
 								<a href="/contacto">CONTACTO</a>
+
+							</li>
+							
+							<li>
+								<a href="/nosotros">NOSOTROS</a>
 
 							</li>
 						</ul>
@@ -663,13 +667,13 @@
 		<div class="row">
 			<div class="col-sm-6 col-lg-3 p-b-50">
 				<h4 class="stext-301 cl0 p-b-30">
-					Categorias
+					Categorías
 					</h4>
 
 					<ul>
-						@foreach ($categorias as $categoria)
+						@foreach ($categoriasProducto as $categoria)
 						<li class="p-b-10">
-							<a href="/shop" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="/shop/{{  $categoria->slug }}" class="stext-107 cl7 hov-cl1 trans-04">
 								{{ $categoria->categoria }}
 							</a>
 						</li>
@@ -712,7 +716,7 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Encuentranos
+						Encuéntranos
 					</h4>
 
 					<p class="stext-107 cl7 size-201">
@@ -737,7 +741,7 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Contactanos
+						Contáctanos
 					</h4>
 
 					<form>
@@ -803,7 +807,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="col-12 d-flex justify-content-center"><img src="{{ asset('assets/img/Bonao_logo.png') }}" style="max-width: 300px;max-height:400px"   alt="Bonao-logo"></div>
+			<div class="col-12 d-flex justify-content-center"><img src="{{ asset('assets/img/Bonao_logo_white.png') }}" style="max-width: 300px;max-height:400px"   alt="Bonao-logo"></div>
 			<div class="p-t-40">
 				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">

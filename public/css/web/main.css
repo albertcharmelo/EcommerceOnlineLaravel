@@ -2159,7 +2159,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .stext-103 {
   font-family: Poppins-Regular;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.466667;
 }
 
@@ -3007,7 +3007,7 @@ input.num-product::-webkit-inner-spin-button {
   z-index: 1;
 }
 
-.how-bor2::before,
+/* .how-bor2::before,
 .how-bor1::before {
   content: "";
   display: block;
@@ -3016,7 +3016,7 @@ input.num-product::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   border: 3px solid #ccc;
-}
+} */
 
 .how-bor1::before {
   bottom: -21px;
@@ -3068,7 +3068,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .hov-img0 img{
   width: 100%;
-  min-height: 315px;
+  min-height: 260px;
   object-fit: cover;
   -webkit-transition: transform 0.9s ease;
   -o-transition: transform 0.9s ease;
@@ -3175,6 +3175,20 @@ input.num-product::-webkit-inner-spin-button {
 
 /*//////////////////////////////////////////////////////////////////
 [ XL ]*/
+
+@media (max-width: 1360px) {
+  .stext-103 {
+    font-family: Poppins-Regular;
+    font-size: 12px !important;
+    line-height: 1.466667;
+  }
+
+}
+
+
+
+
+
 @media (max-width: 1199px) {
   .m-0-xl {margin: 0;}
   .m-lr-0-xl {margin-left: 0; margin-right: 0;}
