@@ -682,14 +682,16 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .logo-mobile img {
   max-width: calc(100% - 20px);
-  min-width: 70px;
-  min-height: 50px;
-  max-height: 100%;
-  position:absolute;
-  top: 0; 
-  left: 0; 
-  bottom: 0;
-  margin: auto;
+    min-width: 70px;
+    min-height: 60px;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    object-fit: contain;
+
 }
 
 

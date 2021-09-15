@@ -410,7 +410,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html"><img src="{{asset('assets/img/devian rd2.png')}}" alt="IMG-LOGO"></a>
+				<a href="/"><img src="{{asset('assets/img/devian rd2.png')}}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->

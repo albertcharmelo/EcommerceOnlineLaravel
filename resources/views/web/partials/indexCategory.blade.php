@@ -6,7 +6,7 @@
             <div class="block1 wrap-pic-w">
                 <img src="web/fundas_banner.jpg" style="object-fit: cover"height="371.44px" alt="IMG-BANNER">
 
-                <a href="product.html"
+                <a href="/shop/laminas_para_vinilos"
                     class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -32,7 +32,7 @@
             <div class="block1 wrap-pic-w">
                 <img src="web/auriculares_banner.jpg" style="object-fit: cover" height="371.44px" alt="IMG-BANNER">
 
-                <a href="product.html"
+                <a href="/shop/accesorios"
                     class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
@@ -59,7 +59,7 @@
                 <img src="web/Beis-Blanco-Proposito-Ano-Nuevo-Instagram-Publicacion.jpg" style="object-fit: cover" style="object-fit: cover;"
                     height="371.44px" alt="IMG-BANNER">
 
-                <a href="product.html"
+                <a href="/shop/plotters_de_hidrogel"
                     class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
