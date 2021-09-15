@@ -514,58 +514,58 @@
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-02.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/1.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-02.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/1.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-03.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/2.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-03.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/2.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-04.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/3.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-04.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/3.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-05.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/4.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-05.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/4.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-06.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/5.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-06.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/5.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-07.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/6.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-07.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/6.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-08.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/7.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-08.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/7.jpg') }}');object-fit: cover;"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="{{ asset("images/gallery-09.jpg") }}"
+							<a class="item-gallery bg-img1" href="{{ asset('web/8.jpg') }}"
 								data-lightbox="gallery"
-								style="background-image: url('{{ asset("images/gallery-09.jpg") }}');object-fit: cover;"></a>
+								style="background-image: url('{{ asset('web/8.jpg') }}');object-fit: cover;"></a>
 						</div>
 					</div>
 				</div>
