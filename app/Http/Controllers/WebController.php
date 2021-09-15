@@ -68,6 +68,29 @@ class WebController extends Controller
         return view('web.about')->with(compact('categorias',"categoriasProducto"));
 
     }
+    public function terms(){
+        $categoriasProducto =  $this->categoriasProducto;
+        $categorias = PostCategoria::all();
+        if (Auth::check()) {
+            $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
+            ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();
+            return view('web.terminos')->with(compact('productosCarrito','categorias',"categoriasProducto"));
+        }
+        return view('web.terminos')->with(compact('categorias',"categoriasProducto"));
+
+    }
+
+    public function guia_uso(){
+        $categoriasProducto =  $this->categoriasProducto;
+        $categorias = PostCategoria::all();
+        if (Auth::check()) {
+            $productosCarrito = ProductoCarrito::join('producto_devia_api','producto_devia_api.id','=','producto_cart.producto_id')
+            ->select('producto_cart.lote as cantidad','producto_cart.user_id','producto_devia_api.*')->where('user_id',Auth::user()->id )->get();
+            return view('web.guia_uso')->with(compact('productosCarrito','categorias',"categoriasProducto"));
+        }
+        return view('web.guia_uso')->with(compact('categorias',"categoriasProducto"));
+
+    }
 
 
     public function shop($slug = null)

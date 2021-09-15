@@ -1,10 +1,14 @@
 <!-- Blog -->
+
 <section class="sec-blog bg0 p-t-60 p-b-90">
     <div class="container">
         <div class="p-b-66">
             <h3 class="ltext-105 cl5 txt-center respon1">
                 Nuestro Blog
             </h3>
+            <p class=" text-center sub-text mt-4">
+                Echa un vistazo a las ultimas noticias de nuestra tienda, No te pierdas de las novedades que tenemos para ti. 
+            </p>
         </div>
 
         <div class="row">
@@ -56,6 +60,124 @@
             
 
          
+        </div>
+    </div>
+</section>
+
+
+<!-- No pierdas Clientes -->
+<section class="sec-blog bg0 p-t-60 p-b-90">
+    <div class="container-fluid">
+        <div class="p-b-66">
+            <h3 class="ltext-105 cl5 txt-center respon1 text-capitalize">
+                VENTAJAS DE NEGOCIO
+            </h3>
+            <p class=" text-center sub-text mt-4">
+                No pierdas más ventas, atiende a todos tus clientes.
+            </p>
+        </div>
+
+        <div class="row ">
+            <div class="col-12 row justify-content-center d-flex">
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                    style="background-color: #343A40;min-height:230px">
+                    <h4 class="font-weight-bold text-white h4">Inversión </h4>
+                    <ul class="mt-4">
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Bajo riesgo de
+                                inversión en el producto​</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Retorno rápido de la
+                                inversión</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Recuperación total de
+                                la inversión</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                    style="background-color: #343A40;min-height:230px">
+                    <h4 class="font-weight-bold text-white h4">Stock </h4>
+                    <ul class="mt-4">
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación de stock en tienda​</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Liberación de espacio en tienda</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación gestión de tiempo y control de stock</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                    style="background-color: #343A40;min-height:230px">
+                    <h4 class="font-weight-bold text-white h4">Inventario </h4>
+                    <ul class="mt-4">
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación global de referencias​</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Implantación de una única referencia universal</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación gestión tiempo y control de inventario</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 row justify-content-center d-flex mt-3">
+                
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                style="background-color: #343A40;min-height:230px">
+                <h4 class="font-weight-bold text-white h4">Compras</h4>
+                <ul class="mt-4">
+                    <li class=" text-white mb-3 ml-2">
+                        <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación gestión tiempo de compras​</p>
+                    </li>
+                    <li class=" text-white mb-3 ml-2">
+                        <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación gestión control de compras</p>
+                    </li>
+                    <li class=" text-white mb-3 ml-2">
+                        <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Implantación de un único proveedor</p>
+                    </li>
+                </ul>
+            </div>
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                    style="background-color: #343A40;min-height:230px">
+                    <h4 class="font-weight-bold text-white h4">Ajuste oferta y demanda​ </h4>
+                    <ul class="mt-4">
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Atención de todos los pedidos de los clientes​</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación ventas perdidas</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Eliminación insatisfacción de los clientes</p>
+                        </li>
+                    </ul>
+                </div>
+              
+                <div class="col-lg-3 col-12 ml-2 col-md-4 p-4 vatajas-card"
+                    style="background-color: #343A40;min-height:230px">
+                    <h4 class="font-weight-bold text-white h4">Fidelización Clientes </h4>
+                    <ul class="mt-4">
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Atención rápida al cliente​</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Atención de todos los clientes</p>
+                        </li>
+                        <li class=" text-white mb-3 ml-2">
+                            <p><i class="fas fa-circle" style="color:#3AC0CB;font-size:8px"></i> Garantia de calidad</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

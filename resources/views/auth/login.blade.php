@@ -81,9 +81,9 @@
                 <div class="text-center mt-5 text-small">
                     Copyright &copy; DeviaRD
                     <div class="mt-2">
-                        <a href="#">Privacy Policy</a>
+                        <a href="{{ url('/terms') }}">Politica de privacidad</a>
                         <div class="bullet"></div>
-                        <a href="#">Terms of Service</a>
+                        <a href="{{ url('/terms') }}">Terminos de Servicio</a>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,7 @@
 @extends('welcome')
 @section('content')
 <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('indexSlider/1630447579banner-slide-mydeviacom4-min.jpg') }}');">
-    <h2 class="ltext-105 cl0 txt-center">
-        Contacto
-    </h2>
+   
 </section>	
 
 

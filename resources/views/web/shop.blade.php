@@ -77,29 +77,23 @@
 
 							<ul>
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active" data-filter="news">
+									<a href="#" class="filter-link filter-order stext-106 trans-04 filter-link-order-active" data-filter="news">
 										Mas nuevos
 									</a>
 								</li>
-							
-
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04" data-filter="popularidad">
+									<a href="#" class="filter-link filter-order stext-106 trans-04" data-filter="popularidad">
 										Popularidad
 									</a>
 								</li>
-
-							
-
-
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04" data-filter="toHigh">
+									<a href="#" class="filter-link filter-order stext-106 trans-04" data-filter="toHigh">
 										Precio: Menor a Mayor
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04" data-filter="toLow">
+									<a href="#" class="filter-link filter-order stext-106 trans-04" data-filter="toLow">
 										Precio: Mayor a Menor
 									</a>
 								</li>

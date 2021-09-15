@@ -1768,6 +1768,10 @@ button.mfp-close {
   color: #00A7B9;
   border-bottom: 1px solid #00A7B9;
 }
+.filter-link-order-active {
+  color: #00A7B9;
+  border-bottom: 1px solid #00A7B9;
+}
 
 @media (max-width: 767px) {
   .filter-col1,

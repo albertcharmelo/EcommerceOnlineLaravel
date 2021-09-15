@@ -21,6 +21,10 @@ Route::prefix('/')->group(function () {
     Route::get('/contacto','WebController@contacto');
     //Nosotros
     Route::get('/nosotros','WebController@about');
+    //Guia
+    Route::get('/guia-uso','WebController@guia_uso');
+    //Terminos
+    Route::get('/terms','WebController@terms');
 
 });
 

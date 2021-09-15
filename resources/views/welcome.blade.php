@@ -39,7 +39,7 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/main.css') }}">
-<link rel="stylesheet" href="{{ asset('css/web/jquery-ui.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/web/jquery-ui.css') }}">
 
 	<!--===============================================================================================-->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -318,6 +318,15 @@
 			}
 
 		}
+		.vatajas-card:hover{
+			box-shadow: 0 8px 16px rgb(44 44 44 / 80%), 0 -8px 16px hsl(0deg 0% 90% / 80%);
+    transform: translateY(-10px);
+    transition: .3s;
+		}
+
+		.vatajas-card{
+			border-radius: 3%;
+		}
 	</style>
 	@yield('css')
 </head>
@@ -339,27 +348,18 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							@foreach ($categoriasProducto as $categoria)
+							{{-- @foreach ($categoriasProducto as $categoria)
 							<li class="">
 								<a class=" text-uppercase" href="/shop/{{ $categoria->slug }}">{{ $categoria->categoria }}</a>
 							</li>
-							@endforeach
-							{{-- <li class="">
-								<a href="/shop">PLOTTER HIDROGEL</a>
-							</li>
-
+							@endforeach --}}
 							<li>
-								<a href="/shop">PROTECTORES DE PANTALLA</a>
+								<a class=" text-uppercase" href="/shop">Tienda</a>
 							</li>
-
-							<li class="" data-label1="">
-								<a href="/shop">LAMINAS</a>
-							</li>
-
 							<li>
-								<a href="/shop">ACCESORIOS PLOTTER</a>
-							</li> --}}
+								<a href="/guia-uso">GUÍA DE USO</a>
 
+							</li>
 							<li>
 								<a href="/blog">BLOG</a>
 							</li>
@@ -379,12 +379,7 @@
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m h-full">
 						@auth
-						{{-- <div class="flex-c-m h-full p-r-24">
-							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
-								<i class="zmdi zmdi-search"></i>
-							</div>
-						</div> --}}
-
+				
 						<div class="flex-c-m h-full p-l-18 p-r-25 bor5">
 							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
 								data-notify="{{ $productosCarrito->count() }}">
@@ -446,21 +441,14 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
-				<li>
-					<a href="/shop">PLOTTER HIDROGEL</a>
+				@foreach ($categoriasProducto as $categoria)
+				<li class="">
+					<a class=" text-uppercase" href="/shop/{{ $categoria->slug }}">{{ $categoria->categoria }}</a>
 				</li>
-
+				@endforeach
 				<li>
-					<a href="/shop">PROTECTORES DE PANTALLA</a>
-				</li>
+					<a href="/guia-uso">GUÍA DE USO</a>
 
-				<li>
-					<a href="/shop" class="label1 rs1" data-label1="hot">LAMINAS VINILOS</a>
-				</li>
-
-
-				<li>
-					<a href="/shop">ACCESORIOS PLOTTER</a>
 				</li>
 				<li>
 					<a href="/blog">BLOG</a>
@@ -468,6 +456,11 @@
 
 				<li>
 					<a href="/contacto">CONTACTO</a>
+				</li>
+				
+				<li>
+					<a href="/nosotros">NOSOTROS</a>
+
 				</li>
 			</ul>
 		</div>
@@ -665,153 +658,142 @@
 <footer class="bg3 p-t-75 p-b-32">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-lg-3 p-b-50">
+			<div class="col-sm-6 col-lg-2 p-b-50">
 				<h4 class="stext-301 cl0 p-b-30">
 					Categorías
-					</h4>
+				</h4>
 
-					<ul>
-						@foreach ($categoriasProducto as $categoria)
-						<li class="p-b-10">
-							<a href="/shop/{{  $categoria->slug }}" class="stext-107 cl7 hov-cl1 trans-04">
-								{{ $categoria->categoria }}
-							</a>
-						</li>
-
-						@endforeach
-					</ul>
-				</div>
-
-				{{-- <div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Help
-					</h4>
-
-					<ul>
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Track Order
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Returns
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shipping
-							</a>
-						</li>
-
-						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								FAQs
-							</a>
-						</li>
-					</ul>
-				</div> --}}
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Encuéntranos
-					</h4>
-
-					<p class="stext-107 cl7 size-201">
-						<i class="fas fa-map-marker-alt mr-1"></i> C/ Duarte No.224, Bonao 42000, Monseñor Nouel,
-						República Dominicana, puede contactarnos al +1 (849) 450-7766
-					</p>
-
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
+				<ul>
+					@foreach ($categoriasProducto as $categoria)
+					<li class="p-b-10">
+						<a href="/shop/{{  $categoria->slug }}" class="stext-107 cl7 hov-cl1 trans-04">
+							{{ $categoria->categoria }}
 						</a>
+					</li>
 
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Contáctanos
-					</h4>
-
-					<form>
-
-						<div class=" ">
-
-							<a href="https://wa.me/18494507766" class="text-white"><i class="fab fa-whatsapp mr-2"
-									style="font-size:18px"></i> <span style="font-size:17px"> Whatsapp</span> </a>
-
-						</div>
-						<div class="p-t-18 ">
-
-							<a href="https://www.youtube.com/channel/UCb_JZZVD9T1fkO-FHgJ3sLA" class="text-white "><i
-									class="fab fa-youtube mr-2" style="font-size:18px"></i> <span
-									style="font-size:17px"> Youtube</span> </a>
-
-						</div>
-						<div class="p-t-18 ">
-
-							<a href="https://twitter.com/mydeviard" class="text-white"><i class="fab fa-twitter mr-2 "
-									style="font-size:18px"></i> <span style="font-size:17px"> Twitter</span> </a>
-
-						</div>
-						<div class="p-t-18">
-
-							<a href="https://www.instagram.com/mydeviard/" class="text-white"><i
-									class="fab fa-instagram mr-2" style="font-size:18px"></i> <span
-									style="font-size:17px"> Instagram</span> </a>
-
-						</div>
-					</form>
-				</div>
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Confían en nosotros
-					</h4>
-
-					<form class="row">
-
-						<div class="col-6">
-
-							<img src="{{ asset('assets/img/logo-dark-el-arabe_blanco.png') }}" width="70%" alt="" srcset="">
+					@endforeach
+				</ul>
+			</div>
 
 
-						</div>
-						<div class="p-t-18 col-6">
 
-							<img src="{{ asset('assets/img/logo-dark-collatech_blanco.png') }}" width="70%"  alt="" srcset="">
+			<div class="col-sm-6 col-lg-2 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Encuéntranos
+				</h4>
 
+				<p class="stext-107 cl7 size-201">
+					<i class="fas fa-map-marker-alt mr-1"></i> C/ Duarte No.224, Bonao 42000, Monseñor Nouel,
+					República Dominicana, puede contactarnos al +1 (849) 450-7766
+				</p>
 
-						</div>
-						<div class="p-t-18 col-6">
+				<div class="p-t-27">
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<i class="fa fa-facebook"></i>
+					</a>
 
-							<img src="{{ asset('assets/img/logo-dark-ernesto-iphone-shop_blanco.png') }}" width="70%" alt="" srcset="">
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<i class="fa fa-instagram"></i>
+					</a>
 
-
-						</div>
-						<div class="p-t-18 col-6">
-							<img src="{{ asset('assets/img/logos-dark-unlock-express_blanco.png') }}"  width="70%" alt="" srcset="">
-
-
-						</div>
-					</form>
+					<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+						<i class="fa fa-pinterest-p"></i>
+					</a>
 				</div>
 			</div>
-			<div class="col-12 d-flex justify-content-center"><img src="{{ asset('assets/img/Bonao_logo_white.png') }}" style="max-width: 300px;max-height:400px"   alt="Bonao-logo"></div>
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="{{ asset("images/icons/icon-pay-01.png") }}" alt="ICON-PAY">
+
+			<div class="col-sm-6 col-lg-2 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Contáctanos
+				</h4>
+
+				<form>
+
+					<div class=" ">
+
+						<a href="https://wa.me/18494507766" class="text-white"><i class="fab fa-whatsapp mr-2"
+								style="font-size:18px"></i> <span style="font-size:17px"> Whatsapp</span> </a>
+
+					</div>
+					<div class="p-t-18 ">
+
+						<a href="https://www.youtube.com/channel/UCb_JZZVD9T1fkO-FHgJ3sLA" class="text-white "><i
+								class="fab fa-youtube mr-2" style="font-size:18px"></i> <span style="font-size:17px">
+								Youtube</span> </a>
+
+					</div>
+					<div class="p-t-18 ">
+
+						<a href="https://twitter.com/mydeviard" class="text-white"><i class="fab fa-twitter mr-2 "
+								style="font-size:18px"></i> <span style="font-size:17px"> Twitter</span> </a>
+
+					</div>
+					<div class="p-t-18">
+
+						<a href="https://www.instagram.com/mydeviard/" class="text-white"><i
+								class="fab fa-instagram mr-2" style="font-size:18px"></i> <span style="font-size:17px">
+								Instagram</span> </a>
+
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6 col-lg-3 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Confían en nosotros
+				</h4>
+
+				<form class="row">
+
+					<div class="col-6">
+
+						<img src="{{ asset('assets/img/logo-dark-el-arabe_blanco.png') }}" width="70%" alt="" srcset="">
+
+
+					</div>
+					<div class="p-t-18 col-6">
+
+						<img src="{{ asset('assets/img/logo-dark-collatech_blanco.png') }}" width="70%" alt=""
+							srcset="">
+
+
+					</div>
+					<div class="p-t-18 col-6">
+
+						<img src="{{ asset('assets/img/logo-dark-ernesto-iphone-shop_blanco.png') }}" width="70%" alt=""
+							srcset="">
+
+
+					</div>
+					<div class="p-t-18 col-6">
+						<img src="{{ asset('assets/img/logos-dark-unlock-express_blanco.png') }}" width="70%" alt=""
+							srcset="">
+
+
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6 col-lg-3 p-b-50">
+				<h4 class="stext-301 cl0 p-b-30">
+					Quiénes somos?
+				</h4>
+
+				<form class="row">
+
+					<div class="col-6">
+
+						<img src="{{ asset('assets/img/Bonao_logo_white.png') }}" style="max-width: 300px;max-height:400px" alt="" srcset="">
+
+
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+		<div class="p-t-40">
+			<div class="flex-c-m flex-w p-b-18">
+				<a href="#" class="m-all-1">
+					<img src="{{ asset("images/icons/icon-pay-01.png") }}" alt="ICON-PAY">
 				</a>
 
 				<a href="#" class="m-all-1">
@@ -832,17 +814,17 @@
 			</div>
 
 			<p class="stext-107 cl6 txt-center">
-					
-					Copyright &copy;<script>
-						document.write(new Date().getFullYear());
-					</script> <a
-						href="https://vissionsolutions.com/" target="_blank">VissionSolutions</a> | All rights reserved 
-					
 
-				</p>
+				Copyright &copy;<script>
+					document.write(new Date().getFullYear());
+				</script> <a href="https://vissionsolutions.com/" target="_blank">VissionSolutions</a> | All rights
+				reserved | <a href="{{ url('/terms') }}">Terminos y Condiciones</a>
+
+
+			</p>
 		</div>
-		</div>
-	</footer>
+	</div>
+</footer>
 
 
 	<!-- Back to top -->
