@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('css')
-<link rel="icon" type="image/png" href="{{ asset('images/cropped-favicon-2.png') }}">
+<link rel="icon" type="image/png" href="{{ asset('assets/img/devian-iso.png') }}">
+
     
 @endsection
 @section('content')
@@ -97,7 +98,7 @@
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text">+1</div>
                                             </div>
-                                            <input id="telefono" placeholder="formato: 123-456-7890" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control @error('telefono') is-invalid @enderror""
+                                            <input id="telefono" placeholder="8494507766" type="tel" class="form-control @error('telefono') is-invalid @enderror""
                                                maxlength="12"  name="telefono" required >
                                         </div>
                                         @error('telefono')

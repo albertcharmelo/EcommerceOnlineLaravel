@@ -88,7 +88,6 @@ class PostController extends Controller
     public function blog($slug = null)
     {
         $categoriasProducto =  $this->categoriasProducto;
-
         $categorias = PostCategoria::all();
         if ($slug == null) {
             $posts = Post::orderBy('created_at', 'desc')->where('estado','Publico')->simplePaginate(5);
@@ -99,7 +98,7 @@ class PostController extends Controller
 
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
-                ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
+            ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
             return view('web.blog')->with(compact('productosCarrito', 'posts', 'categorias','categoriasProducto'));
         } else {
             return view('web.blog')->with(compact('posts', 'categorias','categoriasProducto'));
@@ -165,16 +164,18 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-        $categorias = PostCategoria::all();
-        $productosRecomendados = ProductoApi::inRandomOrder()->limit(4)->get();
-        $post = Post::where('slug', $slug)->get()->first();
 
+        $categoriasProducto =  $this->categoriasProducto;
+        $categorias = PostCategoria::all();
+        $productosRecomendados = ProductoApi::inRandomOrder()->with('imagenes')->where('categoria_id','!=',null)->limit(4)->get();
+        $post = Post::where('slug', $slug)->get()->first();
+        // dd($productosRecomendados);
         if (Auth::check()) {
             $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
                 ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
-            return view('web.post')->with(compact('productosCarrito', 'categorias', 'productosRecomendados', 'post'));
+            return view('web.post')->with(compact('productosCarrito', 'categorias', 'productosRecomendados', 'post','categoriasProducto'));
         } else {
-            return view('web.post')->with(compact('categorias', 'productosRecomendados', 'post'));
+            return view('web.post')->with(compact('categorias', 'productosRecomendados', 'post','categoriasProducto'));
         }
     }
 

@@ -85,7 +85,7 @@
 
                     <div class="p-t-55">
                         <h4 class="mtext-112 cl2 p-b-33">
-                            Categorias
+                            Categorías
                         </h4>
 
                         <ul>
@@ -110,7 +110,7 @@
     
                         <li class="flex-w flex-t p-b-30">
                             <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                <img src="/images/product-min-02.jpg" alt="PRODUCT">
+                                <img src="{{ asset($producto->imagenes->first()->path) }}" style="width: 90px !important;" alt="PRODUCT">
                             </a>
     
                             <div class="size-215 flex-col-t p-t-8">

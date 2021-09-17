@@ -3072,7 +3072,7 @@ input.num-product::-webkit-inner-spin-button {
   overflow: hidden;
 }
 
-.hov-img0 img{
+.hov-img0 img {
   width: 100%;
   min-height: 260px;
   object-fit: contain;
@@ -3080,6 +3080,10 @@ input.num-product::-webkit-inner-spin-button {
   -o-transition: transform 0.9s ease;
   -moz-transition: transform 0.9s ease;
   transition: transform 0.9s ease;
+  max-width: 315px;
+  max-height: 260px;
+  min-width: 315px;
+  min-height: 260px;
 }
 
 .hov-img0:hover img {

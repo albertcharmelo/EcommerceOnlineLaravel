@@ -483,7 +483,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-13.jpg" alt="IMG-PRODUCT">
+											<img src="web/Plotter-Devia-Compact-15-Tablet_115-laminas.png"" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -519,7 +519,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-14.jpg" alt="IMG-PRODUCT">
+											<img src="web/Plotter-15-mas-vendido.jpg" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -555,7 +555,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-15.jpg" alt="IMG-PRODUCT">
+											<img src="web/plotter-devia-blanco-50laminas.jpg" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -591,7 +591,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-16.jpg" alt="IMG-PRODUCT">
+											<img src="web/Plotter-15-mas-vendido.jpg" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -635,7 +635,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-02.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/cuchillas.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -671,7 +671,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-04.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/cabezal.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -707,7 +707,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-06.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/pistola.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -743,7 +743,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-09.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/espatula-tablet.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -779,7 +779,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-11.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/espatula-tablet-y-gamuza.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -815,7 +815,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-13.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/botella-y-gamuza.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -851,7 +851,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-15.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('web/almohadilla.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -895,7 +895,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-03.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/adaptador_smart_series.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -931,7 +931,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-06.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/Adaptador_tipo_C.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -967,7 +967,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-07.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/adaptor_smart_2.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1003,7 +1003,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-08.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/auriculares_1.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1039,7 +1039,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-09.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/auriculares_2.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1075,7 +1075,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-10.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/auriculares_3.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1111,7 +1111,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-11.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/auriculares_inalambricos.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1147,7 +1147,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-12.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/adaptador_smart.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1183,7 +1183,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-13.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/airpod.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
@@ -1219,7 +1219,7 @@
 									<!-- Block2 -->
 									<div class="block2">
 										<div class="block2-pic hov-img0">
-											<img src="images/product-16.jpg" alt="IMG-PRODUCT">
+											<img src="{{ asset('assets/img/adaptador_smart_series.jpg') }}" alt="IMG-PRODUCT">
 
 											<a href="#"
 												class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
