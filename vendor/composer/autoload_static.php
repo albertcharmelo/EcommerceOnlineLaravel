@@ -151,6 +151,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
             'League\\CommonMark\\' => 18,
             'Lcobucci\\JWT\\' => 13,
             'Lcobucci\\Clock\\' => 15,
+            'Laraveles\\Spanish\\' => 18,
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Passport\\' => 17,
@@ -457,6 +458,10 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         array (
             0 => __DIR__ . '/..' . '/lcobucci/clock/src',
         ),
+        'Laraveles\\Spanish\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laraveles/spanish/src',
+        ),
         'Laravel\\Ui\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/ui/src',
@@ -623,6 +628,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
     public static $classMap = array (
         'App\\Articulo' => __DIR__ . '/../..' . '/app/Articulo.php',
         'App\\Categoria' => __DIR__ . '/../..' . '/app/Categoria.php',
+        'App\\CategoriaProducto' => __DIR__ . '/../..' . '/app/CategoriaProducto.php',
         'App\\Compra' => __DIR__ . '/../..' . '/app/Compra.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DetalleCompra' => __DIR__ . '/../..' . '/app/DetalleCompra.php',
@@ -2888,6 +2894,8 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'Laravel\\Ui\\Presets\\Vue' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Vue.php',
         'Laravel\\Ui\\UiCommand' => __DIR__ . '/..' . '/laravel/ui/src/UiCommand.php',
         'Laravel\\Ui\\UiServiceProvider' => __DIR__ . '/..' . '/laravel/ui/src/UiServiceProvider.php',
+        'Laraveles\\Spanish\\Commands\\InstallLang' => __DIR__ . '/..' . '/laraveles/spanish/src/Commands/InstallLang.php',
+        'Laraveles\\Spanish\\SpanishServiceProvider' => __DIR__ . '/..' . '/laraveles/spanish/src/SpanishServiceProvider.php',
         'Lcobucci\\Clock\\Clock' => __DIR__ . '/..' . '/lcobucci/clock/src/Clock.php',
         'Lcobucci\\Clock\\FrozenClock' => __DIR__ . '/..' . '/lcobucci/clock/src/FrozenClock.php',
         'Lcobucci\\Clock\\SystemClock' => __DIR__ . '/..' . '/lcobucci/clock/src/SystemClock.php',

@@ -77,7 +77,7 @@
                                 <div class="row">
                                     <div class="form-group col-6">
                                         <label for="password" class="d-block">Contraseña</label>
-                                        <input id="password" type="password"
+                                        <input id="password" required type="password"
                                             class="form-control @error('password') is-invalid @enderror "
                                              name="password">
                                        
@@ -150,16 +150,15 @@
 
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                                        <input type="checkbox" required  name="agree" class="custom-control-input" id="agree">
                                         <label class="custom-control-label" for="agree">Estoy de acuerdo con los
-                                            terminos
-                                            y condiciones</label>
+                                            <a href="{{ url('/terms') }}" target="_blank">Términos del Servicio</a></label>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                        Register
+                                        Registrarse
                                     </button>
                                 </div>
                             </form>

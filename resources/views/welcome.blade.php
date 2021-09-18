@@ -40,7 +40,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/web/main.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/web/jquery-ui.css') }}">
-
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	
 	<!--===============================================================================================-->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -216,6 +217,7 @@
 		
 		
 		}
+
 		@media only screen and (max-width: 600px) {
 			.sub-text {
 				font-size: 20px;
@@ -326,6 +328,16 @@
 
 		.vatajas-card{
 			border-radius: 3%;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.responsive-slider{
+
+				object-fit: contain;
+				max-height:260px !important;
+			}
+
+
 		}
 	</style>
 	@yield('css')
@@ -885,6 +897,8 @@
 	<script src="{{ asset('vendor/isotope/isotope.pkgd.min.js') }}"></script>
 	<!--===============================================================================================-->
 	<script src="{{ asset('vendor/sweetalert/sweetalert.min.js') }}"></script>
+	
+	
 	<script>
 		$('.js-addwish-b2').on('click', function(e){
 			e.preventDefault();
@@ -920,6 +934,7 @@
 			});
 		});
 	</script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="{{ asset('vendor/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 	<script>
@@ -950,8 +965,8 @@
 	<!--===============================================================================================-->
 	<script src="{{ asset('js/web/main.js') }}"></script>
 <script src="{{ asset('js/web/jquery-ui.min.js') }}"></script>
+@yield('js')
 
-	@yield('js')
 </body>
 
 </html>

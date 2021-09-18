@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Articulo' => $baseDir . '/app/Articulo.php',
     'App\\Categoria' => $baseDir . '/app/Categoria.php',
+    'App\\CategoriaProducto' => $baseDir . '/app/CategoriaProducto.php',
     'App\\Compra' => $baseDir . '/app/Compra.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DetalleCompra' => $baseDir . '/app/DetalleCompra.php',
@@ -2273,6 +2274,8 @@ return array(
     'Laravel\\Ui\\Presets\\Vue' => $vendorDir . '/laravel/ui/src/Presets/Vue.php',
     'Laravel\\Ui\\UiCommand' => $vendorDir . '/laravel/ui/src/UiCommand.php',
     'Laravel\\Ui\\UiServiceProvider' => $vendorDir . '/laravel/ui/src/UiServiceProvider.php',
+    'Laraveles\\Spanish\\Commands\\InstallLang' => $vendorDir . '/laraveles/spanish/src/Commands/InstallLang.php',
+    'Laraveles\\Spanish\\SpanishServiceProvider' => $vendorDir . '/laraveles/spanish/src/SpanishServiceProvider.php',
     'Lcobucci\\Clock\\Clock' => $vendorDir . '/lcobucci/clock/src/Clock.php',
     'Lcobucci\\Clock\\FrozenClock' => $vendorDir . '/lcobucci/clock/src/FrozenClock.php',
     'Lcobucci\\Clock\\SystemClock' => $vendorDir . '/lcobucci/clock/src/SystemClock.php',

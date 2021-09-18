@@ -44,7 +44,7 @@
                             class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2"
                             required>
                         <div class="invalid-feedback">
-                            please fill in your password
+                            Ingrese su contraseña
                         </div>
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -58,13 +58,13 @@
                             <input type="checkbox" name="remember"
                                 {{ old('remember') ? 'checked' : '' }}
                                 class="custom-control-input" tabindex="3" id="remember">
-                            <label class="custom-control-label" for="remember">Recuerdame</label>
+                            <label class="custom-control-label" for="remember">Recuérdame</label>
                         </div>
                     </div>
 
                     <div class="form-group text-right">
                         <a href="{{ route('password.request') }}" class="float-left mt-3">
-                            Olvidaste tu contraseña?
+                            ¿Olvidaste tu contraseña?
                         </a>
                         <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
                             Iniciar sesión
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="mt-5 text-center">
-                        No tienes una cuenta? <a href="{{ route('register') }}">Crea una cuenta</a>
+                        ¿Nuevo usuario? <a href="{{ route('register') }}">Crea una cuenta</a>
                     </div>
                 </form>
                 <div class="text-center mt-5 text-small">
@@ -81,9 +81,9 @@
                 <div class="text-center mt-5 text-small">
                     Copyright &copy; DeviaRD
                     <div class="mt-2">
-                        <a href="{{ url('/terms') }}">Politica de privacidad</a>
+                        <a href="{{ url('/terms') }}">Política de privacidad</a>
                         <div class="bullet"></div>
-                        <a href="{{ url('/terms') }}">Terminos de Servicio</a>
+                        <a href="{{ url('/terms') }}">Términos del Servicio</a>
                     </div>
                 </div>
             </div>
