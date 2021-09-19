@@ -427,18 +427,17 @@
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
-				<div class="flex-c-m h-full p-r-10">
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
-						<i class="zmdi zmdi-search"></i>
-					</div>
-				</div>
-
+			
+				
+				@auth
 				<div class="flex-c-m h-full p-lr-10 bor5">
 					<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
-						data-notify="2">
+					data-notify="{{ $productosCarrito->count() }}">
 						<i class="zmdi zmdi-shopping-cart"></i>
 					</div>
 				</div>
+				@endauth
+				
 			</div>
 
 			<!-- Button show menu -->
@@ -474,6 +473,13 @@
 					<a href="/nosotros">NOSOTROS</a>
 
 				</li>
+				@guest
+					
+				<li>
+					<a href="/login" class="text-uppercase"><span>Iniciar sesión</span> <i class="ml-1 fas fa-sign-in-alt"></i></a>
+
+				</li>
+				@endguest
 			</ul>
 		</div>
 
