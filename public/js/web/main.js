@@ -146,7 +146,9 @@
             $(this).isotope({
                 itemSelector: '.isotope-item',
                 layoutMode: 'fitRows',
+                resizable: true,
                 percentPosition: true,
+                resizesContainer: true,
                 animationEngine : 'best-available',
                 masonry: {
                     columnWidth: '.isotope-item'
@@ -271,10 +273,19 @@
     $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
         $('.js-modal1').addClass('show-modal1');
+        let src = e.target.previousElementSibling.src
+			let id =e.target.previousElementSibling.getAttribute('data-producto')
+			console.log(id);
+			$('#productoID').val(id)
+			document.getElementsByClassName('slick-active')[0].childNodes[0].src = src
+			document.getElementById('imagenPrincipal').src = src;
+			document.getElementsByClassName('mfp-img').src = src;
+			document.getElementById('productoCompraID').value = id;
     });
 
     $('.js-hide-modal1').on('click',function(){
         $('.js-modal1').removeClass('show-modal1');
+        
     });
 
 

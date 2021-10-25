@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Newsletter;
 
 class RegisterController extends Controller
 {
@@ -23,6 +24,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    
 
     /**
      * Where to redirect users after registration.
@@ -56,9 +58,13 @@ class RegisterController extends Controller
             'ciudad' => ['required', 'string', 'max:255'],
             'telefono' => ['required','string','min:10','max:12'],
             'direccion' => ['required', 'string', 'max:255'],
+            'RNC' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'agree'=>['accepted'],
+            'suscriber'=>[],
+
+            
         ]);
     }
 
@@ -69,7 +75,16 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {   
+        
+        if ($data['suscriber'] == 'SI') {
+            Newsletter::subscribe($data['email'], ['FNAME'=> $data['name'], 'LNAME'=>$data['lname'],'PHONE'=>'+1'+$data['telefono'],'ADDRESS'=>$data['direccion']]);
+
+        }
+                
+         
+
+
         return User::create([
             'name' => $data['name'],
             'lname' => $data['lname'],
@@ -79,8 +94,12 @@ class RegisterController extends Controller
             'rol_id'=>2,
             'direccion' => $data['direccion'],
             'email' => $data['email'],
+            'RNC' => $data['RNC'],
+            'suscriber' => $data['suscriber'],
             'password' => Hash::make($data['password']),
             
         ]);
+
+        
     }
 }

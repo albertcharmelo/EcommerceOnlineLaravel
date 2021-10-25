@@ -9,13 +9,14 @@ use App\ProductoCarrito;
 use App\CategoriaProducto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\FuncCall;
 
 class PostController extends Controller
 {
 
 
     protected $categoriasProducto;
-
+    
     public function __construct() 
     {
         // Fetch the Site Settings object
@@ -97,8 +98,10 @@ class PostController extends Controller
         }
 
         if (Auth::check()) {
-            $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
-            ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
+            $productosCarrito = PostController::carrito();
+
+
+            
             return view('web.blog')->with(compact('productosCarrito', 'posts', 'categorias','categoriasProducto'));
         } else {
             return view('web.blog')->with(compact('posts', 'categorias','categoriasProducto'));
@@ -122,7 +125,18 @@ class PostController extends Controller
         return $data;
     }
     
+    public static function carrito(){
 
+        if (Auth::check()) {
+            $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
+        ->join('producto_has_image','producto_has_image.producto_id','=','producto_cart.producto_id')
+        ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*','producto_has_image.path','producto_cart.id as idCarrito')->where('user_id', Auth::user()->id)->get();
+
+        return $productosCarrito;
+        }
+
+       
+    }
     public function getPosts(Request $request)
     {
 
@@ -171,8 +185,8 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->get()->first();
         // dd($productosRecomendados);
         if (Auth::check()) {
-            $productosCarrito = ProductoCarrito::join('producto_devia_api', 'producto_devia_api.id', '=', 'producto_cart.producto_id')
-                ->select('producto_cart.lote as cantidad', 'producto_cart.user_id', 'producto_devia_api.*')->where('user_id', Auth::user()->id)->get();
+            $productosCarrito = PostController::carrito();
+
             return view('web.post')->with(compact('productosCarrito', 'categorias', 'productosRecomendados', 'post','categoriasProducto'));
         } else {
             return view('web.post')->with(compact('categorias', 'productosRecomendados', 'post','categoriasProducto'));

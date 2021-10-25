@@ -10,13 +10,20 @@
                         Nuestra Historia
                     </h3>
 
-                    <p class="stext-113 cl6 p-b-26">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
-                    </p>
-
-                    <p class="stext-113 cl6 p-b-26">
-                        Alguna duda?, encuentrános C/ Duarte No.224, Bonao 42000, Monseñor Nouel, República Dominicana, puede contactarnos al +1 (849) 450-7766
-                    </p>
+                    <div class="pr-5 p-b-9 " style="    border-right: 3px solid #e6e6e6 !important;">
+                        <p class="stext-114 cl6 p-r-40 p-b-11">
+                            <ul style="list-style:initial !important">
+                                <li class=" text-right" >Servir con excelencia.</li>
+                                <li class=" text-right" >Siempre brindar la satisfacción de nuestros clientes.</li>
+                                <li class=" text-right" >Generamos un ambiente de flexibilidad, entusiasmo y confianza</li>
+                                <li class=" text-right" >Innovación y mejora continua</li>
+                            </ul>
+                        </p>
+                        <p class="stext-113 cl6 p-b-26 text-right">
+                            Alguna duda?, encuentrános C/ Duarte No.224, Bonao 42000, Monseñor Nouel, República Dominicana, puede contactarnos al +1 (849) 450-7766
+                        </p>
+                    </div>
+                  
                 </div>
             </div>
 
@@ -37,17 +44,18 @@
                     </h3>
 
                     <p class="stext-113 cl6 p-b-26">
-                        Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+                        Somos una empresa comprometida con nuestros clientes así como con nuestro personal, laboramos bajo políticas, ofreciendo la variedad más rentable del mundo de la tecnología en la zona, buscando siempre la innovación y precios accesibles al público.
                     </p>
 
                     <div class="bor16 p-l-29 p-b-9 m-t-22">
                         <p class="stext-114 cl6 p-r-40 p-b-11">
-                            Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+                            <ul style="list-style: ">
+                                <li>Servir con excelencia.</li>
+                                <li>Siempre brindar la satisfacción de nuestros clientes.</li>
+                                <li>Generamos un ambiente de flexibilidad, entusiasmo y confianza</li>
+                                <li>Innovación y mejora continua</li>
+                            </ul>
                         </p>
-
-                        <span class="stext-111 cl8">
-                            - Steve Job’s 
-                        </span>
                     </div>
                 </div>
             </div>

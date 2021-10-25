@@ -110,6 +110,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'Svg\\' => 4,
+            'Spatie\\Newsletter\\' => 18,
         ),
         'R' => 
         array (
@@ -190,6 +191,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         ),
         'D' => 
         array (
+            'DrewM\\MailChimp\\' => 16,
             'Dotenv\\' => 7,
             'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
@@ -364,6 +366,10 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'Spatie\\Newsletter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-newsletter/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -542,6 +548,10 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
+        'DrewM\\MailChimp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drewm/mailchimp-api/src',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
@@ -667,6 +677,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'App\\Http\\Requests\\StoreCompraPost' => __DIR__ . '/../..' . '/app/Http/Requests/StoreCompraPost.php',
         'App\\Http\\Requests\\StorePersonaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StorePersonaRequest.php',
         'App\\Http\\Requests\\StoreTipoDocumentoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreTipoDocumentoRequest.php',
+        'App\\Mail\\NotificationMail' => __DIR__ . '/../..' . '/app/Mail/NotificationMail.php',
         'App\\ModificacionIndex' => __DIR__ . '/../..' . '/app/ModificacionIndex.php',
         'App\\Persona' => __DIR__ . '/../..' . '/app/Persona.php',
         'App\\Post' => __DIR__ . '/../..' . '/app/Post.php',
@@ -681,6 +692,7 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\RegistroApi' => __DIR__ . '/../..' . '/app/RegistroApi.php',
         'App\\Rol' => __DIR__ . '/../..' . '/app/Rol.php',
         'App\\TipoDocumento' => __DIR__ . '/../..' . '/app/TipoDocumento.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
@@ -1012,6 +1024,9 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'Dotenv\\Store\\StoreInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Store/StoreInterface.php',
         'Dotenv\\Store\\StringStore' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Store/StringStore.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'DrewM\\MailChimp\\Batch' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Batch.php',
+        'DrewM\\MailChimp\\MailChimp' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/MailChimp.php',
+        'DrewM\\MailChimp\\Webhook' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Webhook.php',
         'Egulias\\EmailValidator\\EmailLexer' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailLexer.php',
         'Egulias\\EmailValidator\\EmailParser' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailParser.php',
         'Egulias\\EmailValidator\\EmailValidator' => __DIR__ . '/..' . '/egulias/email-validator/src/EmailValidator.php',
@@ -4852,6 +4867,14 @@ class ComposerStaticInitfc2712c40d1d14b61cc290c2712f7721
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Newsletter\\Exceptions\\InvalidNewsletterList' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Exceptions/InvalidNewsletterList.php',
+        'Spatie\\Newsletter\\Newsletter' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Newsletter.php',
+        'Spatie\\Newsletter\\NewsletterFacade' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterFacade.php',
+        'Spatie\\Newsletter\\NewsletterList' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterList.php',
+        'Spatie\\Newsletter\\NewsletterListCollection' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterListCollection.php',
+        'Spatie\\Newsletter\\NewsletterPermissions' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterPermissions.php',
+        'Spatie\\Newsletter\\NewsletterServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterServiceProvider.php',
+        'Spatie\\Newsletter\\NullDriver' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NullDriver.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Svg\\DefaultStyle' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/DefaultStyle.php',
         'Svg\\Document' => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg/Document.php',

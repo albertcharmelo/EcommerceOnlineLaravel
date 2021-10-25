@@ -16,6 +16,9 @@ Route::prefix('/')->group(function () {
     //Shop
     Route::post('/shop/filterProduct','WebController@filterPrice');
     Route::get('/shop/{slug?}','WebController@shop');
+    Route::get('/shop/filter/{order?}/{fromPrice?}/{toPrice?}','WebController@filter');
+    Route::post('/shop/AgregarAlCarrito','WebController@AgregarProductoCarrito');
+
     Route::post('/search/producto', 'ProductoController@list');
     //Contacto
     Route::get('/contacto','WebController@contacto');
@@ -25,6 +28,14 @@ Route::prefix('/')->group(function () {
     Route::get('/guia-uso','WebController@guia_uso');
     //Terminos
     Route::get('/terms','WebController@terms');
+
+    //Carrito de Compras
+    Route::get('/cart','WebController@cart');
+    Route::post('/removerDelCarrito','WebController@removerDelCarrito');
+    Route::post('/pagarAhora','WebController@pagar');
+
+
+
 
 });
 
@@ -69,7 +80,7 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
 
         Route::get('/create/combo', 'ProductoController@createCombo');
 
-        Route::post('productoget', 'ArticulosController@productoget');
+        
 
     });
 

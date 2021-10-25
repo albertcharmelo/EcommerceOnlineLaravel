@@ -60,6 +60,13 @@ class ProductoController extends Controller
     public function list(Request $request)
     {
         $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->get();
+       
+            $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->where('stock','>',0)->where('precio','!=',null)
+            ->join('producto_has_image','producto_has_image.producto_id','=','producto_devia_api.id')
+            ->join('prodcuto_devia_api_categoria','prodcuto_devia_api_categoria.id','=','producto_devia_api.categoria_id')
+            ->select('producto_devia_api.*','producto_has_image.path','prodcuto_devia_api_categoria.boton', 'prodcuto_devia_api_categoria.slug as categoriaSlug')
+            ->get();
+       
         $data = [];
         foreach ($producto as $producto) {
             $data[] = [

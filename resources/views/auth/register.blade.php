@@ -107,6 +107,19 @@
                                         </span>
                                     @enderror
                                     </div>
+                                    <div class="form-group col-6">
+                                        <label for="password2" class="d-block">RNC</label>
+                                        <div class="input-group">
+                                           
+                                            <input id="RNC" placeholder="" type="text" class="form-control @error('RNC') is-invalid @enderror""
+                                               maxlength="15"  name="RNC" required >
+                                        </div>
+                                        @error('RNC')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    </div>
                                 </div>
 
                                 <div class="form-divider">
@@ -153,6 +166,13 @@
                                         <input type="checkbox" required  name="agree" class="custom-control-input" id="agree">
                                         <label class="custom-control-label" for="agree">Estoy de acuerdo con los
                                             <a href="{{ url('/terms') }}" target="_blank">Términos del Servicio</a></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" required  value="SI" name="suscriber" class="custom-control-input" id="suscriber">
+                                        <label class="custom-control-label" for="suscriber">Suscribirme para recibir las ultimas noticias.
+                                        </label>
                                     </div>
                                 </div>
 
