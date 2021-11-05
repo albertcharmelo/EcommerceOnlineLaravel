@@ -261,13 +261,21 @@ class WebController extends Controller
         $comentario2=$comentarios[1];
         $comentario3=$comentarios[2];
         $comentario4=$comentarios[3];
-       
+        
+
+        $productos = ProductoApi::where('stock','>',0)->where('precio','!=',null)
+        ->join('producto_has_image','producto_has_image.producto_id','=','producto_devia_api.id')
+        ->join('prodcuto_devia_api_categoria','prodcuto_devia_api_categoria.id','=','producto_devia_api.categoria_id')
+        ->select('producto_devia_api.*','producto_has_image.path','prodcuto_devia_api_categoria.boton', 'prodcuto_devia_api_categoria.slug as categoriaSlug')
+        ->with('categoria')
+        ->get();
+        
         if (Auth::check()) {
             $productosCarrito = PostController::carrito();
 
-            return view('web.index')->with(compact('productosCarrito','categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4',"categoriasProducto"));
+            return view('web.index')->with(compact('productosCarrito','categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4',"categoriasProducto",'productos'));
         }
-        return view('web.index')->with(compact('categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4','categoriasProducto'));
+        return view('web.index')->with(compact('categorias','posts','sliderImages','comentario1','comentario2','comentario3','comentario4','categoriasProducto','productos'));
     }
 
     public function AgregarProductoCarrito(Request $request){

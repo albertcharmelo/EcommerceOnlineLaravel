@@ -167,11 +167,19 @@
 									</a>
 					
 									<span class="stext-105 cl3">
-										RD$ @if (Auth::user()->rol->rol == 'mayorista' || Auth::user()->rol->rol == 'admin')
+
+										@auth
+										RD$
+										@if (Auth::user()->rol->rol == 'admin' || Auth::user()->rol->rol == 'mayorista')
 											{{ $producto->precio_mayor }}
-											@else
+										@elseif( Auth::user()->rol->rol == 'regular')
 											{{ $producto->precio }}
-											@endif 
+										@endif	
+										@endauth
+										@guest
+										RD$ {{ $producto->precio }}
+										@endguest
+									
 									</span>
 								</div>
 					

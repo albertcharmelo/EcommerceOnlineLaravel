@@ -27,9 +27,10 @@ class ProductoApi extends Model
      */
     public function categoria()
     {
-        return $this->hasOne(CategoriaProducto::class, 'categoria_id');
+        return $this->belongsTo(CategoriaProducto::class, 'categoria_id');
 
     }
 
+   
    
 }

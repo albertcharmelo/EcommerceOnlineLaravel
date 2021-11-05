@@ -52,6 +52,7 @@
                         <div class="p-t-33">
                             <div class="flex-w flex-r-m p-b-10 d-flex justify-content-start">
                                 <div class="size-204 flex-w flex-m respon6-next">
+                                    @auth
                                     <div class="wrap-num-product flex-w m-r-20 m-tb-10">
                                         <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-minus"></i>
@@ -63,26 +64,40 @@
                                         <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                             <i class="fs-16 zmdi zmdi-plus"></i>
                                         </div>
-                                    </div>
+                                    </div>  
+                                    @endauth
+                                    
                                     <input type="hidden" id='productoCompraID' value="">
-
+                                    @auth
                                     <button onclick="AgregarProductoCarrito()"
-                                        class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="saludo()">
-                                        AÑADIR AL CARRO
+                                    class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="saludo()">
+                                    AÑADIR AL CARRO
                                     </button>
+                                    @endauth
+                                    @guest
+                                    <a href="/login" class=" text-white">
+                                    <button onclick="AgregarProductoCarrito()" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" >
+                                        Inicia sesión para realizar tu compra 
+                                    </button>
+                                    </a>
+                                    @endguest
                                 </div>
                             </div>
                         </div>
+                    
+                        @auth
                         @if (Auth::user()->rol->rol == 'admin' || Auth::user()->rol->rol == 'mayorista')
-                            <div class="alert alert-info alert-dismissible show fade">
-                                <div class="alert-body">
-                                <button class="close" data-dismiss="alert">
-                                    <span>×</span>
-                                </button>
-                                <i class="fas fa-user-circle"></i> Precio mayorista activo
-                                </div>
-                            </div> 
-                        @endif
+                        <div class="alert alert-info alert-dismissible show fade">
+                            <div class="alert-body">
+                            <button class="close" data-dismiss="alert">
+                                <span>×</span>
+                            </button>
+                            <i class="fas fa-user-circle"></i> Precio mayorista activo
+                            </div>
+                        </div> 
+                         @endif   
+                        @endauth
+                     
 
                       
                     </div>
