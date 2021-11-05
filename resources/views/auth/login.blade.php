@@ -16,7 +16,7 @@
                     class=" mb-5 mt-2">
                 <h4 class="text-dark font-weight-normal">Bienvenido a <span class="font-weight-bold">Devia RD</span>
                 </h4>
-                <p class="text-muted">‎Antes de comenzar, debe iniciar sesión o registrarse si aún no tiene una cuenta.‎
+                <p class="text-muted">Antes de comenzar, debe iniciar sesión o registrarse si aún no tiene una cuenta.
                 </p>
                 <form method="POST" action="{{ route('login') }}" class="needs-validation"
                     novalidate="">
