@@ -57,21 +57,36 @@ class ProductoController extends Controller
     {
         return view('panel.articulos.create');
     }
-    public function list(Request $request)
-    {
-        $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->get();
-       
-            $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->where('stock','>',0)->where('precio','!=',null)
+
+
+    public function listTienda(Request $request){
+         $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->where('stock','>',0)->where('precio','!=',null)
             ->join('producto_has_image','producto_has_image.producto_id','=','producto_devia_api.id')
             ->join('prodcuto_devia_api_categoria','prodcuto_devia_api_categoria.id','=','producto_devia_api.categoria_id')
             ->select('producto_devia_api.*','producto_has_image.path','prodcuto_devia_api_categoria.boton', 'prodcuto_devia_api_categoria.slug as categoriaSlug')
             ->get();
+              
+        $data = [];
+        foreach ($producto as $producto) {
+            $data[] = [
+                'label' => $producto->titulo,
+                'id' => $producto->id,
+            ];
+        }
+
+        return $data;
+    }
+
+    public function list(Request $request)
+    {
+            $producto = ProductoApi::where('titulo', 'like', '%' . $request->busqueda . '%')->where('stock','>',0)->where('precio','!=',null)->get();
+       
+           
        
         $data = [];
         foreach ($producto as $producto) {
             $data[] = [
                 'label' => $producto->titulo,
-                'url' => '/blog/post/' . $producto->slug,
                 'id' => $producto->id,
             ];
         }
@@ -123,7 +138,7 @@ class ProductoController extends Controller
         return $producto;
     }
     public function storeImagen(Request $request)
-    {
+    {   try {
         if ($request->hasFile('file')) {
 
             foreach ($request->file('file') as $file) {
@@ -138,6 +153,10 @@ class ProductoController extends Controller
                 ]);
             }
         }
+    } catch (\Throwable $th) {
+        return 'fallido';
+    }
+       
     }
 
     public static function getPlantilla(Request $request)

@@ -14,8 +14,8 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ url('/panel/dashboard/tienda') }}">Tienda</a></li>
-                    <li><a class="nav-link" href="{{ url('/panel/dashboard/blog') }}">Blog</a>
-                    </li>
+                    <li><a class="nav-link" href="{{ url('/panel/dashboard/usuarios') }}">Usuarios</a></li>
+                    <li><a class="nav-link" href="{{ url('/panel/dashboard/blog') }}">Blog</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown ">

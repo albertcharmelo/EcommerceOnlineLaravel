@@ -97,7 +97,7 @@ class RegisterController extends Controller
             'RNC' => $data['RNC'],
             'suscriber' => $data['suscriber'],
             'password' => Hash::make($data['password']),
-            
+            'referenciaID'=>time() . rand(10*45, 100*98)
         ]);
 
         

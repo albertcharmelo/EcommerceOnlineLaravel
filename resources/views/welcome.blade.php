@@ -633,7 +633,13 @@
 							</a>
 							
 							<span class="header-cart-item-info">
-								{{ $producto->cantidad }} x ${{ $producto->precio }}
+
+								{{ $producto->cantidad }} x RD$ @if (Auth::user()->rol->rol == 'mayorista' || Auth::user()->rol->rol == 'admin' )
+								{{ $producto->precio_mayor }}
+								@else
+								{{ $producto->precio }}
+
+								@endif 
 							</span>
 						</div>
 					</li>

@@ -28,9 +28,9 @@
     </div>
 
     <div class="section-body">
-        <h2 class="section-title  text-capitaliz">Seleccione las imágenes y categoría del producto </h2>
+        <h2 class="section-title  text-capitaliz">Seleccione las imágenes del producto </h2>
         <p class="section-lead pb-0 mb-0">
-            Para que el producto pueda estardisponible en la tienda, este debe de tener asignado la <strong>categoria</strong> y las <strong>imaganes</strong> 
+            Para que el producto pueda estardisponible en la tienda, este debe de tener asignado las <strong>imaganes</strong> 
 
         </p>
 
@@ -38,7 +38,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Escribe Tu Categoría</h4>
+                        <h4>Imágenes del producto</h4>
+                        <p class=" text-muted"> Primero haga la busqueda del producto y luego proceda a añadir la imagen</p>
                     </div>
                     <div class="card-body">
                         <div class="form-group row mb-4">
@@ -47,7 +48,7 @@
                                 <input type="text" class="form-control" id="producto">
                             </div>
                         </div>
-                        <div class="form-group row mb-4">
+                        {{-- <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Categoría</label>
                             <div class="col-sm-12 col-md-7">
                                 <select class="form-control" name="" id="categoria">
@@ -57,7 +58,7 @@
 
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Imágenes</label>
                             <div class="col-sm-12 col-md-7">
@@ -71,13 +72,13 @@
                                 </form>
                             </div>
                         </div>
-
+{{-- 
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                             <div class="col-sm-12 col-md-7">
                                 <button class="btn btn-primary" id="save">Asignar Categoria</button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -106,7 +107,7 @@
 {{-- <script src="{{ asset('js/jquery.selectric.js') }}"></script> --}}
 
 <script src="{{ asset('js/dropzone.min.js') }}"></script>
-<script src="{{ asset('js/panel/page/features-post-create.js') }}"></script>
+{{-- <script src="{{ asset('js/panel/page/features-post-create.js') }}"></script> --}}
 <script src="{{ asset('js/panel/page/components-multiple-upload.js') }}"></script>
 <script src="{{ asset('js/web/jquery-ui.min.js') }}"></script>
 
@@ -182,19 +183,29 @@ var myDropzone = new Dropzone(".dropzone", {
         myDropzone.on("sending", function (file, xhr, formData) {
             formData.append("_token", $('meta[name="csrf-token"]').attr('content'));
             formData.append("producto_id", producto);
-
+            console.log(file, xhr, formData)
         });
         this.on("complete", function(file) {
             myDropzone.removeFile(file);
-            loader.classList.add('d-none');
+            if ($('#producto').val().length > 0) {
+                loader.classList.add('d-none');
             showImages(producto)
             iziToast.success({
             title: 'Imagen agregada satisfactoriamente',
             message: 'El producto posee imaganes para mostrar en la tienda',
             position: 'bottomRight' 
+             }); 
+            }else{
+            iziToast.info({
+            title: 'Producto desconocido',
+            message: 'Necesita buscar el producto al que le agregara la imagen',
+            position: 'bottomRight' 
+             });  
+            }
+           
+        
         });
-        });
-
+    
         this.on("success",
             myDropzone.processQueue.bind(myDropzone)
         );

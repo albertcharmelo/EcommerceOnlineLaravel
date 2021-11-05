@@ -73,6 +73,18 @@
                                 </div>
                             </div>
                         </div>
+                        @if (Auth::user()->rol->rol == 'admin' || Auth::user()->rol->rol == 'mayorista')
+                            <div class="alert alert-info alert-dismissible show fade">
+                                <div class="alert-body">
+                                <button class="close" data-dismiss="alert">
+                                    <span>×</span>
+                                </button>
+                                <i class="fas fa-user-circle"></i> Precio mayorista activo
+                                </div>
+                            </div> 
+                        @endif
+
+                      
                     </div>
                 </div>
             </div>

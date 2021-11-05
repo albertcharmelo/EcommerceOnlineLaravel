@@ -40,13 +40,24 @@
                                     </div>
                                 </td>
                                 <td class="column-2">{{ $producto->titulo }}</td>
-                                <td class="column-3">RD$ {{ $producto->precio }}</td>
+                                <td class="column-3">RD$ @if (Auth::user()->rol->rol == 'mayorista' || Auth::user()->rol->rol == 'admin' )
+                                    {{ $producto->precio_mayor }}
+                                    @else
+                                    {{ $producto->precio }}
+                                @endif</td>
                                 <td class="column-4">
                                     <div class="wrap-num-product flex-w m-l-auto m-r-0" style="width: 58px !important">
                                         <input class="" type="number" readonly name="num-product1" value="{{ $producto->cantidad }}" style="padding-left: 42%;font-size: 18px;">
                                     </div>
                                 </td>
-                                <td class="column-5">RD$ <span class="totalProducto">{{ $producto->cantidad * $producto->precio }}</span> </td>
+                                <td class="column-5">RD$ <span class="totalProducto">
+                                   
+                                    @if (Auth::user()->rol->rol == 'mayorista' || Auth::user()->rol->rol == 'admin' )
+                                    {{ $producto->cantidad * $producto->precio_mayor }}
+                                    @else
+                                    {{ $producto->cantidad * $producto->precio }}
+                                    @endif
+                                </span> </td>
                             </tr>
                             @endforeach
                         </table>
@@ -228,7 +239,7 @@
                 total:total
 
             }
-            console.log(data)
+            // console.log(data)
 
             $.ajax({
                 type: "POST",

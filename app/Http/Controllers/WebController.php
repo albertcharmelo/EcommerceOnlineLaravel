@@ -9,6 +9,8 @@ use App\RegistroApi;
 use App\PostCategoria;
 use App\ProductoCarrito;
 use App\CategoriaProducto;
+use App\Factura;
+use App\Factura_productos;
 use App\ModificacionIndex;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,9 +44,11 @@ class WebController extends Controller
                         'titulo'=>$producto->nombre_producto,
                         'descripcion'=>$producto->descripcion,
                         'stock'=>$producto->disponible,
-                        'precio'=>$producto->precio,
+                        'precio'=>$producto->precio_al_detalle,
                         'producto_id'=>$producto->ID,
-                        'categoria_id'=>1
+                        'categoria_id'=>1,
+                        'precio_mayor'=>$producto->precio_por_mayor
+
                     ]
                 );  
             }else if($producto->categoria == 'AURICULAR' ||$producto->categoria == 'BOCINA' ||$producto->categoria == 'HANDS FREE'){
@@ -54,9 +58,11 @@ class WebController extends Controller
                         'titulo'=>$producto->nombre_producto,
                         'descripcion'=>$producto->descripcion,
                         'stock'=>$producto->disponible,
-                        'precio'=>$producto->precio,
+                        'precio'=>$producto->precio_al_detalle,
                         'producto_id'=>$producto->ID,
-                        'categoria_id'=>2
+                        'categoria_id'=>2,
+                        'precio_mayor'=>$producto->precio_por_mayor
+
                     ]
                 );  
             }else if($producto->categoria == 'CABLE' ||$producto->categoria == 'CARGADOR' ||$producto->categoria == 'COVER' ||$producto->categoria == 'CARGADOR INALAMBRICO' ||$producto->categoria == 'CARGADOR CARRO'){
@@ -66,9 +72,11 @@ class WebController extends Controller
                         'titulo'=>$producto->nombre_producto,
                         'descripcion'=>$producto->descripcion,
                         'stock'=>$producto->disponible,
-                        'precio'=>$producto->precio,
+                        'precio'=>$producto->precio_al_detalle,
                         'producto_id'=>$producto->ID,
-                        'categoria_id'=>3
+                        'categoria_id'=>3,
+                        'precio_mayor'=>$producto->precio_por_mayor
+
                     ]
                 );  
             }else if($producto->categoria == 'ADAPTADOR' ||$producto->categoria == 'BLUETOOTH' ||$producto->categoria == 'FUENTE' ||$producto->categoria == 'ARO DE LUZ' ||$producto->categoria == 'PORTA CARRO' ||$producto->categoria == 'SOPORTE' ||$producto->categoria == 'POWER BANK'){
@@ -78,9 +86,10 @@ class WebController extends Controller
                         'titulo'=>$producto->nombre_producto,
                         'descripcion'=>$producto->descripcion,
                         'stock'=>$producto->disponible,
-                        'precio'=>$producto->precio,
+                        'precio'=>$producto->precio_al_detalle,
                         'producto_id'=>$producto->ID,
-                        'categoria_id'=>4
+                        'categoria_id'=>4,
+                        'precio_mayor'=>$producto->precio_por_mayor
                     ]
                 );  
             }
@@ -109,6 +118,26 @@ class WebController extends Controller
     }
 
 
+    public static function facturar($datosFactura){
+        $url = "https://espinosatechnology.com/espinosa_api/api/cenllabo/crear_factura?es_api_cenllabo=1&token=AD419C02A85C54DD";
+
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+                  
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $datosFactura);
+
+        $resp = curl_exec($curl);
+        curl_close($curl);
+
+       
+    
+    }
+
+
     public function pagar(Request $request){
 
       
@@ -126,7 +155,7 @@ class WebController extends Controller
         }  
         
         $cliente = array(
-            'codigo' => Auth::user()->id,
+            'codigo' => '12345689',
             'nombre' => Auth::user()->name.' '.Auth::user()->lname,
             'email' => Auth::user()->email,
             'telefono' => Auth::user()->telefono,
@@ -142,30 +171,70 @@ class WebController extends Controller
         'mtofactura' =>floatval($request->total),
         'fechafact' => now()->format('d-m-y'),
         'Montoenvio' => floatval($request->montoEnvio),
+        'referencia'=> time() . rand(10*45, 100*98),
         'cliente'=>$cliente,
         'products'=>$productos,
         );
-
         $factura = array('datos_factura'=>$datosPago);
 
-        //eliminar productos
-        foreach ($productosCarrito as $productosCarrito) {
+
+
+
+        try {
+           $facturas = Factura::insertGetId([
+                'codMoneda' => 'RD',
+                'montoImpuesto' => '0.00',
+                'montoFacturado' =>floatval($request->total),
+                'fechaFact' => now()->format('d-m-y'),
+                'montoEnvio' => floatval($request->montoEnvio),
+                'referencia'=> time() . rand(10*45, 100*98), 
+                'user_id_cliente'=> Auth::user()->referenciaID,
+            ]);
+
+            $registro_de_factura = Factura::find($facturas);
+            RegistroApi::create([
+                'fecha'=> now()->format('d-m-y'),
+                'motivo'=>"Facturación $registro_de_factura->referencia"
+            ]);
             
-            ProductoCarrito::find($productosCarrito->idCarrito)->delete();
+            foreach ($productosCarrito as $producto) {
+                Factura_productos::create([
+                    'factura_id'=> $facturas,
+                    'producto_id'=>$producto->id
+                ]);
+
+            }
+
+            
+            // $url = "https://espinosatechnology.com/espinosa_api/api/cenllabo/crear_factura?es_api_cenllabo=1&token=AD419C02A85C54DD";
+            // $curl = curl_init();
+            // curl_setopt($curl, CURLOPT_URL, $url);
+            // curl_setopt($curl, CURLOPT_POST, 1);
+            // curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+            // curl_setopt($curl, CURLOPT_POSTFIELDS,json_encode($factura,JSON_PRETTY_PRINT));
+            // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            // $resp = curl_exec($curl);
+            // var_dump($resp);
+            // curl_close($curl);
+
+
+          
+
+            // return json_encode($factura,JSON_PRETTY_PRINT);
+       
+            
+
+        } catch (\Throwable $th) {
+            return 'error de transaccion '.$th;
         }
 
-        return $factura;
 
 
 
     }
 
     public static function removerDelCarrito(Request $request){
-
         ProductoCarrito::where('user_id',Auth::user()->id)->where('producto_id',$request->productoId)->delete();
-
-
-
     }
 
 

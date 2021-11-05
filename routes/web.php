@@ -19,7 +19,7 @@ Route::prefix('/')->group(function () {
     Route::get('/shop/filter/{order?}/{fromPrice?}/{toPrice?}','WebController@filter');
     Route::post('/shop/AgregarAlCarrito','WebController@AgregarProductoCarrito');
 
-    Route::post('/search/producto', 'ProductoController@list');
+    Route::post('/search/producto', 'ProductoController@listTienda');
     //Contacto
     Route::get('/contacto','WebController@contacto');
     //Nosotros
@@ -30,7 +30,7 @@ Route::prefix('/')->group(function () {
     Route::get('/terms','WebController@terms');
 
     //Carrito de Compras
-    Route::get('/cart','WebController@cart');
+    Route::get('/cart','WebController@cart')->middleware('auth');
     Route::post('/removerDelCarrito','WebController@removerDelCarrito');
     Route::post('/pagarAhora','WebController@pagar');
 
@@ -49,8 +49,8 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/tienda', 'PanelController@index')->name('dashboard.tienda');
         Route::get('/usuarios', 'PanelController@usuarios');
+        Route::get('/usuariosMayorisa/{user}', 'PanelController@usuariosMayorisa');
         Route::get('/blog', 'PanelController@blog');
-
         Route::post('/get/usuarios', 'PanelController@getUsuarios');
     });
 
@@ -70,6 +70,8 @@ Route::prefix('panel')->middleware(['auth','admin'])->group(function () {
         Route::get('/GaleryGet/{id}', 'ProductoController@GalerryGet');
         Route::post('/asignarCategoria', 'ProductoController@asignarCategoria');
         Route::post('/search/list', 'ProductoController@list');
+        Route::post('/search/listTienda', 'ProductoController@listTienda');
+
 
         Route::post('/store/articulos', 'ProductoController@store');
         Route::post('/store/articuloImagen', 'ProductoController@storeImagen');

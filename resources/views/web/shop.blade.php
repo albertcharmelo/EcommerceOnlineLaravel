@@ -39,11 +39,11 @@
 						 Filtro
 					</div>
 
-					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
+					{{-- <div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Buscar
-					</div>
+					</div> --}}
 				</div>
 				
 				<!-- Search product -->
@@ -167,7 +167,11 @@
 									</a>
 					
 									<span class="stext-105 cl3">
-										RD$ {{ $producto->precio }}
+										RD$ @if (Auth::user()->rol->rol == 'mayorista' || Auth::user()->rol->rol == 'admin')
+											{{ $producto->precio_mayor }}
+											@else
+											{{ $producto->precio }}
+											@endif 
 									</span>
 								</div>
 					
